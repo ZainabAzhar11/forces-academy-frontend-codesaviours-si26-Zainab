@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>c
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -684,13 +684,29 @@
 
       <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Admissions</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Results</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+        <a class="nav-link" href="index.html">Home</a>
+        <li class="nav-item">
+    <a class="nav-link" href="#" onclick="showPage('About'); return false;">About</a>
+
+</li>
+
+
+         <li class="nav-item">
+    <a class="nav-link" href="#" onclick="showPage('courses'); return false;">Courses</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="#" onclick="showPage('admissions'); return false;">Admissions</a>
+</li>
+          
+          <li class="nav-item">
+    <a class="nav-link" href="#" onclick="showPage('gallery'); return false;">Gallery</a>
+</li>
+          <li class="nav-item">
+    <a class="nav-link" href="#" onclick="showPage('results'); return false;">Results</a>
+</li>
+         <li class="nav-item">
+    <a class="nav-link" href="#" onclick="showPage('contact') return false;">Contact</a>
+</li>
           <li class="nav-item"><a class="portal-btn" href="#">studentportal</a></li>
         </ul>
       </div>
@@ -719,6 +735,12 @@
 
     </div>
   </section>
+  <div id="about" style="display:none; background:white; min-height:100vh; padding:40px;">
+    <!-- Abhi khali hai -->
+</div>
+<div id="courses" style="display:none; background:white; min-height:100vh; padding:40px;">
+    
+</div>
 
   <!-- ABOUT / HOW IT WORKS -->
   <section class="section" id="about">
@@ -971,7 +993,7 @@
           <div class="socials">
             <span>f</span>
             <span>▶</span>
-            <span>◎</span>
+           
             <span>☘</span>
           </div>
         </div>
@@ -1028,6 +1050,25 @@
   <script 
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
   </script>
+<script>
+function showPage(page){
 
+    // Home hide
+    document.querySelector(".hero").style.display = "none";
+
+    // About show
+    document.getElementById("about").style.display = "block";
+          document.getElementById("courses").style.display = "none";
+           document.getElementById("admissions").style.display = "none";
+            document.getElementById("gallery").style.display = "none";
+            document.getElementById("results").style.display = "none";
+            document.getElementById("contact us").style.display = "none";
+
+
+
+    // Page upar hi rahe
+    window.scrollTo(0,0);
+}
+</script>
 </body>
 </html>
