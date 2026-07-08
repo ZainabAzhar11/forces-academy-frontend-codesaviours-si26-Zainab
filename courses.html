@@ -3,78 +3,254 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us - Forces Academy</title>
-
-<!-- Bootstrap CSS -->
+<title>Courses | Forces Academy</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<!-- Custom CSS -->
-<link rel="stylesheet" href="css/style.css">
-
-<!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* Navbar & Button Styling */
-.navbar{
-    background:#071f3d;
-    padding:14px 0;
+body {font-family:'Poppins',sans-serif;margin:0;padding:0;background:#f8f9fa;color:#111827;}
+.navbar {background:#071f3d;}
+.navbar-brand {color:white !important;font-size:28px;font-weight:900;}
+.nav-link {color:white !important;font-weight:600;margin:0 10px;}
+.nav-link:hover {color:#ffc107 !important;}
+.portal-btn {background:#ffc107;color:#000 !important;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:700;}
+.portal-btn:hover {background:#ffb300;transform:translateY(-2px);}
+.hero {position:relative;background:#0d1b38 url('https://images.unsplash.com/photo-1593642532973-d31b6557fa68?fit=crop&w=1920&q=80') center/cover no-repeat; min-height:400px;display:flex;align-items:center;color:white;}
+.hero::before {content:"";position:absolute;inset:0;background:rgba(13,27,56,0.7);}
+.hero-content {position:relative;z-index:2;max-width:700px;margin-left:50px;}
+.hero h1 {font-size:48px;font-weight:900;}
+.hero p {font-size:18px;margin-bottom:20px;}
+.main-btn {background:#ffc107;color:#000;padding:12px 25px;border-radius:8px;text-decoration:none;font-weight:700;}
+.main-btn:hover {background:#ffb300;transform:translateY(-3px);}
+.section-heading {font-size:36px;font-weight:900;margin-bottom:10px;text-align:center;}
+.underline {width:60px;height:4px;background:#ffc107;margin:8px auto 30px;border-radius:2px;}
+.card-img-top {height:180px;object-fit:cover;}
+.course-meta {font-size:0.9rem;margin-top:10px;color:#555;}
+.course-meta i {margin-right:5px;}
+
+</style>
+<style>
+/* Courses card hover effect */
+#courses-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.navbar-brand{
-    color:#fff !important;
-    font-size:28px;
-    font-weight:900;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    white-space:nowrap;
+#courses-section .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
-.nav-link{
-    color:#fff !important;
-    font-size:16px;
-    font-weight:600;
-    margin:0 5px;
-    position:relative;
-    white-space:nowrap;
-}
-.nav-link:hover{
-    color:#ffc107 !important;
-}
-.nav-link::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-6px;
-    width:0;
-    height:2px;
-    background:#ffc107;
-    transition:.3s;
-}
-.nav-link:hover::after{
-    width:100%;
-}
-.portal-btn{
+.portal-btn {
     background:#ffc107;
     color:#000 !important;
-    padding:11px 20px;
+    padding:10px 25px; /* width ko thoda increase kiya */
     border-radius:8px;
-    font-weight:700;
     text-decoration:none;
-    margin-left:10px;
+    font-weight:700;
+    white-space:nowrap; /* ye ensure kare ke text single line me rahe */
     display:inline-block;
-    transition:.3s;
-    white-space:nowrap;
 }
+
 .portal-btn:hover{
     background:#ffb300;
-    transform:translateY(-3px);
-    box-shadow:0 10px 25px rgba(255,193,7,.35);
+    transform:translateY(-2px);}</style>
+</head>
+<body>
 
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container">
+<a class="navbar-brand" href="index.html">🎓 Forces Academy</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navbarMenu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link active" href="courses.html">Courses</a></li>
+<li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+<li class="nav-item"><a class="portal-btn" href="#">Student Portal</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+<div class="hero-content">
+<h1>Our Courses</h1>
+<p>Explore the programs designed to prepare students for academic excellence and Pakistan Armed Forces.</p>
+<a href="#courses-section" class="main-btn">Explore Courses →</a>
+</div>
+</section>
+
+<!-- Courses Section -->
+<section class="section" id="courses-section">
+<div class="container">
+<h2 class="section-heading">Courses Offered</h2>
+<div class="underline"></div>
+<div class="row g-4">
+
+<!-- Course 1 -->
+<div class="col-md-4 col-sm-12">
+<div class="card h-100">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPHYnfkEugd7sE3sfRVDmMRxQToBhMGxaHOi4Jcm3iA&s=10" class="card-img-top" alt="FSc Pre-Medical">
+<div class="card-body">
+<h5 class="card-title">FSc Pre-Medical</h5>
+<p class="card-text">Prepare for medical studies with a strong foundation in biology, chemistry, and physics.</p>
+<div class="course-meta">
+<p><i class="bi bi-clock"></i> Duration: 2 Years</p>
+<p><i class="bi bi-person"></i> For: Matric Science students</p>
+</div>
+<a href="#" class="btn btn-primary">Learn More</a>
+</div>
+</div>
+</div>
+
+<!-- Course 2 -->
+<div class="col-md-4 col-sm-12">
+<div class="card h-100">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPZcnLvKRNpvpcLUYkfYtstE9rqvfmkmJ_3aaJN9RE8A&s=10" class="card-img-top" alt="FSc Pre-Engineering">
+<div class="card-body">
+<h5 class="card-title">FSc Pre-Engineering</h5>
+<p class="card-text">Intermediate coaching in mathematics, physics, and chemistry to strengthen analytical base.</p>
+<div class="course-meta">
+<p><i class="bi bi-clock"></i> Duration: 2 Years</p>
+<p><i class="bi bi-person"></i> For: Matric Science students</p>
+</div>
+<a href="#" class="btn btn-primary">Learn More</a>
+</div>
+</div>
+</div>
+
+<!-- Course 3 -->
+<div class="col-md-4 col-sm-12">
+<div class="card h-100">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSje85iumCWb1Cffi6ShYzxLVe_7ZWWJiFYzTPJP4ustQ&s=10" class="card-img-top" alt="Matric Science">
+<div class="card-body">
+<h5 class="card-title">Matric Science</h5>
+<p class="card-text">Solid grounding in science subjects with regular tests and concept-building.</p>
+<div class="course-meta">
+<p><i class="bi bi-clock"></i> Duration: 2 Years</p>
+<p><i class="bi bi-person"></i> For: Class 9 & 10 students</p>
+</div>
+<a href="#" class="btn btn-primary">Learn More</a>
+</div>
+</div>
+</div>
+
+<!-- Course 4 -->
+<div class="col-md-4 col-sm-12">
+<div class="card h-100">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpZJ8MFTteI11jgN03twskJ7xJIhG2T9FaI6rftvbfXw&s=10" class="card-img-top" alt="Matric Arts">
+<div class="card-body">
+<h5 class="card-title">Matric Arts</h5>
+<p class="card-text">Comprehensive coaching in Arts group subjects, building strong knowledge foundations.</p>
+<div class="course-meta">
+<p><i class="bi bi-clock"></i> Duration: 2 Years</p>
+<p><i class="bi bi-person"></i> For: Class 9 & 10 students</p>
+</div>
+<a href="#" class="btn btn-primary">Learn More</a>
+</div>
+</div>
+</div>
+
+<!-- Course 5 -->
+<div class="col-md-4 col-sm-12">
+<div class="card h-100">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2IGdGXuEPg8cPB8V6J6pQcI3WxL7eXHDMH9lSXJrMOg&s=10" class="card-img-top" alt="Entry Test Preparation">
+<div class="card-body">
+<h5 class="card-title">Entry Test Preparation</h5>
+<p class="card-text">Focused coaching in Mathematics, English and Intelligence (IQ) for Army, Navy, PAF entry tests.</p>
+<div class="course-meta">
+<p><i class="bi bi-clock"></i> Duration: 3 Months</p>
+<p><i class="bi bi-person"></i> For: All aspiring cadets</p>
+</div>
+<a href="#" class="btn btn-primary">Learn More</a>
+</div>
+</div>
+</div>
+
+<!-- Course 6 -->
+<div class="col-md-4 col-sm-12">
+<div class="card h-100">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-tCxHk2ePHWoTmtET8AVS0Rs3Q7nMwcj2O6rI7AOIww&s=10" class="card-img-top" alt="ISSB & Interview Prep">
+<div class="card-body">
+<h5 class="card-title">ISSB & Interview Prep</h5>
+<p class="card-text">Psychological tests, group tasks, and personality grooming for ISSB interview preparation.</p>
+<div class="course-meta">
+<p><i class="bi bi-clock"></i> Duration: 6 Weeks</p>
+<p><i class="bi bi-person"></i> For: Written test qualifiers</p>
+</div>
+<a href="#" class="btn btn-primary">Learn More</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- Unique Guidance Section -->
+<section class="section">
+  <div class="container">
+    <div class="unique-guidance d-flex flex-column flex-md-row align-items-center justify-content-between p-4 position-relative">
+      <div class="guidance-icon">
+        <i class="bi bi-question-circle-fill fs-1 text-warning"></i>
+      </div>
+      <div class="guidance-text ms-md-3 mt-3 mt-md-0">
+        <h4>Need Help Choosing Your Course?</h4>
+        <p>Our academic counselors are ready to guide you through selecting the program that fits your goals and aspirations. Personalized support at every step!</p>
+      </div>
+      <div class="guidance-action mt-3 mt-md-0">
+        <a href="mailto:counselor@forcesacademy.com" class="btn guidance-btn">Student Support</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.unique-guidance {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-/* Footer Heading Color */
+.unique-guidance:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.guidance-icon {
+  flex-shrink: 0;
+}
+
+.guidance-text h4 {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.guidance-text p {
+  color: #374151;
+  margin: 0;
+}
+
+.guidance-btn {
+  background-color: #2563eb;
+  color: #fff !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.guidance-btn:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+</style>
+<style>
 footer h5 {
     color: #4e86ff; /* Bright Blue like your screenshot */
     font-weight: 700;
@@ -115,113 +291,7 @@ footer .d-flex.gap-3 a:hover {
 footer .d-flex.gap-3 a i {
     line-height: 1; /* ensures icon vertically centered */
 }
-
 </style>
-</head>
-
-<body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">🎓 Forces Academy</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarMenu">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
-        <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact </a></li>
-        <li class="nav-item"><a class="portal-btn" href="#">Student Portal</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- About Section -->
-<section class="container my-5">
-  <h1>About Us</h1>
-  <p>
-    Forces Academy provides quality education, discipline, leadership training, and professional guidance for students who wish to join the Pakistan Armed Forces.
-  </p>
-  <a href="index.html" class="btn btn-primary">Back to Home</a>
-</section>
-
-<!-- Mission & Vision -->
-<section class="container my-5">
-  <div class="row">
-    <div class="col-md-6">
-      <h3>Mission</h3>
-      <p>To nurture confident, disciplined, and knowledgeable students ready to serve their nation.</p>
-    </div>
-    <div class="col-md-6">
-      <h3>Vision</h3>
-      <p>To become a leading academy recognized for excellence in education, leadership, and character building.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Why Choose Us -->
-<section class="container my-5">
-  <h2 class="mb-4">Why Choose Us</h2>
-  <div class="row g-4">
-    <div class="col-md-3">
-      <div class="card p-3 h-100">
-        <h5 class="card-title">Discipline</h5>
-        <p class="card-text">Structured environment to develop strong self-discipline.</p>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card p-3 h-100">
-        <h5 class="card-title">Qualified Faculty</h5>
-        <p class="card-text">Experienced teachers to guide students efficiently.</p>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card p-3 h-100">
-        <h5 class="card-title">Proven Results</h5>
-        <p class="card-text">Consistent success in academic and entry test performance.</p>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card p-3 h-100">
-        <h5 class="card-title">Modern Facilities</h5>
-        <p class="card-text">Fully equipped classrooms and laboratories for practical learning.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Leadership Team -->
-<section class="container my-5">
-  <h2 class="mb-4">Leadership Team</h2>
-  <div class="row g-4">
-    <div class="col-md-3">
-      <div class="card h-100">
-        <img src="https://via.placeholder.com/300x300" class="card-img-top" alt="Leader 1">
-        <div class="card-body text-center">
-          <h5 class="card-title">John Doe</h5>
-          <p class="card-text">Principal</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card h-100">
-        <img src="https://via.placeholder.com/300x300" class="card-img-top" alt="Leader 2">
-        <div class="card-body text-center">
-          <h5 class="card-title">Jane Smith</h5>
-          <p class="card-text">Head of Academics</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Footer -->
 <footer style="background-color:#0b1e46; color:#fff;" class="py-5 mt-5">
   <div class="container">
@@ -229,7 +299,8 @@ footer .d-flex.gap-3 a i {
 
       <!-- About -->
       <div class="col-md-3 mb-4">
-        <h5>About Forces Academy</h5>
+        <span>🎓</span>
+        <h5>Forces Academy</h5>
         <p>Forces Academy is committed to preparing students for a successful career through quality education, discipline, and character building.</p>
          <div class="col-md-3 mb-4">
         <h5>Follow Us</h5>
@@ -254,7 +325,7 @@ footer .d-flex.gap-3 a i {
         <h5>Contact Us</h5>
         
           📞 <a href="tel:+923478592099" style="color:#fff; text-decoration:underline;">+923478592099</a><br>
-            <p>✉<a href="mailto:forcesacademyofficial@gmail.com" style="color:#fff; text-decoration:underline;">forcesacademyofficial@gmail.com</a></p>
+            <p>✉️<a href="mailto:forcesacademyofficial@gmail.com" style="color:#fff; text-decoration:underline;">forcesacademyofficial@gmail.com</a></p>
       </div>
 
       <!-- Web Links -->
@@ -277,11 +348,6 @@ footer .d-flex.gap-3 a i {
     </div>
   </div>
 </footer>
-
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</script>
-
 </body>
 </html>
