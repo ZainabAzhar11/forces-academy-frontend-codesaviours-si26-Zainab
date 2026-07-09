@@ -694,7 +694,7 @@
 <a class="nav-link" href="contact.html">Contact </a>
       
         
-          <li class="nav-item"><a class="portal-btn" href="#">studentportal</a></li>
+          <li class="nav-item"><a class="portal-btn" href="#">student portal</a></li>
         </ul>
       </div>
 
@@ -728,6 +728,158 @@
 <div id="courses" style="display:none; background:white; min-height:100vh; padding:40px;">
     
 </div>
+<!-- Selection Box -->
+<div class="selection-box">
+  <h5>Selection Process</h5>
+  <span class="sel-year">SEL-2026</span>
+  <ul>
+     <li><i class="bi bi-check-circle-fill text-success"></i> Pre-Screening Test</li>
+    <li><i class="bi bi-check-circle-fill text-success"></i> Physical Fitness & Medical Check</li>
+    <li><i class="bi bi-check-circle-fill text-success"></i> Officer Interview</li>
+    <li><i class="bi bi-check-circle-fill text-success"></i> Final Training Selection</li>
+  </ul>
+  <div class="progress-bar"><div class="progress"></div></div>
+  <div class="shortlisted">SHORTLISTED</div>
+</div>
+
+<style>
+.hero {
+  position: relative;
+}
+
+/* Selection Box Styles */
+.selection-box {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  width: 280px;
+  background: #f9f8f2;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+  z-index: 3;
+}
+.selection-box:hover {
+  transform: rotate(0deg) translateY(-5px);
+}
+.selection-box h5 {
+  font-weight: 700;
+  color: #064e3b;
+  margin-bottom: 5px;
+}
+.sel-year {
+  float: right;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+.selection-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+.selection-box ul li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+.progress-bar {
+  height: 6px;
+  background: #d1fae5;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+.progress {
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(to right, #16a34a, #facc15);
+  animation: loading 2s infinite;
+}
+@keyframes loading {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 0%; }
+}
+.shortlisted {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #064e3b;
+  color: #f9f8f2;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+</style>
+<!--  Scrolling Services Section -->
+<section style="background:#071f3d; padding:10px 0; overflow:hidden;">
+  <div class="scrolling-wrapper">
+    <div class="scrolling-content">
+      <span>TEST & PSYCH PREP</span>
+      <span>• ISSB PREPARATION</span>
+      <span>• PMA LONG COURSE COACHING</span>
+      <span>• PHYSICAL & FITNESS TRAINING</span>
+      <span>• ACADEMIC COACHING</span>
+      <span>• INTERVIEW & PSYCH PREP</span>
+      <span>• FSc PRE-MEDICAL</span>
+      <span>• FSc PRE-ENGINEERING</span>
+      <span>• MATRIC SCIENCE</span>
+      <span>• MATRIC ARTS</span>
+      <span>• ENTRY TEST PREPARATION</span>
+      <span>• SHORT COURSES</span>
+      <span>• LEADERSHIP TRAINING</span>
+      <span>• SPORTS & FITNESS</span>
+      <span>• SCHOLARSHIP OPPORTUNITIES</span>
+      <!-- duplicate the same content for seamless scroll -->
+      <span>TEST & PSYCH PREP</span>
+      <span>• ISSB PREPARATION</span>
+      <span>• PMA LONG COURSE COACHING</span>
+      <span>• PHYSICAL & FITNESS TRAINING</span>
+      <span>• ACADEMIC COACHING</span>
+      <span>• INTERVIEW & PSYCH PREP</span>
+      <span>• FSc PRE-MEDICAL</span>
+      <span>• FSc PRE-ENGINEERING</span>
+      <span>• MATRIC SCIENCE</span>
+      <span>• MATRIC ARTS</span>
+      <span>• ENTRY TEST PREPARATION</span>
+      <span>• SHORT COURSES</span>
+      <span>• LEADERSHIP TRAINING</span>
+      <span>• SPORTS & FITNESS</span>
+      <span>• SCHOLARSHIP OPPORTUNITIES</span>
+    </div>
+  </div>
+</section>
+
+<style>
+.scrolling-wrapper {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.scrolling-content {
+  display: inline-block;
+  white-space: nowrap;
+  color: #ffc107;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  animation: scroll 30s linear infinite;
+}
+
+.scrolling-content span {
+  display: inline-block;
+  margin-right: 60px; /* spacing between items */
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
 
   <!-- ABOUT / HOW IT WORKS -->
   <section class="section" id="about">
@@ -976,18 +1128,18 @@
             Forces Academy is committed to preparing students for a successful career
             through quality education, discipline, and character building.
           </p>
-
+<h5>Follow us</h5>
           <div class="socials">
 
-    <a href="https://www.facebook.com/ForcesAcademyOfficial" target="_blank">
+    <a href="https://www.facebook.com/ForcesAcademyFaisalabad" target="_blank">
         <span>f</span>
     </a>
 
-    <a href="https://www.youtube.com/@ForcesAcademyOfficial" target="_blank">
+    <a href="http://www.youtube.com/@forcesacademyfaisalabad" target="_blank">
         <span>▶</span>
     </a>
 
-      <a href="https://www.instagram.com/forcesacademyofficial/" target="_blank">
+      <a href="https://www.instagram.com/forcesacademyfaisalabad?igsh=MWI4YThxazhwM3o3Zg==" target="_blank">
         <span>◎</span>
     </a>
 
