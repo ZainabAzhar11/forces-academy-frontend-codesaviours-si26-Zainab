@@ -1283,229 +1283,52 @@ text-align:center;
 
 }
 </style>
-<!-- SOCIAL MEDIA -->
-<section class="follow-section">
-
-<div class="container text-center">
-
-<h3>
-Follow Us
-</h3>
-
-<div class="social-icons">
-
-
-<!-- Facebook -->
-
-<a href="https://www.facebook.com/ForcesAcademyFaisalabad" 
-target="_blank"
-class="facebook">
-
-<i class="bi bi-facebook"></i>
-
-</a>
-
-
-
-
-<!-- Instagram -->
-
-<a href="https://www.instagram.com/forcesacademyfaisalabad" 
-target="_blank"
-class="instagram">
-
-<i class="bi bi-instagram"></i>
-
-</a>
-
-
-
-
-
-<!-- YouTube -->
-
-<a href="https://www.youtube.com/@ForcesAcademyFaisalabad" 
-target="_blank"
-class="youtube">
-
-<i class="bi bi-youtube"></i>
-
-</a>
-
-
-
-
-
-<!-- LinkedIn -->
-
-<a href="https://www.linkedin.com/company/forces-academy-faisalabad" 
-target="_blank"
-class="linkedin">
-
-<i class="bi bi-linkedin"></i>
-
-</a>
-
-
+<!-- Follow Us Section -->
+<div class="follow-us text-center py-4">
+  <h3>Follow Us</h3>
+  <div class="social-icons mt-3">
+    <a href="https://www.facebook.com/forcesacademy" target="_blank" class="facebook"> 
+      <i class="bi bi-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/forcesacademy" target="_blank" class="instagram">
+      <i class="bi bi-instagram"></i>
+    </a>
+    <a href="https://www.youtube.com/forcesacademy" target="_blank" class="youtube">
+      <i class="bi bi-youtube"></i>
+    </a>
+    <a href="https://www.linkedin.com/school/forcesacademy" target="_blank" class="linkedin">
+      <i class="bi bi-linkedin"></i>
+    </a>
+  </div>
 </div>
 
-
-
 <style>
-.follow-section{
-
-background:white;
-
-padding:35px 0;
-
-border-top:1px solid #eee;
-
+.follow-us h3 {
+  font-weight: 700;       /* Bold text */
+  font-size: 24px;        /* Larger font size */
+  color: #071f3d;         /* Dark blue text */
+  margin-bottom: 15px;
 }
 
-
-.follow-section h3{
-
-font-size:18px;
-
-font-weight:700;
-
-color:#071f3d;
-
-margin-bottom:25px;
-
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 28px;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
+/* Brand colors */
+.social-icons a.facebook { color: #1877F2; }
+.social-icons a.instagram { color: #E4405F; }
+.social-icons a.youtube { color: #FF0000; }
+.social-icons a.linkedin { color: #0A66C2; }
 
-
-.social-icons{
-
-display:flex;
-
-justify-content:center;
-
-gap:30px;
-
-}
-
-
-
-.social-icons a{
-
-height:38px;
-
-width:38px;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-color:white;
-
-font-size:20px;
-
-text-decoration:none;
-
-transition:.3s;
-
-}
-
-
-
-.facebook{
-
-background:#1877f2;
-
-}
-
-
-.instagram{
-
-background:#e1306c;
-
-}
-
-
-.youtube{
-
-background:#ff0000;
-
-}
-
-
-.linkedin{
-
-background:#0077b5;
-
-}
-
-
-
-.social-icons a:hover{
-
-transform:translateY(-5px) scale(1.1);
-
+/* Hover effect */
+.social-icons a:hover {
+  transform: translateY(-5px);
+  opacity: 0.8;
 }
 </style>
-
-
-
-
-
-
-<style>
-/* Footer Heading Color */
-footer h5 {
-    color: #4e86ff; /* Bright Blue like your screenshot */
-    font-weight: 700;
-}
-
-/* Footer Quick Links & Web Links Hover Fix */
-footer .list-unstyled li a {
-    color: #fff !important; /* default white */
-    text-decoration: none !important;
-    transition: color 0.3s;
-}
-
-footer .list-unstyled li a:hover {
-    color: #ffc107 !important; /* yellow on hover */
-}
-/* Footer Social Icons - proper circles */
-footer .d-flex.gap-3 a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%; /* perfect circle */
-    background-color: #ffc107; /* default yellow */
-    color: #000; /* icon black */
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-footer .d-flex.gap-3 a:hover {
-    background-color: #ffb300; /* darker yellow on hover */
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-    color: #000;
-}
-
-footer .d-flex.gap-3 a i {
-    line-height: 1; /* ensures icon vertically centered */
-}
-
-</style>
-</head>
-
-<body>
-
-
-
 <!-- Footer -->
 <footer style="background-color:#0b1e46; color:#fff;" class="py-5 mt-5">
   <div class="container">
@@ -1561,6 +1384,48 @@ footer .d-flex.gap-3 a i {
     </div>
   </div>
 </footer>
+<style>
+footer h5 {
+    color: #4e86ff; /* Bright Blue like your screenshot */
+    font-weight: 700;
+}
+
+/* Footer Quick Links & Web Links Hover Fix */
+footer .list-unstyled li a {
+    color: #fff !important; /* default white */
+    text-decoration: none !important;
+    transition: color 0.3s;
+}
+
+footer .list-unstyled li a:hover {
+    color: #ffc107 !important; /* yellow on hover */
+}
+/* Footer Social Icons - proper circles */
+footer .d-flex.gap-3 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* perfect circle */
+    background-color: #ffc107; /* default yellow */
+    color: #000; /* icon black */
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+footer .d-flex.gap-3 a:hover {
+    background-color: #ffb300; /* darker yellow on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    color: #000;
+}
+
+footer .d-flex.gap-3 a i {
+    line-height: 1; /* ensures icon vertically centered */
+}
+</style>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
