@@ -232,7 +232,13 @@ Celebrating achievements and academic excellence.
 
 
 </section>
-<style >
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f5ed;
+    scroll-behavior: smooth;
+}
+
 /* Filter Box */
 .filter-box {
     background: #fff;
@@ -268,14 +274,19 @@ Celebrating achievements and academic excellence.
     font-size: 0.8rem;
     font-weight: 600;
     color: white;
+    display: inline-block;
 }
 
-/* Responsive */
-@media(max-width:768px){
-    .filter-box .row > div { margin-bottom: 15px; }
+/* Responsive table horizontal scroll for mobile */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.table {
+    min-width: 700px; /* Ensure table wider than small screens */
 }
 
-/* Scroll effect for table row highlight */
+/* Highlight effect for filtered rows */
 .highlight {
     animation: highlightAnim 1s ease;
 }
@@ -283,8 +294,13 @@ Celebrating achievements and academic excellence.
     0% { background-color: #fffbcc; }
     100% { background-color: transparent; }
 }
-</style>
 
+@media(max-width:768px){
+    .filter-box .row > div { margin-bottom: 15px; }
+}
+</style>
+</head>
+<body>
 
 <div class="container py-5">
     <h2 class="mb-4 text-center">Search Results</h2>
@@ -343,61 +359,60 @@ Celebrating achievements and academic excellence.
                 </tr>
             </thead>
             <tbody>
-                <tr><td>FA24-101</td><td>Abdullah Anjum</td><td>FSc Pre-Medical</td><td>2024</td><td class="status-badge" style="background:#28a745;">Selected - Army</td></tr>
-                <tr><td>FA24-102</td><td>Hassan Ali</td><td>Entry Test Prep</td><td>2026</td><td class="status-badge" style="background:#17a2b8;">Selected - Air Force</td></tr>
-                <tr><td>FA24-103</td><td> Fatima Yousaf</td><td>Matric Science</td><td>2024</td><td class="status-badge" style="background:#ffc107;">Promoted to FSC</td></tr>
-                <tr><td>FA24-104</td><td> Usman Khan</td><td>ISSB & Interview Prep</td><td>2024</td><td class="status-badge" style="background:#28a745;">Selected - Pakistan Army</td></tr>
-                <tr><td>FA24-105</td><td>Ayesha Noor</td><td>FSc Pre-Engineering</td><td>2024</td><td class="status-badge" style="background:#ffc107;">Qualified Written Test</td></tr>
-                <tr><td>FA23-106</td><td>Hamza Sheikh</td><td>Entry Test Prep</td><td>2023</td><td class="status-badge" style="background:#17a2b8;">Selected - Pakistan Navy</td></tr>
-                <tr><td>FA24-107</td><td>Zainab Malik</td><td>Matric Arts</td><td>2025</td><td class="status-badge" style="background:#ffc107;">Promoted to FSC</td></tr>
-                <tr><td>FA23-108</td><td>Ali Hassan</td><td>ISSB & Interview Prep</td><td>2023</td><td class="status-badge" style="background:#dc3545;">Not Selected</td></tr>
-                <tr><td>FA23-109</td><td>Mahnoor Iqbal</td><td>FSc Pre-Medical</td><td>2023</td><td class="status-badge" style="background:#28a745;">Selected - Army</td></tr>
-                <tr><td>FA24-110</td><td>Talha Farooq</td><td>Entry Test Prep</td><td>2024</td><td class="status-badge" style="background:#ffc107;">In Process</td></tr>
+                <tr>
+                    <td>FA24-101</td><td>Abdullah Anjum</td><td>FSc Pre-Medical</td><td>2024</td>
+                    <td class="status-badge" style="background:#28a745;">Selected - Army</td>
+                </tr>
+                <tr>
+                    <td>FA24-102</td><td>Hassan Ali</td><td>Entry Test Prep</td><td>2026</td>
+                    <td class="status-badge" style="background:#17a2b8;">Selected - Air Force</td>
+                </tr>
+                <tr>
+                    <td>FA24-103</td><td>Fatima Yousaf</td><td>Matric Science</td><td>2024</td>
+                    <td class="status-badge" style="background:#ffc107;">Promoted to FSC</td>
+                </tr>
+                <tr>
+                    <td>FA24-104</td><td>Usman Khan</td><td>ISSB & Interview Prep</td><td>2024</td>
+                    <td class="status-badge" style="background:#28a745;">Selected - Pakistan Army</td>
+                </tr>
+                <tr>
+                    <td>FA24-105</td><td>Ayesha Noor</td><td>FSc Pre-Engineering</td><td>2024</td>
+                    <td class="status-badge" style="background:#ffc107;">Qualified Written Test</td>
+                </tr>
+                <tr>
+                    <td>FA23-106</td><td>Hamza Sheikh</td><td>Entry Test Prep</td><td>2023</td>
+                    <td class="status-badge" style="background:#17a2b8;">Selected - Pakistan Navy</td>
+                </tr>
+                <tr>
+                    <td>FA24-107</td><td>Zainab Malik</td><td>Matric Arts</td><td>2025</td>
+                    <td class="status-badge" style="background:#ffc107;">Promoted to FSC</td>
+                </tr>
+                <tr>
+                    <td>FA23-108</td><td>Ali Hassan</td><td>ISSB & Interview Prep</td><td>2023</td>
+                    <td class="status-badge" style="background:#dc3545;">Not Selected</td>
+                </tr>
+                <tr>
+                    <td>FA23-109</td><td>Mahnoor Iqbal</td><td>FSc Pre-Medical</td><td>2023</td>
+                    <td class="status-badge" style="background:#28a745;">Selected - Army</td>
+                </tr>
+                <tr>
+                    <td>FA24-110</td><td>Talha Farooq</td><td>Entry Test Prep</td><td>2024</td>
+                    <td class="status-badge" style="background:#ffc107;">In Process</td>
+                </tr>
             </tbody>
         </table>
     </div>
 </div>
-<!-- Add this CSS adjustments for mobile -->
-<style>
-/* Container padding */
-.container {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Filter box adjustments */
-.filter-box {
-    flex-wrap: wrap;
-}
-.filter-box .row > div {
-    margin-bottom: 10px;
-}
-
-/* Table responsive adjustments */
-.result-table table {
-    min-width: 600px; /* ensures horizontal scroll on small screens */
-}
-
-/* Make input/select full width on mobile */
-@media(max-width:768px){
-    .filter-box input,
-    .filter-box select {
-        width: 100%;
-    }
-    .result-table table {
-        font-size: 0.9rem;
-    }
-}
-</style>
 
 <script>
+// Filter function
 const table = document.getElementById('resultsTable');
 const searchInput = document.getElementById('searchName');
 const courseFilter = document.getElementById('courseFilter');
 const yearFilter = document.getElementById('yearFilter');
 const statusFilter = document.getElementById('statusFilter');
 
-function filterTable(){
+function filterTable() {
     const nameVal = searchInput.value.toLowerCase();
     const courseVal = courseFilter.value;
     const yearVal = yearFilter.value;
@@ -409,14 +424,14 @@ function filterTable(){
         const year = row.cells[3].textContent;
         const status = row.cells[4].textContent;
 
-        if( (name.includes(nameVal)) &&
+        if ((name.includes(nameVal)) &&
             (courseVal === 'All' || course === courseVal) &&
             (yearVal === 'All' || year === yearVal) &&
             (statusVal === 'All' || status.includes(statusVal))
-        ){
+        ) {
             row.style.display = '';
             row.classList.add('highlight');
-            setTimeout(()=>row.classList.remove('highlight'), 1000);
+            setTimeout(() => row.classList.remove('highlight'), 1000);
         } else {
             row.style.display = 'none';
         }
