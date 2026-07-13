@@ -357,6 +357,38 @@ Celebrating achievements and academic excellence.
         </table>
     </div>
 </div>
+<!-- Add this CSS adjustments for mobile -->
+<style>
+/* Container padding */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Filter box adjustments */
+.filter-box {
+    flex-wrap: wrap;
+}
+.filter-box .row > div {
+    margin-bottom: 10px;
+}
+
+/* Table responsive adjustments */
+.result-table table {
+    min-width: 600px; /* ensures horizontal scroll on small screens */
+}
+
+/* Make input/select full width on mobile */
+@media(max-width:768px){
+    .filter-box input,
+    .filter-box select {
+        width: 100%;
+    }
+    .result-table table {
+        font-size: 0.9rem;
+    }
+}
+</style>
 
 <script>
 const table = document.getElementById('resultsTable');
