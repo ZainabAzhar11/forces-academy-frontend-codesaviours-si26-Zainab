@@ -3,79 +3,1507 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us - Forces Academy</title>
 
+<title>Results | Forces Academy</title>
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<!-- Custom CSS -->
-<link rel="stylesheet" href="css/style.css">
-
 <!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
 <style>
-/* Navbar & Button Styling */
+
+
+/* ================= BODY ================= */
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:#f7f5ed;
+
+scroll-behavior:smooth;
+
+}
+
+/* ================= NAVBAR ================= */
 .navbar{
-    background:#071f3d;
-    padding:14px 0;
+
+background:#071f3d;
+
 }
+
 .navbar-brand{
-    color:#fff !important;
-    font-size:28px;
-    font-weight:900;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    white-space:nowrap;
+
+color:white!important;
+
+font-size:28px;
+
+font-weight:900;
+
 }
+
+
 .nav-link{
-    color:#fff !important;
-    font-size:16px;
-    font-weight:600;
-    margin:0 5px;
-    position:relative;
-    white-space:nowrap;
+
+color:white!important;
+
+font-weight:600;
+
+margin:0 8px;
+
 }
+
 .nav-link:hover{
-    color:#ffc107 !important;
+
+color:#ffc107!important;
+
 }
-.nav-link::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-6px;
-    width:0;
-    height:2px;
-    background:#ffc107;
-    transition:.3s;
-}
-.nav-link:hover::after{
-    width:100%;
-}
-.portal-btn{
+
+.portal-btn {
     background:#ffc107;
     color:#000 !important;
-    padding:11px 20px;
+    padding:10px 25px; /* width ko thoda increase kiya */
     border-radius:8px;
-    font-weight:700;
     text-decoration:none;
-    margin-left:10px;
+    font-weight:700;
+    white-space:nowrap; /* ye ensure kare ke text single line me rahe */
     display:inline-block;
-    transition:.3s;
-    white-space:nowrap;
 }
-.portal-btn:hover{
-    background:#ffb300;
-    transform:translateY(-3px);
-    box-shadow:0 10px 25px rgba(255,193,7,.35);
+/* ================= HERO SECTION ================= */
+
+.hero{
+
+height:420px;
+background:
+
+linear-gradient(
+rgba(7,31,61,.8),
+rgba(7,31,61,.8)
+),
+
+url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9G3hTjZ5qIZ42vTWOmrn9cxfGK0wQ7m2pR4Cifn2P4Q&s=10")
+
+center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+animation:heroShow 1.2s ease;
+}
+
+.hero h1{
+font-size:60px;
+font-weight:900;
+color:#ffc107;
 
 }
-/* Footer Heading Color */
-footer h5 {
+
+.hero p{
+font-size:20px;
+
+}
+
+/* Hero animation */
+@keyframes heroShow{
+from{
+opacity:0;
+transform:translateY(-70px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ================= HEADING ================= */
+.title{
+
+text-align:center;
+
+font-size:40px;
+
+font-weight:900;
+
+color:#071f3d;
+
+}
+
+.line{
+
+height:4px;
+
+width:80px;
+
+background:#ffc107;
+
+margin:15px auto 40px;
+
+}
+</style>
+</head>
+<body>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container">
+<a class="navbar-brand" href="index.html">
+🎓 Forces Academy
+</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li>
+<a class="nav-link" href="index.html">
+Home
+</a>
+</li>
+
+<li>
+<a class="nav-link" href="about.html">
+About
+</a>
+</li>
+
+<li>
+<a class="nav-link" href="courses.html">
+Courses
+</a>
+</li>
+
+<li>
+<a class="nav-link" href="admissions.html">
+Admissions
+</a>
+</li>
+
+<li>
+<a class="nav-link" href="gallery.html">
+Gallery
+</a>
+</li>
+
+<li>
+<a class="nav-link active" href="results.html">
+Results
+</a>
+</li>
+
+
+<li>
+<a class="nav-link" href="contact.html">
+Contact
+</a>
+</li>
+
+<li>
+<a class="portal-btn" href="student-portal.html">
+Student Portal
+
+</a>
+
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- ================= HERO ================= -->
+<section class="hero">
+<div>
+<h1>
+Student Results
+</h1>
+<p>
+Celebrating achievements and academic excellence.
+</p>
+
+
+</div>
+
+
+</section>
+<style >
+/* Filter Box */
+.filter-box {
+    background: #fff;
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+.filter-box input, .filter-box select {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Table Styles */
+.result-table {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.result-table thead {
+    background: #064e3b;
+    color: white;
+}
+.result-table tbody tr:hover {
+    background: #fff3cd;
+    transform: scale(1.02);
+    transition: .3s;
+}
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .filter-box .row > div { margin-bottom: 15px; }
+}
+
+/* Scroll effect for table row highlight */
+.highlight {
+    animation: highlightAnim 1s ease;
+}
+@keyframes highlightAnim {
+    0% { background-color: #fffbcc; }
+    100% { background-color: transparent; }
+}
+</style>
+
+
+<div class="container py-5">
+    <h2 class="mb-4 text-center">Search Results</h2>
+
+    <!-- Filter Box -->
+    <div class="filter-box">
+        <div class="row g-3">
+            <div class="col-md-3">
+                <input type="text" id="searchName" class="form-control" placeholder="Search by Name or Roll No.">
+            </div>
+            <div class="col-md-3">
+                <select id="courseFilter" class="form-select">
+                    <option value="All">All Courses</option>
+                    <option>Matric Science</option>
+                    <option>Matric Arts</option>
+                    <option>FSc Pre-Medical</option>
+                    <option>FSc Pre-Engineering</option>
+                    <option>Entry Test Prep</option>
+                    <option>ISSB & Interview Prep</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="yearFilter" class="form-select">
+                    <option value="All">All Years</option>
+                    <option>2026</option>
+                    <option>2025</option>
+                    <option>2024</option>
+                    <option>2023</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="statusFilter" class="form-select">
+                    <option value="All">All Statuses</option>
+                    <option>Selected - Army</option>
+                    <option>Selected - Navy</option>
+                    <option>Selected - Air Force</option>
+                    <option>Promoted to FSC</option>
+                    <option>Qualified Written Test</option>
+                    <option>In Process</option>
+                    <option>Not Selected</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Table -->
+    <div class="table-responsive result-table">
+        <table class="table table-bordered text-center" id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Student Name</th>
+                    <th>Course</th>
+                    <th>Batch Year</th>
+                    <th>Result / Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>FA24-101</td><td>Abdullah Anjum</td><td>FSc Pre-Medical</td><td>2024</td><td class="status-badge" style="background:#28a745;">Selected - Army</td></tr>
+                <tr><td>FA24-102</td><td>Hassan Ali</td><td>Entry Test Prep</td><td>2026</td><td class="status-badge" style="background:#17a2b8;">Selected - Air Force</td></tr>
+                <tr><td>FA24-103</td><td> Fatima Yousaf</td><td>Matric Science</td><td>2024</td><td class="status-badge" style="background:#ffc107;">Promoted to FSC</td></tr>
+                <tr><td>FA24-104</td><td> Usman Khan</td><td>ISSB & Interview Prep</td><td>2024</td><td class="status-badge" style="background:#28a745;">Selected - Pakistan Army</td></tr>
+                <tr><td>FA24-105</td><td>Ayesha Noor</td><td>FSc Pre-Engineering</td><td>2024</td><td class="status-badge" style="background:#ffc107;">Qualified Written Test</td></tr>
+                <tr><td>FA23-106</td><td>Hamza Sheikh</td><td>Entry Test Prep</td><td>2023</td><td class="status-badge" style="background:#17a2b8;">Selected - Pakistan Navy</td></tr>
+                <tr><td>FA24-107</td><td>Zainab Malik</td><td>Matric Arts</td><td>2025</td><td class="status-badge" style="background:#ffc107;">Promoted to FSC</td></tr>
+                <tr><td>FA23-108</td><td>Ali Hassan</td><td>ISSB & Interview Prep</td><td>2023</td><td class="status-badge" style="background:#dc3545;">Not Selected</td></tr>
+                <tr><td>FA23-109</td><td>Mahnoor Iqbal</td><td>FSc Pre-Medical</td><td>2023</td><td class="status-badge" style="background:#28a745;">Selected - Army</td></tr>
+                <tr><td>FA24-110</td><td>Talha Farooq</td><td>Entry Test Prep</td><td>2024</td><td class="status-badge" style="background:#ffc107;">In Process</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+const table = document.getElementById('resultsTable');
+const searchInput = document.getElementById('searchName');
+const courseFilter = document.getElementById('courseFilter');
+const yearFilter = document.getElementById('yearFilter');
+const statusFilter = document.getElementById('statusFilter');
+
+function filterTable(){
+    const nameVal = searchInput.value.toLowerCase();
+    const courseVal = courseFilter.value;
+    const yearVal = yearFilter.value;
+    const statusVal = statusFilter.value;
+
+    Array.from(table.tBodies[0].rows).forEach(row => {
+        const name = row.cells[1].textContent.toLowerCase();
+        const course = row.cells[2].textContent;
+        const year = row.cells[3].textContent;
+        const status = row.cells[4].textContent;
+
+        if( (name.includes(nameVal)) &&
+            (courseVal === 'All' || course === courseVal) &&
+            (yearVal === 'All' || year === yearVal) &&
+            (statusVal === 'All' || status.includes(statusVal))
+        ){
+            row.style.display = '';
+            row.classList.add('highlight');
+            setTimeout(()=>row.classList.remove('highlight'), 1000);
+        } else {
+            row.style.display = 'none';
+        }
+    });
+}
+
+searchInput.addEventListener('input', filterTable);
+courseFilter.addEventListener('change', filterTable);
+yearFilter.addEventListener('change', filterTable);
+statusFilter.addEventListener('change', filterTable);
+</script>
+<!-- WALL OF HONOUR -->
+<section class="honour py-5" style="background:#0b1d4f;">
+  <div class="container" style="max-width:1100px;">
+    <h2 class="title text-white text-center mb-4">Wall of Honour</h2>
+    <div class="line" style="width:80px; height:4px; background:#ffc107; margin:0 auto 40px;"></div>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="honour-card">
+          <div class="honour-inner">
+            <div class="front">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle mb-2">
+              <h3 class="text-white mt-2">Ali Ahmed</h3>
+              <span class="badge bg-warning text-dark mt-1">PMA SELECTED</span>
+            </div>
+            <div class="back">
+              <h3>🎖 Achievement</h3>
+              <p><b>Name:</b> Ali Ahmed</p>
+              <p><b>Status:</b> Selected Candidate</p>
+              <p><b>Year:</b> 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="honour-card">
+          <div class="honour-inner">
+            <div class="front">
+              <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle mb-2">
+              <h3 class="text-white mt-2">Usman Khan</h3>
+              <span class="badge bg-warning text-dark mt-1">ISSB CLEAR</span>
+            </div>
+            <div class="back">
+              <h3>🏆 Achievement</h3>
+              <p><b>Name:</b>Usman Khan</p>
+              <p><b>Status:</b> Recommended</p>
+              <p><b>Year:</b> 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="honour-card">
+          <div class="honour-inner">
+            <div class="front">
+              <img src="https://randomuser.me/api/portraits/men/55.jpg" class="rounded-circle mb-2">
+              <h3 class="text-white mt-2">Hassan Ali</h3>
+              <span class="badge bg-warning text-dark mt-1">Entry Test Prep</span>
+            </div>
+            <div class="back">
+              <h3>⭐ Achievement</h3>
+              <p><b>Name:</b> Hassan Ali</p>
+              <p><b>Status:</b> Merit Holder</p>
+              <p><b>Year:</b> 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.honour-card {
+  perspective: 1000px;
+}
+.honour-inner {
+  position: relative;
+  width: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.honour-card:hover .honour-inner {
+  transform: rotateY(180deg);
+}
+.front, .back {
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+.front {
+  background: #0b1d4f; /* dark blue front */
+  color: white;
+}
+.back {
+  background: #ffc107;
+  color: #0b1d4f;
+  transform: rotateY(180deg);
+}
+.front img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+h3 {
+  margin-top: 10px;
+}
+.badge {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  display: inline-block;
+}
+</style>
+
+
+
+
+
+<!-- CERTIFICATE REVEAL SECTION -->
+
+<section class="certificate-section py-5">
+
+<div class="container">
+
+
+<h2 class="title">
+Achievement Certificates
+</h2>
+
+<div class="line"></div>
+
+
+<div class="row g-4">
+
+
+<div class="col-md-4">
+
+
+<div class="certificate-card">
+
+
+<div class="certificate-front">
+
+<i class="bi bi-award-fill"></i>
+
+<h3>
+Certificate
+</h3>
+
+<p>
+Hover to Reveal
+</p>
+
+</div>
+
+
+
+<div class="certificate-back">
+
+<h4>
+Ali Ahmed
+</h4>
+
+<p>
+PMA Long Course
+</p>
+
+<p>
+🎖 Successfully Selected
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="col-md-4">
+
+
+<div class="certificate-card">
+
+
+<div class="certificate-front">
+
+<i class="bi bi-trophy-fill"></i>
+
+<h3>
+Achievement
+</h3>
+
+<p>
+Hover to Reveal
+</p>
+
+</div>
+
+
+
+<div class="certificate-back">
+
+<h4>
+Hassan Ali
+</h4>
+
+<p>
+Entry Test Topper
+</p>
+
+<p>
+🏆 Merit Holder
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="col-md-4">
+
+
+<div class="certificate-card">
+
+
+<div class="certificate-front">
+
+<i class="bi bi-star-fill"></i>
+
+<h3>
+Success
+</h3>
+
+<p>
+Hover to Reveal
+</p>
+
+</div>
+
+
+
+<div class="certificate-back">
+
+<h4>
+Usman Khan
+</h4>
+
+<p>
+ISSB Recommended
+</p>
+
+<p>
+⭐ Outstanding Performance
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<!-- LIVE SELECTION BOARD -->
+
+
+<section class="selection-board">
+
+
+<div class="container">
+
+
+<h2 class="title text-white">
+Latest Selections
+</h2>
+
+
+<div class="line"></div>
+
+
+
+<div class="live-box">
+
+
+<div class="moving-text">
+
+🟢 Ali Ahmed - PMA Selected &nbsp;&nbsp;&nbsp;
+
+🟢 Usman Khan - ISSB Recommended &nbsp;&nbsp;&nbsp;
+
+🟢 Hassan Ali - Merit Holder &nbsp;&nbsp;&nbsp;
+
+🟢 New Batch Admissions Open
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- BEFORE AFTER -->
+
+
+<section class="py-5">
+
+
+<div class="container">
+
+
+<h2 class="title">
+Student Transformation
+</h2>
+
+
+<div class="line"></div>
+
+
+
+<div class="transform-box">
+
+
+<div>
+
+<h3>
+Before Academy
+</h3>
+
+
+<p>
+⭐ Confidence Building</p>
+
+<p>
+⭐ Fitness Improvement</p>
+
+<p>
+⭐ Career Guidance</p>
+
+
+</div>
+
+
+
+<div class="arrow-big">
+→
+</div>
+
+
+
+<div>
+
+
+<h3>
+After Training
+</h3>
+
+
+<p>
+🏆 Leadership Skills</p>
+
+<p>
+🎖 Selection Preparation</p>
+
+<p>
+💪 Strong Personality</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+<style>  
+	//journey
+.journey{
+
+padding:80px 0;
+
+}
+
+
+
+.steps{
+
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+
+.step{
+
+background:#071f3d;
+color:white;
+
+padding:25px;
+
+width:200px;
+
+border-radius:20px;
+
+text-align:center;
+
+position:relative;
+
+transition:.5s;
+
+}
+
+
+.step:hover{
+
+transform:translateY(-15px);
+
+}
+
+
+.step i{
+
+font-size:40px;
+color:#ffc107;
+
+}
+
+
+.arrow{
+
+font-size:40px;
+color:#ffc107;
+
+}
+
+
+
+
+
+/* WALL OF HONOUR */
+
+
+.honour{
+
+background:#071f3d;
+
+padding:40px 0;
+
+}
+
+
+
+
+.honour-card{
+
+height:350px;
+
+perspective:1000px;
+
+}
+
+
+
+.honour-inner{
+
+height:100%;
+
+transition:.8s;
+
+transform-style:preserve-3d;
+
+position:relative;
+
+}
+
+
+
+.honour-card:hover .honour-inner{
+
+transform:rotateY(180deg);
+
+}
+
+
+
+.front,
+.back{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+backface-visibility:hidden;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 20px 40px rgba(0,0,0,.3);
+
+}
+
+
+
+.front{
+
+background:white;
+
+text-align:center;
+
+}
+
+
+
+.front img{
+
+height:260px;
+
+width:100%;
+
+object-fit:cover;
+
+}
+.front h3{
+    font-size:20px;
+    margin-top:10px;
+}
+
+
+.badge{
+    padding:5px 12px;
+    font-size:13px;
+}
+
+
+
+
+
+
+
+
+
+.back{
+
+background:#ffc107;
+
+transform:rotateY(180deg);
+
+padding:30px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+text-align:center;
+
+}
+
+
+.back h3{
+
+font-weight:900;
+
+color:#071f3d;
+
+}
+
+
+.back p{
+
+font-weight:600;
+
+}
+
+
+</style>
+<style>
+/* Certificate */
+
+
+.certificate-card{
+
+height:280px;
+
+perspective:1000px;
+
+}
+
+
+
+.certificate-front,
+.certificate-back{
+
+height:100%;
+
+width:100%;
+
+position:absolute;
+
+backface-visibility:hidden;
+
+border-radius:20px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+
+
+.certificate-card{
+
+position:relative;
+
+}
+
+
+
+.certificate-front{
+
+background:#071f3d;
+
+color:white;
+
+}
+
+
+
+.certificate-front i{
+
+font-size:60px;
+
+color:#ffc107;
+
+}
+
+
+
+.certificate-back{
+
+background:#ffc107;
+
+transform:rotateY(180deg);
+
+color:#071f3d;
+
+}
+
+
+
+.certificate-card:hover .certificate-front{
+
+transform:rotateY(180deg);
+
+}
+
+
+
+.certificate-card:hover .certificate-back{
+
+transform:rotateY(360deg);
+
+}
+
+
+
+
+
+/* Selection Board */
+
+
+.selection-board{
+
+background:#071f3d;
+
+padding:70px 0;
+
+overflow:hidden;
+
+}
+
+
+
+.live-box{
+
+background:white;
+
+padding:20px;
+
+border-radius:15px;
+
+overflow:hidden;
+
+}
+
+
+
+.moving-text{
+
+font-weight:700;
+
+color:#071f3d;
+
+white-space:nowrap;
+
+animation:move 15s linear infinite;
+
+}
+
+
+
+@keyframes move{
+
+from{
+
+transform:translateX(100%);
+
+}
+
+
+to{
+
+transform:translateX(-100%);
+
+}
+
+}
+
+
+
+
+
+
+/* Transformation */
+
+
+.transform-box{
+
+background:#071f3d;
+
+color:white;
+
+padding:40px;
+
+border-radius:25px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:60px;
+
+text-align:center;
+
+}
+
+
+
+.transform-box h3{
+
+color:#ffc107;
+
+font-weight:900;
+
+}
+
+
+
+.arrow-big{
+
+font-size:50px;
+
+color:#ffc107;
+
+}
+
+
+
+
+
+/* Final */
+
+
+.final-box{
+
+background:#071f3d;
+
+color:white;
+
+padding:60px;
+
+border-radius:25px;
+
+text-align:center;
+
+}
+
+
+
+.final-box h1{
+
+color:#ffc107;
+
+font-weight:900;
+
+}
+
+
+
+.final-box a{
+
+display:inline-block;
+
+margin-top:20px;
+
+background:#ffc107;
+
+color:#000;
+
+padding:13px 35px;
+
+border-radius:10px;
+
+font-weight:700;
+
+text-decoration:none;
+
+}
+
+
+
+
+@media(max-width:768px){
+
+.transform-box{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+
+.arrow-big{
+
+transform:rotate(90deg);
+
+}
+
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+<!-- ================= ADMIN NOTE ================= -->
+
+
+<section class="container pb-5">
+
+<div class="note">
+<i class="bi bi-info-circle-fill"></i>
+<br><br>
+
+
+Results are updated by administration.
+Contact admin for queries.
+
+
+</div>
+
+
+</section>
+<!-- ================= CSS FOR TABLE ANIMATION ================= -->
+<style>
+
+/* RESULT CARD DROP EFFECT */
+.result-box{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+opacity:0;
+animation:tableDrop 1.5s ease forwards;
+animation-delay:.5s;
+
+
+}
+
+@keyframes tableDrop{
+
+0%{
+opacity:0;
+transform:translateY(-150px) scale(.95);
+}
+60%{
+opacity:1;
+transform:translateY(20px) scale(1);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* TABLE DESIGN */
+.table thead{
+background:#071f3d;
+color:white;
+}
+
+.table tbody tr{
+opacity:0;
+transform:translateY(-30px);
+animation:rowDrop .8s forwards;
+}
+
+@keyframes rowDrop{
+to{
+opacity:1;
+transform:translateY(0);
+
+}
+
+
+}
+
+
+/* ROW DELAY */
+.table tbody tr:nth-child(1){
+
+animation-delay:.8s;
+
+}
+.table tbody tr:nth-child(2){
+animation-delay:1s;
+
+}
+
+.table tbody tr:nth-child(3){
+animation-delay:1.2s;
+}
+.table tbody tr:nth-child(4){
+animation-delay:1.4s;
+}
+.table tbody tr:nth-child(5){
+animation-delay:1.6s;
+}
+.table tbody tr:nth-child(6){
+animation-delay:1.8s;
+}
+.table tbody tr:nth-child(7){
+animation-delay:2s;
+}
+.table tbody tr:nth-child(8){
+animation-delay:2.2s;
+}
+.table tbody tr:nth-child(9){
+animation-delay:2.4s;
+}
+.table tbody tr:nth-child(10){
+animation-delay:2.6s;
+}
+.table tbody tr:hover{
+background:#fff3cd;
+transform:scale(1.02);
+transition:.3s;
+}
+/* ADMIN NOTE */
+.note{
+background:#071f3d;
+color:white;
+padding:25px;
+border-radius:20px;
+text-align:center;
+font-weight:600;
+font-size:16px;
+}
+</style>
+<!-- Footer -->
+<footer style="background-color:#0b1e46; color:#fff;" class="py-5 mt-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- About -->
+      <div class="col-md-3 mb-4">
+       
+        <h5> <span>🎓</span>Forces Academy</h5>
+        <p>Forces Academy is committed to preparing students for a successful career through quality education, discipline, and character building.</p>
+         <div class="col-md-3 mb-4">
+        <h5>Follow Us</h5>
+        <div class="d-flex gap-3">
+          <a href="https://www.facebook.com/ForcesAcademyFaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/forcesacademyfaisalabad?igsh=MWI4YThxazhwM3o3Zg==" target="_blank" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="http://www.youtube.com/@forcesacademyfaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      </div>
+
+      <!-- Location & Working Hours -->
+      <div class="col-md-3 mb-4">
+        <h5>Location</h5>
+        <p>📍 Forces Academy, Faisalabad, Pakistan</p>
+        <h5>Working Hours</h5>
+        <p>🕘 9:00 AM – 5:00 PM<br>Monday – Saturday</p>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 mb-4">
+        <h5>Contact Us</h5>
+        
+          📞 <a href="tel:+923478592099" style="color:#fff; text-decoration:underline;">+923478592099</a><br>
+            <p>✉️<a href="mailto:forcesacademyofficial@gmail.com" style="color:#fff; text-decoration:underline;">forcesacademyofficial@gmail.com</a></p>
+      </div>
+
+      <!-- Web Links -->
+            <div class="col-md-3 mb-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
+          <li><a href="courses.html" class="text-light text-decoration-none">Courses</a></li>
+          <li><a href="admissions.html" class="text-light text-decoration-none">Admissions</a></li>
+          <li><a href="gallery.html" class="text-light text-decoration-none">Gallery</a></li>
+          <li><a href="results.html" class="text-light text-decoration-none">Results</a></li>
+          <li><a href="contact.html" class="text-light text-decoration-none">Contact </a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="text-center mt-3 border-top border-secondary pt-3">
+      © 2026 Forces Academy. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+<style>
+    footer h5 {
     color: #4e86ff; /* Bright Blue like your screenshot */
     font-weight: 700;
 }
@@ -115,101 +1543,8 @@ footer .d-flex.gap-3 a:hover {
 footer .d-flex.gap-3 a i {
     line-height: 1; /* ensures icon vertically centered */
 }
-
 </style>
-</head>
-
-<body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">🎓 Forces Academy</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarMenu">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
-        <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact </a></li>
-        <li class="nav-item"><a class="portal-btn" href="#">Student Portal</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-
-  
-      
-      
-    
-
-<!-- Footer -->
-<footer style="background-color:#0b1e46; color:#fff;" class="py-5 mt-5">
-  <div class="container">
-    <div class="row">
-
-      <!-- About -->
-      <div class="col-md-3 mb-4">
-        <h5><span>🎓</span> Forces Academy</h5>
-        <p>Forces Academy is committed to preparing students for a successful career through quality education, discipline, and character building.</p>
-         <div class="col-md-3 mb-4">
-        <h5>Follow Us</h5>
-        <div class="d-flex gap-3">
-          <a href="https://www.facebook.com/ForcesAcademyFaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/forcesacademyfaisalabad?igsh=MWI4YThxazhwM3o3Zg==" target="_blank" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
-          <a href="http://www.youtube.com/@forcesacademyfaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
-        </div>
-      </div>
-      </div>
-
-      <!-- Location & Working Hours -->
-      <div class="col-md-3 mb-4">
-        <h5>Location</h5>
-        <p>📍 Forces Academy, Faisalabad, Pakistan</p>
-        <h5>Working Hours</h5>
-        <p>🕘 9:00 AM – 5:00 PM<br>Monday – Saturday</p>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="col-md-3 mb-4">
-        <h5>Contact Us</h5>
-        
-          📞 <a href="tel:+923478592099" style="color:#fff; text-decoration:underline;">+923478592099</a><br>
-            <p>✉<a href="mailto:forcesacademyofficial@gmail.com" style="color:#fff; text-decoration:underline;">forcesacademyofficial@gmail.com</a></p>
-      </div>
-
-      <!-- Web Links -->
-            <div class="col-md-3 mb-4">
-        <h5>Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
-          <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
-          <li><a href="courses.html" class="text-light text-decoration-none">Courses</a></li>
-          <li><a href="admissions.html" class="text-light text-decoration-none">Admissions</a></li>
-          <li><a href="gallery.html" class="text-light text-decoration-none">Gallery</a></li>
-          <li><a href="results.html" class="text-light text-decoration-none">Results</a></li>
-          <li><a href="contact.html" class="text-light text-decoration-none">Contact </a></li>
-        </ul>
-      </div>
-
-    </div>
-    <div class="text-center mt-3 border-top border-secondary pt-3">
-      © 2026 Forces Academy. All Rights Reserved.
-    </div>
-  </div>
-</footer>
-
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</script>
-
 </body>
 </html>
