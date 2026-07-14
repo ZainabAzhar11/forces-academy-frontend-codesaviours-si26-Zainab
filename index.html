@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Forces Academy</title>
-
-  <!-- Bootstrap CSS -->
+  
+  
   <link 
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
     rel="stylesheet"
@@ -80,6 +80,7 @@
     .nav-link:hover::after {
       width: 100%;
     }
+    
 
     .portal-btn {
       background: #ffc107;
@@ -100,7 +101,23 @@
       box-shadow: 0 10px 25px rgba(255, 193, 7, 0.35);
     }
 
-    /* HERO */
+    .nav-link.active {
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ffc107; /* yellow line */
+    border-radius: 2px;
+}
+/* NAV LINK YELLOW */
+
+/* HERO */
     .hero {
       min-height: 650px;
       display: flex;
@@ -1206,7 +1223,6 @@
   <script 
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
   </script>
-
-
+  
 </body>
 </html>
