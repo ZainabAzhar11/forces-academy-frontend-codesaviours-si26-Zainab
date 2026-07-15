@@ -143,9 +143,6 @@ transform:translateY(0);
 }
 
 
-
-
-
 /* TITLE */
 
 
@@ -1827,5 +1824,42 @@ footer .d-flex.gap-3 a i {
 
 
 </body>
+<style>
+.gallery-container img {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.gallery-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure GLightbox arrows show on mobile */
+.glightbox-container {
+  z-index: 1050; /* on top of other elements */
+}
+
+.glightbox-arrow {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.glightbox-arrow::after {
+  font-size: 2rem !important;
+}
+
+/* Remove horizontal scroll inside lightbox */
+.glightbox-container .gslide {
+  overflow: hidden !important;
+}
+</style>
+
+<script>
+const lightbox = GLightbox({
+  selector: '.glightbox',
+  loop: true,
+  touchNavigation: true,
+  keyboardNavigation: true,
+});
+</script>
 
 </html>

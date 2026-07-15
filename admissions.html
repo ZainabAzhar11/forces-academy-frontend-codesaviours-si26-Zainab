@@ -17,15 +17,31 @@ body {font-family:'Poppins',sans-serif;margin:0;padding:0;background:#f8f9fa;col
 .portal-btn:hover {background:#ffb300;transform:translateY(-2px);}
 
 /* Hero Section */
-.hero {position:relative;background:#0d1b38 url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH05M0ULNAZ4kMVI3eLhNaJlGIPIXX6SGXQFMBqHR6Dg&s=10') center/cover no-repeat; min-height:400px;display:flex;align-items:center;color:white;}
+
+
 .hero::before {content:"";position:absolute;inset:0;background:rgba(7,31,61,0.75);}
-.hero-content {position:relative;z-index:2;max-width:700px;margin-left:50px;}
+
 .hero h1 {font-size:48px;font-weight:900;}
 .hero p {font-size:18px;margin-bottom:20px;}
 .hero .last-date {color:#ffdd57;font-weight:700;font-size:16px;margin-top:10px;}
+.hero {
+  position: relative;
+  background: #0d1b38 url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH05M0ULNAZ4kMVI3eLhNaJlGIPIXX6SGXQFMBqHR6Dg&s=10') center/cover no-repeat;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  animation: splashHero 1.5s ease forwards;
+}
+@keyframes splashHero {
+  0% { transform: translateY(-150px); opacity:0; }
+  100% { transform: translateY(0); opacity:1; }
+}
+.hero-content { position: relative; z-index: 2; max-width:700px; margin-left:50px; }
+
 .main-btn {background:#ffc107;color:#000;padding:12px 25px;border-radius:8px;text-decoration:none;font-weight:700;}
 .main-btn:hover {background:#ffb300;transform:translateY(-2px);}
-
 /* Section Headings */
 .section-heading {font-size:36px;font-weight:900;margin-bottom:10px;text-align:center;}
 .underline {width:60px;height:4px;background:#ffc107;margin:8px auto 30px;border-radius:2px;}
@@ -445,7 +461,8 @@ footer .d-flex.gap-3 a i {
 </section>
 
 <!-- Contact / Support -->
-<section class="section">
+<section class="section".
+
   <div class="container apply-cta" style="background:#0d1b38;">
     <h3 class="mb-4 text-white">Need Assistance?</h3>
     <p class="text-white">Contact our academic support team for personalized guidance and queries.<br><br><br>
