@@ -1021,6 +1021,37 @@ color:#555;
 
 }
 
+/* Force GLightbox arrows visible on mobile */
+@media(max-width: 768px) {
+    .glightbox-arrow {
+        display: flex !important;          /* Make sure arrows are displayed */
+        width: 50px !important;            /* Bigger for mobile */
+        height: 50px !important;
+        top: 50% !important;               /* Center vertically */
+        transform: translateY(-50%) !important;
+        opacity: 1 !important;             /* Fully visible */
+    }
+
+    .glightbox-arrow-left {
+        left: 10px !important;
+    }
+
+    .glightbox-arrow-right {
+        right: 10px !important;
+    }
+
+    .glightbox-arrow::after {
+        font-size: 2rem !important;        /* Make the arrow icon bigger */
+        color: #ffc107;                    /* Optional: yellow like your design */
+    }
+}
+
+/* Ensure lightbox container has no scroll overflow */
+.glightbox-container .gslide {
+    overflow: hidden !important;
+}
+
+
 
 
 /* Mobile */
@@ -1824,42 +1855,8 @@ footer .d-flex.gap-3 a i {
 
 
 </body>
-<style>
-.gallery-container img {
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-.gallery-container img:hover {
-  transform: scale(1.05);
-}
 
-/* Ensure GLightbox arrows show on mobile */
-.glightbox-container {
-  z-index: 1050; /* on top of other elements */
-}
 
-.glightbox-arrow {
-  width: 50px !important;
-  height: 50px !important;
-}
 
-.glightbox-arrow::after {
-  font-size: 2rem !important;
-}
-
-/* Remove horizontal scroll inside lightbox */
-.glightbox-container .gslide {
-  overflow: hidden !important;
-}
-</style>
-
-<script>
-const lightbox = GLightbox({
-  selector: '.glightbox',
-  loop: true,
-  touchNavigation: true,
-  keyboardNavigation: true,
-});
-</script>
 
 </html>
