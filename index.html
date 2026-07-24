@@ -681,7 +681,7 @@ to{
   <!-- HERO -->
    
   <section class="hero" id="home">
-    <div class="container hero-content">
+      <div class="container hero-content hero-text-animation">
      
 
       <span class="hero-badge">Discipline • Knowledge • Success</span>
@@ -706,6 +706,31 @@ to{
 
      
   <div id="about" style="display:none; background:white; min-height:100vh; padding:40px;">
+    <style>
+    /* Hero Text Smooth Reveal */
+
+.hero-text-animation{
+    opacity:0;
+    transform:translateY(50px);
+    animation: heroTextShow 1.2s ease forwards;
+    animation-delay:0.5s;
+}
+
+
+@keyframes heroTextShow{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+</style>
    
 </div>
 <div id="courses" style="display:none; background:white; min-height:100vh; padding:40px;">
@@ -851,7 +876,7 @@ to{
 </section>
 
 <style>
-  
+
 .scrolling-wrapper {
   overflow: hidden;
   position: relative;
@@ -2304,11 +2329,11 @@ font-size:28px;
 
         <div class="journey-buttons">
 
-            <a href="#" class="apply-btn">
+            <a href="admissions.html" class="apply-btn">
                 Apply for Admission
             </a>
 
-            <a href="#" class="contact-btn">
+            <a href="contact.html" class="contact-btn">
                 Contact Us
             </a>
 
@@ -2565,6 +2590,19 @@ margin-top:40px;
 }
 
 }
+/* Ready to Begin Your Journey section */
+
+.journey-section{
+    margin-bottom:0 !important;
+    padding-bottom:30px !important;
+}
+
+
+/* Footer gap remove */
+
+footer{
+    margin-top:0 !important;
+}
 
 
 
@@ -2629,7 +2667,7 @@ html{
   
 
       <!-- FOOTER -->
-  <footer style="background-color:#0b1e46; color:#fff;" class="py-5 mt-5">
+  <footer style="background-color:#0b1e46; color:#fff;" class="py-5 ">
   <div class="container">
     <div class="row">
 
