@@ -71,7 +71,10 @@ color:#ffc107!important;
     height: 3px;
     background: #ffc107; /* yellow line */
     border-radius: 2px;
+    
 }
+
+
 
 
 .portal-btn {
@@ -87,7 +90,7 @@ color:#ffc107!important;
 /* ================= HERO SECTION ================= */
 
 .hero{
-
+position:relative;
 height:420px;
 background:
 
@@ -117,6 +120,34 @@ color:#ffc107;
 .hero p{
 font-size:20px;
 
+}
+
+/* Hero Ticker Strip */
+.hero-ticker{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#ffc107;
+    overflow:hidden;
+    padding:10px 0;
+    z-index:5;
+}
+.hero-ticker .ticker-track{
+    display:inline-block;
+    white-space:nowrap;
+    font-weight:700;
+    color:#071f3d;
+    font-size:15px;
+    animation:heroMove 18s linear infinite;
+    padding-left:100%;
+}
+.hero-ticker .ticker-track span{
+    margin:0 25px;
+}
+@keyframes heroMove{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-100%); }
 }
 
 /* Hero animation */
@@ -162,11 +193,12 @@ background:#ffc107;
 margin:15px auto 40px;
 
 }
+
 </style>
 </head>
 <body>
 <!-- ================= NAVBAR ================= -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<nav class="navbar navbar-expand-xl navbar-dark sticky-top">
 <div class="container">
 <a class="navbar-brand" href="index.html">
 🎓 Forces Academy
@@ -202,16 +234,15 @@ Admissions
 </a>
 </li>
 
-<li>
-<a class="nav-link" href="gallery.html">
-Gallery
-</a>
-</li>
+
 
 <li>
 <a class="nav-link active" href="results.html">
 Results
 </a>
+
+<li class="nav-item">
+<a class="nav-link" href="gallery.html">Gallery</a>
 </li>
 
 
@@ -235,20 +266,487 @@ Student Portal
 </nav>
 
 <!-- ================= HERO ================= -->
-<section class="hero">
-<div>
-<h1>
-Student Results
-</h1>
-<p>
-Celebrating achievements and academic excellence.
+<section class="results-hero">
+<div class="rh-bg-lines"></div>
+<div class="container">
+<div class="row align-items-center gy-5">
+
+<!-- LEFT: COPY -->
+<div class="col-lg-6">
+<div class="rh-eyebrow"><span class="rh-dot"></span> OFFICIAL RECORD &nbsp;·&nbsp; FORCES ACADEMY FAISALABAD</div>
+
+<h1 class="rh-heading">Every Roll Number Tells<br><span>a Result.</span></h1>
+
+<p class="rh-sub">
+Term results, merit lists and ISSB assessment scores — declared here first, straight from the academic office. Find your roll number below, check your grade, and know exactly where you stand.
 </p>
 
-
+<div class="rh-actions">
+<a href="#resultsTable" class="rh-btn-primary">CHECK MY RESULT <i class="bi bi-arrow-down"></i></a>
+<a href="contact.html" class="rh-btn-outline">ASK ADMIN <i class="bi bi-headset"></i></a>
 </div>
 
+<div class="rh-divider"></div>
 
+<div class="rh-stats">
+<div class="rh-stat">
+<h3>1,240+</h3>
+<span>RESULTS DECLARED</span>
+</div>
+<div class="rh-stat">
+<h3>34</h3>
+<span>ACTIVE BATCHES</span>
+</div>
+<div class="rh-stat">
+<h3>92%</h3>
+<span>ISSB RECOMMENDATION RATE</span>
+</div>
+</div>
+</div>
+
+<!-- RIGHT: QUICK CHECK CARD -->
+<div class="col-lg-5 offset-lg-1">
+<div class="rh-card" id="rhCard">
+
+<div class="rh-card-face rh-card-front">
+<div class="rh-icon"><i class="bi bi-shield-check"></i></div>
+<div class="rh-card-eyebrow">QUICK CHECK</div>
+<h4>Preview Your Result</h4>
+<p>Type a roll number and see the result slip flip into view — a quick look before you scroll to the full sheet.</p>
+
+<div class="rh-search">
+<input type="text" id="rhRollInput" placeholder="e.g. FA24-101" autocomplete="off">
+<button id="rhSearchBtn" type="button"><i class="bi bi-arrow-right"></i></button>
+</div>
+<div class="rh-error" id="rhError">No result found for that roll number — try the full list below.</div>
+
+<div class="rh-try">
+<span>TRY:</span>
+<button class="rh-pill" data-roll="FA24-101">FA24-101</button>
+<button class="rh-pill" data-roll="FA24-102">FA24-102</button>
+<button class="rh-pill" data-roll="FA23-109">FA23-109</button>
+</div>
+</div>
+
+<div class="rh-card-face rh-card-back" id="rhCardBack"></div>
+
+<!-- filled dynamically by JS -->
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
 </section>
+
+<!-- LATEST SELECTIONS TICKER -->
+<div class="rh-ticker">
+    <div class="rh-ticker-track">
+        <span>🟢 Ali Ahmed - PMA Selected</span>
+        <span>🟢 Hassan Ali - Selected Air Force</span>
+        <span>🟢 Usman Khan - ISSB Recommended</span>
+        <span>🟢 Mahnoor Iqbal - Selected Navy</span>
+        <span>🎓 New Batch Admissions Open Now</span>
+    </div>
+</div>
+
+<style>
+/* ================= RESULTS HERO (new) ================= */
+.results-hero{
+    position:relative;
+    background:
+        repeating-linear-gradient(135deg, rgba(255,255,255,.025) 0 2px, transparent 2px 26px),
+        linear-gradient(160deg, #071f3d 0%, #0a2c52 55%, #061a33 100%);
+    border-top:3px solid #ffc107;
+    padding:70px 0 60px;
+    overflow:hidden;
+}
+.rh-bg-lines{
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at 85% 20%, rgba(255,193,7,.08), transparent 45%);
+    pointer-events:none;
+}
+.results-hero .container{ position:relative; z-index:2; }
+
+.rh-eyebrow{
+    font-family:'Poppins',sans-serif;
+    letter-spacing:2px;
+    font-size:12px;
+    font-weight:600;
+    color:#ffc107;
+    text-transform:uppercase;
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    opacity:0;
+    animation:rhReveal .8s ease forwards;
+    animation-delay:.15s;
+}
+.rh-dot{
+    width:6px;height:6px;border-radius:50%;
+    background:#ffc107;
+    display:inline-block;
+}
+
+.rh-heading{
+    font-weight:900;
+    font-size:46px;
+    line-height:1.15;
+    color:#fdfdfb;
+    margin-bottom:22px;
+    opacity:0;
+    animation:rhReveal .8s ease forwards;
+    animation-delay:.4s;
+}
+.rh-heading span{ color:#ffc107; }
+
+.rh-sub{
+    color:#c9d3e6;
+    font-size:16px;
+    line-height:1.7;
+    max-width:520px;
+    margin-bottom:30px;
+    opacity:0;
+    animation:rhReveal .8s ease forwards;
+    animation-delay:.7s;
+}
+
+.rh-actions{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+    opacity:0;
+    animation:rhReveal .8s ease forwards;
+    animation-delay:.95s;
+}
+.rh-btn-primary{
+    background:#ffc107;
+    color:#071f3d;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:.5px;
+    padding:14px 26px;
+    border-radius:10px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:.25s;
+}
+.rh-btn-primary:hover{ transform:translateY(-3px); box-shadow:0 10px 20px rgba(255,193,7,.25); color:#071f3d; }
+
+.rh-btn-outline{
+    background:transparent;
+    color:#ffc107;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:.5px;
+    padding:14px 26px;
+    border-radius:10px;
+    border:1.5px solid #ffc107;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:.25s;
+}
+.rh-btn-outline:hover{ background:rgba(255,193,7,.1); color:#ffc107; }
+
+.rh-divider{
+    border-top:2px dashed rgba(255,255,255,.15);
+    margin-bottom:26px;
+    max-width:520px;
+    opacity:0;
+    animation:rhReveal .8s ease forwards;
+    animation-delay:1.15s;
+}
+
+.rh-stats{
+    display:flex;
+    gap:45px;
+    flex-wrap:wrap;
+    opacity:0;
+    animation:rhReveal .8s ease forwards;
+    animation-delay:1.3s;
+}
+
+@keyframes rhReveal{
+    from{ opacity:0; transform:translateY(22px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+.rh-stat h3{
+    color:#ffc107;
+    font-weight:900;
+    font-size:26px;
+    margin-bottom:2px;
+}
+.rh-stat span{
+    color:#9fb0c9;
+    font-size:11px;
+    letter-spacing:1px;
+    font-weight:600;
+}
+
+/* CARD */
+.rh-card{
+    position:relative;
+    background:#0c2c52;
+    border:1px solid rgba(255,193,7,.25);
+    border-radius:22px;
+    padding:34px 30px;
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+    min-height:420px;
+    perspective:1200px;
+}
+.rh-card-face{
+    transition:opacity .35s ease, transform .35s ease;
+}
+.rh-card-back{ display:none; }
+
+.rh-card.flipped .rh-card-front{ display:none; }
+.rh-card.flipped .rh-card-back{ display:block; animation:rhFlipIn .45s ease; }
+
+@keyframes rhFlipIn{
+    from{ opacity:0; transform:rotateY(90deg); }
+    to{ opacity:1; transform:rotateY(0deg); }
+}
+
+.rh-icon{
+    width:46px;height:46px;
+    border:1.5px solid #ffc107;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:#ffc107;
+    font-size:20px;
+    margin-bottom:18px;
+}
+.rh-card-eyebrow{
+    color:#8fb8ea;
+    font-size:11px;
+    letter-spacing:1.5px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+.rh-card h4{
+    color:#fdfdfb;
+    font-weight:700;
+    font-size:22px;
+    margin-bottom:12px;
+}
+.rh-card p{
+    color:#b6c0d3;
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:24px;
+}
+
+.rh-search{ display:flex; gap:10px; margin-bottom:10px; }
+.rh-search input{
+    flex:1;
+    background:#061a33;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:10px;
+    padding:12px 15px;
+    color:#fff;
+    font-family:'Courier New', monospace;
+    letter-spacing:1px;
+    font-size:14px;
+}
+.rh-search input::placeholder{ color:#5f7a6c; }
+.rh-search input:focus{ outline:2px solid #ffc107; border-color:transparent; }
+.rh-search button{
+    background:#ffc107;
+    border:none;
+    border-radius:10px;
+    width:46px;
+    color:#071f3d;
+    font-size:18px;
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;
+    transition:.2s;
+}
+.rh-search button:hover{ background:#ffce38; }
+
+.rh-error{
+    display:none;
+    color:#ff8a8a;
+    font-size:12.5px;
+    margin-bottom:14px;
+}
+.rh-error.show{ display:block; }
+
+.rh-try{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-wrap:wrap;
+    font-size:11px;
+    color:#7f8faa;
+    letter-spacing:1px;
+    font-weight:600;
+}
+.rh-pill{
+    background:transparent;
+    border:1px solid rgba(255,193,7,.4);
+    color:#ffc107;
+    padding:5px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s;
+}
+.rh-pill:hover{ background:rgba(255,193,7,.15); }
+
+/* RESULT BACK FACE */
+.rh-result-status{
+    display:inline-block;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:700;
+    color:#fff;
+    margin-bottom:16px;
+}
+.rh-result-name{ color:#fdfdfb; font-size:24px; font-weight:800; margin-bottom:4px; }
+.rh-result-roll{ color:#8fb8ea; font-family:'Courier New',monospace; font-size:13px; margin-bottom:20px; }
+.rh-result-row{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px dashed rgba(255,255,255,.12);
+    font-size:14px;
+}
+.rh-result-row span:first-child{ color:#8fa0b6; }
+.rh-result-row span:last-child{ color:#fff; font-weight:600; }
+.rh-back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-top:24px;
+    color:#ffc107;
+    font-weight:700;
+    font-size:13px;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+/* TICKER STRIP */
+.rh-ticker{
+    background:#071f3d;
+    border-bottom:1px solid rgba(255,193,7,.2);
+    padding:12px 0;
+    overflow:hidden;
+}
+.rh-ticker-track{
+    display:inline-block;
+    white-space:nowrap;
+    font-weight:700;
+    color:#ffc107;
+    font-size:13.5px;
+    letter-spacing:.3px;
+    animation:rhTickerMove 18s linear infinite;
+    padding-left:100%;
+}
+.rh-ticker-track span{ margin:0 25px; }
+@keyframes rhTickerMove{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-100%); }
+}
+/* Mobile */
+@media (max-width: 576px) {
+  /* 375px fixes */
+}
+
+/* Tablet */
+@media (min-width: 577px) and (max-width: 1199.98px) {
+  /* 768px and iPad fixes */
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  /* 1440px layout */
+}
+@media(max-width:1336px){
+    .rh-heading{ font-size:34px; }
+    .rh-card{ min-height:auto; }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .rh-ticker-track{ animation:none; }
+    .rh-eyebrow, .rh-heading, .rh-sub, .rh-actions, .rh-divider, .rh-stats{
+        animation:none;
+        opacity:1;
+    }
+}
+</style>
+
+<script>
+// ===== Hero quick-result lookup =====
+(function(){
+    const rhData = {
+        "FA24-101": {name:"Abdullah Anjum", course:"FSc Pre-Medical", year:"2024", status:"Selected - Army", color:"#28a745"},
+        "FA24-102": {name:"Hassan Ali", course:"Entry Test Prep", year:"2026", status:"Selected - Air Force", color:"#17a2b8"},
+        "FA24-103": {name:"Fatima Yousaf", course:"Matric Science", year:"2024", status:"Promoted to FSC", color:"#e0a800"},
+        "FA24-104": {name:"Usman Khan", course:"ISSB & Interview Prep", year:"2024", status:"Selected - Pakistan Army", color:"#28a745"},
+        "FA24-105": {name:"Ayesha Noor", course:"FSc Pre-Engineering", year:"2024", status:"Qualified Written Test", color:"#e0a800"},
+        "FA23-106": {name:"Hamza Sheikh", course:"Entry Test Prep", year:"2023", status:"Selected - Pakistan Navy", color:"#17a2b8"},
+        "FA24-107": {name:"Zainab Malik", course:"Matric Arts", year:"2025", status:"Promoted to FSC", color:"#e0a800"},
+        "FA23-108": {name:"Ali Hassan", course:"ISSB & Interview Prep", year:"2023", status:"Not Selected", color:"#dc3545"},
+        "FA23-109": {name:"Mahnoor Iqbal", course:"FSc Pre-Medical", year:"2023", status:"Selected - Navy", color:"#28a745"},
+        "FA24-110": {name:"Talha Farooq", course:"Entry Test Prep", year:"2024", status:"In Process", color:"#e0a800"}
+    };
+
+    const card = document.getElementById('rhCard');
+    const back = document.getElementById('rhCardBack');
+    const input = document.getElementById('rhRollInput');
+    const btn = document.getElementById('rhSearchBtn');
+    const errorBox = document.getElementById('rhError');
+
+    function lookup(roll){
+        roll = roll.trim().toUpperCase();
+        errorBox.classList.remove('show');
+        if(!roll) return;
+        const rec = rhData[roll];
+        if(rec){
+            back.innerHTML = `
+                <span class="rh-result-status" style="background:${rec.color}">${rec.status}</span>
+                <div class="rh-result-name">${rec.name}</div>
+                <div class="rh-result-roll">${roll}</div>
+                <div class="rh-result-row"><span>Course</span><span>${rec.course}</span></div>
+                <div class="rh-result-row"><span>Batch Year</span><span>${rec.year}</span></div>
+                <a class="rh-back-link" id="rhViewFull"><i class="bi bi-search"></i> View in full result list</a>
+            `;
+            card.classList.add('flipped');
+            document.getElementById('rhViewFull').addEventListener('click', function(){
+                const searchInput = document.getElementById('searchName');
+                if(searchInput){
+                    searchInput.value = roll;
+                    searchInput.dispatchEvent(new Event('input'));
+                }
+                document.getElementById('resultsTable').scrollIntoView({behavior:'smooth', block:'center'});
+            });
+        }else{
+            card.classList.remove('flipped');
+            errorBox.classList.add('show');
+        }
+    }
+
+    btn.addEventListener('click', function(){ lookup(input.value); });
+    input.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ lookup(input.value); } });
+
+    document.querySelectorAll('.rh-pill').forEach(function(pill){
+        pill.addEventListener('click', function(){
+            input.value = pill.dataset.roll;
+            lookup(pill.dataset.roll);
+        });
+    });
+})();
+</script>
 
 
 
@@ -439,8 +937,51 @@ const yearFilter = document.getElementById('yearFilter');
 const statusFilter = document.getElementById('statusFilter');
 
 function filterTable() {
-    const nameVal = searchInput.value.toLowerCase();
+  function filterTable() {
+    const searchVal = searchInput.value.trim().toLowerCase();
     const courseVal = courseFilter.value;
+    const yearVal = yearFilter.value;
+    const statusVal = statusFilter.value;
+
+    Array.from(table.tBodies[0].rows).forEach(row => {
+
+        const rollNo = row.cells[0].textContent.trim().toLowerCase();
+        const studentName = row.cells[1].textContent.trim().toLowerCase();
+        const course = row.cells[2].textContent.trim();
+        const year = row.cells[3].textContent.trim();
+        const status = row.cells[4].textContent.trim();
+
+        const matchesSearch =
+            studentName.includes(searchVal) ||
+            rollNo.includes(searchVal);
+
+        const matchesCourse =
+            courseVal === 'All' || course === courseVal;
+
+        const matchesYear =
+            yearVal === 'All' || year === yearVal;
+
+        const matchesStatus =
+            statusVal === 'All' || status.includes(statusVal);
+
+        if (
+            matchesSearch &&
+            matchesCourse &&
+            matchesYear &&
+            matchesStatus
+        ) {
+            row.style.display = '';
+            row.classList.add('highlight');
+
+            setTimeout(() => {
+                row.classList.remove('highlight');
+            }, 1000);
+
+        } else {
+            row.style.display = 'none';
+        }
+    });
+}
     const yearVal = yearFilter.value;
     const statusVal = statusFilter.value;
 
@@ -642,59 +1183,13 @@ ISSB Recommended
 
 
 
-<!-- LIVE SELECTION BOARD -->
-
-
-<section class="selection-board">
-
-
-<div class="container">
-
-
-<h2 class="title text-white">
-Latest Selections
-</h2>
-
-
-<div class="line"></div>
-
-
-
-<div class="live-box">
-
-
-<div class="moving-text">
-
-🟢 Ali Ahmed - PMA Selected &nbsp;&nbsp;&nbsp;
-
-🟢 Usman Khan - ISSB Recommended &nbsp;&nbsp;&nbsp;
-
-🟢 Hassan Ali - Merit Holder &nbsp;&nbsp;&nbsp;
-
-🟢 New Batch Admissions Open
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
 
 
 
 <!-- BEFORE AFTER -->
 
 
-<section class="py-5">
+<section class="py-5 st-section">
 
 
 <div class="container">
@@ -709,57 +1204,36 @@ Student Transformation
 
 
 
-<div class="transform-box">
+<div class="st-wrap">
 
-
-<div>
-
-<h3>
-Before Academy
-</h3>
-
-
-<p>
-⭐ Confidence Building</p>
-
-<p>
-⭐ Fitness Improvement</p>
-
-<p>
-⭐ Career Guidance</p>
-
-
+<!-- BEFORE CARD -->
+<div class="st-card st-before">
+<div class="st-icon"><i class="bi bi-person"></i></div>
+<span class="st-tag">STAGE 01</span>
+<h3>Before Academy</h3>
+<p class="st-desc">Where every candidate starts out</p>
+<ul class="st-list">
+<li><i class="bi bi-check2-circle"></i> Confidence Building</li>
+<li><i class="bi bi-check2-circle"></i> Fitness Improvement</li>
+<li><i class="bi bi-check2-circle"></i> Career Guidance</li>
+</ul>
 </div>
 
+<!-- CENTER BADGE -->
+<div class="st-badge"><i class="bi bi-arrow-right"></i></div>
 
-
-<div class="arrow-big">
-→
+<!-- AFTER CARD -->
+<div class="st-card st-after">
+<div class="st-icon"><i class="bi bi-award"></i></div>
+<span class="st-tag">STAGE 02</span>
+<h3>After Training</h3>
+<p class="st-desc">Where our graduates stand today</p>
+<ul class="st-list">
+<li><i class="bi bi-trophy-fill"></i> Leadership Skills</li>
+<li><i class="bi bi-shield-check"></i> Selection Preparation</li>
+<li><i class="bi bi-lightning-charge-fill"></i> Strong Personality</li>
+</ul>
 </div>
-
-
-
-<div>
-
-
-<h3>
-After Training
-</h3>
-
-
-<p>
-🏆 Leadership Skills</p>
-
-<p>
-🎖 Selection Preparation</p>
-
-<p>
-💪 Strong Personality</p>
-
-
-</div>
-
-
 
 </div>
 
@@ -771,8 +1245,116 @@ After Training
 </section>
 
 
+<style>
+/* ===== STUDENT TRANSFORMATION (new) ===== */
+.st-section{ padding:80px 0; }
+
+.st-wrap{
+    position:relative;
+    display:flex;
+    align-items:stretch;
+    justify-content:center;
+    gap:0;
+    max-width:900px;
+    margin:0 auto;
+    flex-wrap:wrap;
+}
+
+.st-card{
+    flex:1 1 360px;
+    background:#fff;
+    border-radius:22px;
+    padding:40px 34px;
+    box-shadow:0 15px 40px rgba(7,31,61,.08);
+    position:relative;
+    transition:.3s;
+}
+.st-card:hover{ transform:translateY(-6px); box-shadow:0 20px 45px rgba(7,31,61,.14); }
+
+.st-before{ border:1.5px solid #e4e1d6; }
+.st-after{
+    background:#071f3d;
+    color:#fff;
+}
+
+.st-icon{
+    width:56px;height:56px;
+    border-radius:16px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:24px;
+    margin-bottom:18px;
+}
+.st-before .st-icon{ background:#f2efe4; color:#071f3d; }
+.st-after .st-icon{ background:rgba(255,193,7,.15); color:#ffc107; }
+
+.st-tag{
+    display:inline-block;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    color:#ffc107;
+    margin-bottom:10px;
+}
+
+.st-card h3{
+    font-weight:900;
+    font-size:22px;
+    margin-bottom:6px;
+}
+.st-before h3{ color:#071f3d; }
+.st-after h3{ color:#fff; }
+
+.st-desc{
+    font-size:13.5px;
+    margin-bottom:22px;
+}
+.st-before .st-desc{ color:#7a7768; }
+.st-after .st-desc{ color:#b9c4d9; }
+
+.st-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.st-list li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:11px 0;
+    border-bottom:1px dashed rgba(0,0,0,.08);
+    font-weight:600;
+    font-size:14.5px;
+}
+.st-after .st-list li{ border-bottom:1px dashed rgba(255,255,255,.15); }
+.st-before .st-list li i{ color:#071f3d; font-size:16px; }
+.st-after .st-list li i{ color:#ffc107; font-size:16px; }
+.st-list li:last-child{ border-bottom:none; }
+
+.st-badge{
+    width:60px;height:60px;
+    min-width:60px;
+    border-radius:50%;
+    background:#ffc107;
+    color:#071f3d;
+    display:flex;align-items:center;justify-content:center;
+    font-size:24px;
+    box-shadow:0 10px 25px rgba(255,193,7,.4);
+    align-self:center;
+    margin:0 -14px;
+    z-index:2;
+    border:4px solid #f7f5ed;
+}
+
+@media(max-width:767px){
+    .st-wrap{ flex-direction:column; align-items:center; }
+    .st-badge{ margin:-14px 0; transform:rotate(90deg); }
+    .st-card{ width:100%; }
+}
+</style>
+
+
 <style>  
-	
+    
 .journey{
 
 padding:80px 0;
@@ -1278,17 +1860,14 @@ font-size:40px;
 
 <section class="container pb-5">
 
-<div class="note">
+<div class="note-bar">
 <i class="bi bi-info-circle-fill"></i>
-<br><br>
-
-
-Results are updated by administration.
-Contact admin for queries.
-
-
+<span>Results are updated by administration. Contact admin for queries.</span>
 </div>
 
+<div class="download-wrap">
+<a href="#" class="download-btn"><i class="bi bi-download"></i> Download Complete 2025 Merit List (PDF)</a>
+</div>
 
 </section>
 <!-- ================= CSS FOR TABLE ANIMATION ================= -->
@@ -1389,16 +1968,110 @@ transform:scale(1.02);
 transition:.3s;
 }
 /* ADMIN NOTE */
-.note{
-background:#071f3d;
-color:white;
-padding:25px;
-border-radius:20px;
-text-align:center;
-font-weight:600;
-font-size:16px;
+.note-bar{
+    background:#eee9d9;
+    border-left:4px solid #ffc107;
+    border-radius:10px;
+    padding:16px 22px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#071f3d;
+    font-weight:600;
+    font-size:15px;
+    margin-bottom:26px;
+}
+.note-bar i{
+    color:#071f3d;
+    font-size:18px;
+}
+
+.download-wrap{
+    text-align:center;
+}
+.download-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:#ffc107;
+    color:#071f3d;
+    font-weight:700;
+    font-size:15px;
+    padding:14px 30px;
+    border-radius:10px;
+    text-decoration:none;
+    transition:.25s;
+}
+.download-btn:hover{
+    background:#e0a800;
+    color:#071f3d;
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(255,193,7,.3);
 }
 </style>
+<!-- Back to Top Button -->
+<button id="backToTopBtn" title="Back to Top">↑</button>
+
+<style>
+#backToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+}
+#backToTopBtn:hover {
+  background-color: #ffb300;
+  transform: translateY(-3px);
+}
+</style>
+
+<script>
+// Smooth scroll for all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Back-to-top button
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+window.onscroll = function() {
+  if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+};
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+});
+// gets the current file name
+
+const current = location.pathname.split("/").pop(); // gets the current file name
+const menuItems = document.querySelectorAll(".navbar .nav-link");
+
+menuItems.forEach(item => {
+  if(item.getAttribute("href") === current) {
+    item.classList.add("active");
+  }
+});
+</script>
+
 <!-- Footer -->
 <footer style="background-color:#0b1e46; color:#fff;" class="py-5 mt-5">
   <div class="container">
@@ -1501,3 +2174,4 @@ footer .d-flex.gap-3 a i {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
