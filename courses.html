@@ -3,12 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Courses | Forces Academy</title>
+
+ <title>Forces Academy | ISSB & Armed Forces Preparation</title>
+
+  <meta name="description" content="Forces Academy in Faisalabad offers ISSB, PMA and entry test prep, academic coaching, and leadership training for future army, navy and air force cadets.">
+  <meta name="keywords" content="Forces Academy, ISSB preparation, PMA long course, army entry test, Pakistan armed forces academy, Faisalabad academy">
+  <meta property="og:title" content="Forces Academy - Build Your Future, Serve Your Nation">
+  <meta property="og:description" content="Quality education, discipline and forces test preparation for students aiming to join Pakistan Armed Forces in Faisalabad, Pakistan.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/course-banner.png">
+ <link rel="icon" type="image/png" href="images/favicon.png">
+
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 <style>
-body {font-family:'Poppins',sans-serif;margin:0;padding:0;background:#f8f9fa;color:#111827;}
+body {font-family:'Poppins',sans-serif;margin:0;padding:0;background:#f8f9fa;color:#111827;transition:background-color 0.3s ease, color 0.3s ease;}
 .navbar {background:#071f3d;}
 .navbar-brand {color:white !important;font-size:28px;font-weight:900;}
 .nav-link {
@@ -23,12 +35,34 @@ body {font-family:'Poppins',sans-serif;margin:0;padding:0;background:#f8f9fa;col
     border-bottom:3px solid #ffc107;}
 .portal-btn {background:#ffc107;color:#000 !important;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:700;}
 .portal-btn:hover {background:#ffb300;transform:translateY(-2px);}
+
+/* Dark mode toggle button */
+#theme-toggle {
+  background: transparent;
+  border: 2px solid #ffc107;
+  color: #ffc107;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#theme-toggle:hover {
+  background: #ffc107;
+  color: #071f3d;
+  transform: translateY(-3px);
+}
+
 .hero{
     position:relative;
 
     background:
-    linear-gradient(rgba(7,31,61,.45),rgba(7,31,61,.65)),
-    url('tumhari-image');
+    linear-gradient(rgba(7,31,61,.45),rgba(7,31,61,.65));
 
     background-size:cover;
 
@@ -188,6 +222,92 @@ opacity:0;
 
 
 </style>
+
+<style>
+/* ============ DARK MODE ============ */
+body.dark-mode {
+  background: #0f1720;
+  color: #e5e7eb;
+}
+
+body.dark-mode .navbar {
+  background: #060f1f;
+}
+
+body.dark-mode .section-heading {
+  color: #f3f4f6;
+}
+
+body.dark-mode #courses-section,
+body.dark-mode .card {
+  background: #16233a;
+  color: #e5e7eb;
+}
+
+body.dark-mode .card-title {
+  color: #f3f4f6;
+}
+
+body.dark-mode .card-text,
+body.dark-mode .course-meta {
+  color: #9ca3af;
+}
+
+body.dark-mode .program-path {
+  background: #0b1420;
+}
+
+body.dark-mode .path-heading h2 {
+  color: #f3f4f6;
+}
+
+body.dark-mode .path-heading p {
+  color: #9ca3af;
+}
+
+body.dark-mode .path-item {
+  border-bottom: 1px dashed #374151;
+}
+
+body.dark-mode .path-item h4 {
+  color: #e5e7eb;
+}
+
+body.dark-mode .path-item span {
+  background: #1f2a3d;
+  color: #ffc107;
+}
+
+body.dark-mode .compare-section {
+  background: #0f1720;
+}
+
+body.dark-mode .compare-heading h2 {
+  color: #f3f4f6;
+}
+
+body.dark-mode .compare-table td {
+  color: #d1d5db;
+  border-bottom: 1px solid #374151;
+}
+
+body.dark-mode .compare-table tbody tr:hover {
+  background: #1f2a3d;
+}
+
+body.dark-mode .compare-table td:nth-child(4),
+body.dark-mode .compare-table td:nth-child(5) {
+  color: #ffc107;
+}
+
+body.dark-mode .fee-note {
+  color: #9ca3af;
+}
+
+body.dark-mode footer {
+  background-color: #060f1f !important;
+}
+</style>
 </head>
 <body>
 
@@ -197,7 +317,7 @@ opacity:0;
 <a class="navbar-brand" href="index.html">🎓 Forces Academy</a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"><span class="navbar-toggler-icon"></span></button>
 <div class="collapse navbar-collapse" id="navbarMenu">
-<ul class="navbar-nav ms-auto">
+<ul class="navbar-nav ms-auto align-items-lg-center">
 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 
@@ -214,6 +334,9 @@ opacity:0;
 </li>
 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 <li class="nav-item"><a class="portal-btn" href="#">Student Portal</a></li>
+<li class="nav-item">
+  <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+</li>
 </ul>
 </div>
 </div>
@@ -287,7 +410,7 @@ position:relative;
 
 background:
 linear-gradient(rgba(7,31,61,.88),rgba(7,31,61,.95)),
-url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNCZ-OTj2wvyf0r9HsFA5E6Hyc4HOWjHN2gBUqfK13am23IW28m9MIzNej&s=10");
+url("");
 
 background-size:cover;
 
@@ -423,9 +546,9 @@ flex-direction:column;
 }
 </style>
 <!-- Program Path Section -->
-<!-- Program Path Section -->
+<section class="program-path scroll-reveal">
 
-<section class="program-path">
+
 
 <div class="container">
 
@@ -633,6 +756,18 @@ transform:translateX(10px);
 color:#1f2937;
 
 }
+/* Yellow line under section headings */
+
+.path-heading h2::after,
+.compare-heading h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ffc107;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
 
 
 
@@ -652,7 +787,7 @@ gap:10px;
 </style>
 
 <!-- Courses Section -->
-<section class="section" id="courses-section">
+<section class="section scroll-reveal" id="courses-section">
 <div class="container">
 <h2 class="section-heading">Courses Offered</h2>
 <div class="underline"></div>
@@ -661,7 +796,7 @@ gap:10px;
 <!-- Course 1 -->
 <div class="col-md-4 col-sm-12">
 <div class="card h-100">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPHYnfkEugd7sE3sfRVDmMRxQToBhMGxaHOi4Jcm3iA&s=10" class="card-img-top" alt="FSc Pre-Medical">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPHYnfkEugd7sE3sfRVDmMRxQToBhMGxaHOi4Jcm3iA&s=10" class="card-img-top" alt="FSc Pre-Medical course students studying biology and chemistry">
 <div class="card-body">
 <h5 class="card-title">FSc Pre-Medical</h5>
 
@@ -678,7 +813,7 @@ gap:10px;
 <!-- Course 2 -->
 <div class="col-md-4 col-sm-12">
 <div class="card h-100">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPZcnLvKRNpvpcLUYkfYtstE9rqvfmkmJ_3aaJN9RE8A&s=10" class="card-img-top" alt="FSc Pre-Engineering">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPZcnLvKRNpvpcLUYkfYtstE9rqvfmkmJ_3aaJN9RE8A&s=10" class="card-img-top" alt="FSc Pre-Engineering course students working on mathematics and physics">
 <div class="card-body">
 <h5 class="card-title">FSc Pre-Engineering</h5>
 <p class="card-text">Intermediate coaching in mathematics, physics, and chemistry to strengthen analytical base.</p>
@@ -694,7 +829,7 @@ gap:10px;
 <!-- Course 3 -->
 <div class="col-md-4 col-sm-12">
 <div class="card h-100">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSje85iumCWb1Cffi6ShYzxLVe_7ZWWJiFYzTPJP4ustQ&s=10" class="card-img-top" alt="Matric Science">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSje85iumCWb1Cffi6ShYzxLVe_7ZWWJiFYzTPJP4ustQ&s=10" class="card-img-top" alt="Matric Science class students in a science coaching session">
 <div class="card-body">
 <h5 class="card-title">Matric Science</h5>
 <p class="card-text">Solid grounding in science subjects with regular tests and concept-building.</p>
@@ -710,7 +845,7 @@ gap:10px;
 <!-- Course 4 -->
 <div class="col-md-4 col-sm-12">
 <div class="card h-100">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpZJ8MFTteI11jgN03twskJ7xJIhG2T9FaI6rftvbfXw&s=10" class="card-img-top" alt="Matric Arts">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpZJ8MFTteI11jgN03twskJ7xJIhG2T9FaI6rftvbfXw&s=10" class="card-img-top" alt="Matric Arts class students in a group discussion">
 <div class="card-body">
 <h5 class="card-title">Matric Arts</h5>
 <p class="card-text">Comprehensive coaching in Arts group subjects, building strong knowledge foundations.</p>
@@ -726,7 +861,7 @@ gap:10px;
 <!-- Course 5 -->
 <div class="col-md-4 col-sm-12">
 <div class="card h-100">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2IGdGXuEPg8cPB8V6J6pQcI3WxL7eXHDMH9lSXJrMOg&s=10" class="card-img-top" alt="Entry Test Preparation">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2IGdGXuEPg8cPB8V6J6pQcI3WxL7eXHDMH9lSXJrMOg&s=10" class="card-img-top" alt="Cadets in PMA Long Course and entry test preparation session">
 <div class="card-body">
 <h5 class="card-title">PMA Long Course & Entry Test Preparation</h5>
 <p class="card-text">Focused coaching in Mathematics, English and Intelligence (IQ) for Army, Navy, PAF entry tests.</p>
@@ -742,7 +877,7 @@ gap:10px;
 <!-- Course 6 -->
 <div class="col-md-4 col-sm-12">
 <div class="card h-100">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-tCxHk2ePHWoTmtET8AVS0Rs3Q7nMwcj2O6rI7AOIww&s=10" class="card-img-top" alt="ISSB & Interview Prep">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-tCxHk2ePHWoTmtET8AVS0Rs3Q7nMwcj2O6rI7AOIww&s=10" class="card-img-top" alt="Students in ISSB and interview preparation training">
 <div class="card-body">
 <h5 class="card-title">ISSB & Interview Prep</h5>
 <p class="card-text">Psychological tests, group tasks, and personality grooming for ISSB interview preparation.</p>
@@ -760,7 +895,7 @@ gap:10px;
 </section>
 <!-- Course Comparison Section -->
 
-<section class="compare-section">
+<section class="compare-section scroll-reveal">
 
 <div class="container">
 
@@ -983,6 +1118,7 @@ color:#777;
 font-size:14px;
 
 }
+
 </style>
 
 <!-- Course CTA Section -->
@@ -1127,6 +1263,19 @@ font-size:14px;
     opacity:1;
     transform:translateY(0);
 }
+/* Scroll reveal for all sections */
+
+.scroll-reveal{
+    opacity:0;
+    transform:translateY(70px);
+    transition:all .9s ease;
+}
+
+.scroll-reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
 
 
 @keyframes ctaSplash{
@@ -1171,16 +1320,31 @@ footer{
 }
 </style>
 <script>
-const reveal = document.querySelector('.reveal');
+// Scroll Reveal Animation
 
-window.addEventListener('scroll',()=>{
-    let position = reveal.getBoundingClientRect().top;
-    let screen = window.innerHeight;
+const reveals = document.querySelectorAll(".scroll-reveal, .reveal");
 
-    if(position < screen - 100){
-        reveal.classList.add('show');
-    }
-});
+
+function revealOnScroll(){
+
+    reveals.forEach((item)=>{
+
+        let top = item.getBoundingClientRect().top;
+        let height = window.innerHeight;
+
+        if(top < height - 120){
+            item.classList.add("active");
+            item.classList.add("show");
+        }
+
+    });
+
+}
+
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
 </script>
 
 
@@ -1286,6 +1450,26 @@ menuItems.forEach(item => {
 });
 </script>
 
+<!-- Dark Mode Toggle -->
+<script>
+(function(){
+  const toggleBtn = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Apply saved theme on page load
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    toggleBtn.textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+})();
+</script>
 
 <!-- Footer -->
 <footer style="background-color:#0b1e46; color:#fff;" class="py-5 ">
@@ -1294,15 +1478,15 @@ menuItems.forEach(item => {
 
       <!-- About -->
       <div class="col-md-3 mb-4">
-      
-        <h5> <span>🎓</span>Forces Academy</h5>
+       
+        <h5><span>🎓</span>Forces Academy</h5>
         <p>Forces Academy is committed to preparing students for a successful career through quality education, discipline, and character building.</p>
          <div class="col-md-3 mb-4">
         <h5>Follow Us</h5>
         <div class="d-flex gap-3">
           <a href="https://www.facebook.com/ForcesAcademyFaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
           <a href="https://www.instagram.com/forcesacademyfaisalabad?igsh=MWI4YThxazhwM3o3Zg==" target="_blank" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
-          <a href="http://www.youtube.com/@forcesacademyfaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.youtube.com/@forcesacademyfaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
       </div>
@@ -1336,13 +1520,63 @@ menuItems.forEach(item => {
           <li><a href="contact.html" class="text-light text-decoration-none">Contact </a></li>
         </ul>
       </div>
-
     </div>
     <div class="text-center mt-3 border-top border-secondary pt-3">
       © 2026 Forces Academy. All Rights Reserved.
     </div>
   </div>
 </footer>
+<style>
+  .footer {background:#071f3d;color:#fff;padding:50px 0;}
+.footer a {color:#fff;text-decoration:none;}
+.footer a:hover {color:#ffc107;}
+.socials a {display:inline-block;width:36px;height:36px;background:#2563eb;border-radius:50%;color:#fff;text-align:center;line-height:36px;margin-right:8px;transition:.3s;}
+.socials a:hover {background:#ffc107;color:#071f3d;transform:translateY(-2px);}
+.overview-img {width:100%; border-radius:10px; object-fit:cover;}
+footer h5 {
+    color: #4e86ff; /* Bright Blue like your screenshot */
+    font-weight: 700;
+}
+
+/* Footer Quick Links & Web Links Hover Fix */
+footer .list-unstyled li a {
+    color: #fff !important; /* default white */
+    text-decoration: none !important;
+    transition: color 0.3s;
+}
+
+footer .list-unstyled li a:hover {
+    color: #ffc107 !important; /* yellow on hover */
+}
+/* Footer Social Icons - proper circles */
+footer .d-flex.gap-3 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* perfect circle */
+    background-color: #ffc107; /* default yellow */
+    color: #000; /* icon black */
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+footer .d-flex.gap-3 a:hover {
+    background-color: #ffb300; /* darker yellow on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    color: #000;
+}
+
+footer .d-flex.gap-3 a i {
+    line-height: 1; /* ensures icon vertically centered */
+}
+</style>
+
+
+  
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

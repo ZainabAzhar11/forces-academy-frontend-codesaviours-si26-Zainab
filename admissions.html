@@ -4,11 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Admissions | Forces Academy</title>
+
+<meta name="description" content="Apply to Forces Academy Faisalabad — admissions open for 2026. Check eligibility, required documents, fee structure and important dates for all programs.">
+<meta name="keywords" content="Forces Academy admissions, apply Forces Academy, admission form, eligibility criteria, fee structure, Faisalabad academy 2026">
+<meta property="og:title" content="Admissions - Forces Academy Faisalabad">
+<meta property="og:description" content="Admissions are open for the 2026 batch at Forces Academy. Check eligibility, documents, fees and apply online.">
+<meta property="og:type" content="website">
+ <link rel="icon" type="image/png" href="images/favicon.png">
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-body {font-family:'Poppins',sans-serif;margin:0;padding:0;background:#f8f9fa;color:#111827;}
+body {font-family:'Poppins',sans-serif;margin:0;padding:0;background:#f8f9fa;color:#111827;transition:background-color 0.3s ease, color 0.3s ease;}
 .navbar {background:#071f3d;}
 .navbar-brand {color:white !important;font-size:28px;font-weight:900;}
 .nav-link {color:white !important;font-weight:600;margin:0 10px;}
@@ -59,6 +67,28 @@ body {font-family:'Poppins',sans-serif;margin:0;padding:0;background:#f8f9fa;col
 
     width:100%;
 
+}
+
+/* Dark mode toggle button */
+#theme-toggle {
+  background: transparent;
+  border: 2px solid #ffc107;
+  color: #ffc107;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#theme-toggle:hover {
+  background: #ffc107;
+  color: #071f3d;
+  transform: translateY(-3px);
 }
 
 /* Hero Section */
@@ -178,6 +208,135 @@ footer .d-flex.gap-3 a i {
     line-height: 1; /* ensures icon vertically centered */
 }
 </style>
+
+<style>
+/* ============ DARK MODE ============ */
+body.dark-mode {
+  background: #0f1720;
+  color: #e5e7eb;
+}
+
+body.dark-mode .navbar {
+  background: #060f1f;
+}
+
+body.dark-mode .section-heading {
+  color: #f3f4f6;
+}
+
+body.dark-mode .apply-process,
+body.dark-mode .documents-section,
+body.dark-mode .fee-section,
+body.dark-mode .scholarship-section,
+body.dark-mode .dates-section {
+  background: #0f1720 !important;
+}
+
+/* Dark mode section headings white */
+
+body.dark-mode .process-heading h2,
+body.dark-mode .doc-text h2,
+body.dark-mode .fee-heading h2,
+body.dark-mode .dates-heading h2 {
+    color: #ffffff !important;
+}
+
+
+body.dark-mode .process-item h4 {
+  color: #ffc107;
+}
+
+body.dark-mode .process-item p,
+body.dark-mode .doc-text p,
+body.dark-mode .fee-heading p {
+  color: #9ca3af;
+}
+
+body.dark-mode .eligibility-card {
+  background: #16233a;
+  color: #e5e7eb;
+}
+
+body.dark-mode .eligibility-card h4 {
+  color: #ffc107;
+}
+
+body.dark-mode .eligibility-card p {
+  color: #d1d5db;
+}
+
+body.dark-mode .eligibility-detail li {
+  color: #d1d5db;
+}
+
+body.dark-mode .doc-item {
+  color: #e5e7eb;
+}
+
+body.dark-mode .ready-count {
+  color: #ffc107;
+}
+
+body.dark-mode .fee-table-wrapper {
+  border-color: #374151;
+}
+
+body.dark-mode .fee-table td {
+  color: #d1d5db;
+  border-bottom: 1px solid #374151;
+}
+
+body.dark-mode .fee-table td:first-child {
+  color: #ffc107;
+}
+
+body.dark-mode .fee-table td:nth-child(3),
+body.dark-mode .fee-table td:nth-child(4) {
+  color: #ffc107;
+}
+
+body.dark-mode .fee-table tbody tr:hover {
+  background: #1f2a3d;
+}
+
+body.dark-mode .accordion-item {
+  background: #16233a;
+  border-color: #374151;
+}
+
+body.dark-mode .accordion-button {
+  background: #16233a;
+  color: #e5e7eb;
+}
+
+body.dark-mode .accordion-button:not(.collapsed) {
+  background: #1f2a3d;
+  color: #ffc107;
+}
+
+body.dark-mode .accordion-body {
+  background: #16233a;
+  color: #d1d5db;
+}
+
+body.dark-mode .apply-box {
+  background: #16233a;
+  color: #e5e7eb;
+}
+
+body.dark-mode .apply-box input,
+body.dark-mode .apply-box select,
+body.dark-mode .apply-box textarea {
+  background: #0f1720;
+  color: #e5e7eb;
+  border-color: #374151;
+}
+
+body.dark-mode footer {
+  background-color: #060f1f !important;
+}
+
+</style>
 </head>
 <body>
 
@@ -187,7 +346,7 @@ footer .d-flex.gap-3 a i {
 <a class="navbar-brand" href="index.html">🎓 Forces Academy</a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"><span class="navbar-toggler-icon"></span></button>
 <div class="collapse navbar-collapse" id="navbarMenu">
-<ul class="navbar-nav ms-auto">
+<ul class="navbar-nav ms-auto align-items-lg-center">
 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
@@ -203,6 +362,9 @@ footer .d-flex.gap-3 a i {
 
 
 <li class="nav-item"><a class="portal-btn" href="#">Student Portal</a></li>
+<li class="nav-item">
+  <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+</li>
 </ul>
 </div>
 </div>
@@ -421,10 +583,22 @@ transform:translateY(0);
 }
 
 }
+/* Scroll Reveal Animation */
+
+.scroll-reveal{
+    opacity:0;
+    transform:translateY(70px);
+    transition:all .9s ease;
+}
+
+.scroll-reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
 </style>
 <!-- How To Apply Section -->
 
-<section class="apply-process">
+<section class="apply-process scroll-reveal">
 
 <div class="container">
 
@@ -741,7 +915,7 @@ width:100%;
 
 <!-- Eligibility Section -->
 
-<section class="eligibility-section">
+<section class="eligibility-section scroll-reveal">
 
 <div class="container">
 
@@ -809,9 +983,9 @@ View Eligibility ↓
 <li>Eligible students can apply</li>
 </ul>
 
-<a href="#" class="apply-small">
-Apply Online →
-</a>
+<button class="main-btn" onclick="openForm()">
+    Apply Now →
+</button>
 
 </div>
 
@@ -839,9 +1013,9 @@ View Eligibility ↓
 <li>Discipline and commitment</li>
 </ul>
 
-<a href="#" class="apply-small">
-Apply Online →
-</a>
+<button class="main-btn" onclick="openForm()">
+    Apply Now →
+</button>
 
 </div>
 
@@ -869,9 +1043,9 @@ View Eligibility ↓
 <li>Interview preparation</li>
 </ul>
 
-<a href="#" class="apply-small">
-Apply Online →
-</a>
+<button class="main-btn" onclick="openForm()">
+    Apply Now →
+</button>
 
 </div>
 
@@ -899,9 +1073,9 @@ View Eligibility ↓
 <li>Interview guidance</li>
 </ul>
 
-<a href="#" class="apply-small">
-Apply Online →
-</a>
+<button class="main-btn" onclick="openForm()">
+    Apply Now →
+</button>
 
 </div>
 
@@ -1331,7 +1505,7 @@ document.getElementById("applyModal").style.display="none";
 
 </script>
 <!-- Documents-->
-<section class="documents-section">
+<section class="documents-section scroll-reveal">
 
 <div class="container">
 
@@ -1601,7 +1775,7 @@ bar.style.width = (completed / checks.length * 100) + "%";
 </script>
 
 
-<section class="fee-section">
+<section class="fee-section scroll-reveal">
 
 <div class="container">
 
@@ -2361,7 +2535,7 @@ grid-template-columns:1fr;
 
 }
 </style>
-<section class="dates-section">
+<section class="dates-section scroll-reveal">
 
 <div class="container">
 
@@ -2639,8 +2813,7 @@ display:none;
 </style>
 
 <!-- FAQ Section -->
-<!-- FAQ Section -->
-<section class="section">
+<section class="section scroll-reveal">
 
 <div class="container">
 
@@ -2853,8 +3026,7 @@ as required for the selected program.
 
 </section>
 <!-- Final CTA Section -->
-
-<section class="journey-section">
+<section class="journey-section scroll-reveal">
 
 <div class="journey-overlay"></div>
 
@@ -3106,6 +3278,27 @@ menuItems.forEach(item => {
 });
 </script>
 
+<!-- Dark Mode Toggle -->
+<script>
+(function(){
+  const toggleBtn = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Apply saved theme on page load
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    toggleBtn.textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+})();
+</script>
+
 
 
 
@@ -3166,5 +3359,47 @@ menuItems.forEach(item => {
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+const revealSections = document.querySelectorAll(".scroll-reveal");
+
+
+function revealOnScroll(){
+
+    revealSections.forEach(section => {
+
+        let position = section.getBoundingClientRect().top;
+        let screenHeight = window.innerHeight;
+
+
+        if(position < screenHeight - 120){
+
+            section.classList.add("active");
+
+        }
+
+    });
+
+}
+
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
+const reveal = document.querySelectorAll(".scroll-reveal");
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("active");
+        }
+    });
+});
+
+reveal.forEach(section=>{
+    observer.observe(section);
+});
+
+</script>
 </body>
 </html>

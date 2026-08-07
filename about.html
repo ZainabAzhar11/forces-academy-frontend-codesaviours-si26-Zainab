@@ -3,12 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About |  Forces Academy></title>
+
+ <title>Forces Academy | ISSB & Armed Forces Preparation</title>
+<meta name="description" content="Learn about Forces Academy Faisalabad — our mission, leadership team, and commitment to discipline, academic excellence and forces entry test preparation.">
+<meta name="keywords" content="Forces Academy, about Forces Academy, ISSB preparation, PMA long course, Faisalabad academy, leadership team, armed forces training">
+<meta property="og:title" content="About Forces Academy - Our Mission, Vision and Leadership">
+<meta property="og:description" content="Discover the mission, vision and leadership team behind Forces Academy's discipline-focused education in Faisalabad, Pakistan.">
+<meta property="og:type" content="website">
+
+ <link rel="icon" type="image/png" href="images/favicon.png">
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-body {font-family:'Poppins',sans-serif;background:#f8f9fa;color:#111827;margin:0;padding:0;}
+body {font-family:'Poppins',sans-serif;background:#f8f9fa;color:#111827;margin:0;padding:0;transition:background-color 0.3s ease, color 0.3s ease;}
 .navbar {background:#071f3d;}
 .navbar-brand {color:white !important;font-size:28px;font-weight:900;}
 .nav-link {color:white !important;font-weight:600;margin:0 10px;}
@@ -64,6 +73,29 @@ body {font-family:'Poppins',sans-serif;background:#f8f9fa;color:#111827;margin:0
     background:#ffb300;
     transform:translateY(-2px);
 }
+
+/* Dark mode toggle button */
+#theme-toggle {
+  background: transparent;
+  border: 2px solid #ffc107;
+  color: #ffc107;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#theme-toggle:hover {
+  background: #ffc107;
+  color: #071f3d;
+  transform: translateY(-3px);
+}
+
 .hero {position:relative;background:url('https://th.bing.com/th/id/OIP.jwAAJMOVRt9XefhBzNCYrwHaEs?w=285&h=180&c=7&r=0&o=7&pid=1.7&rm=3') center/cover no-repeat; min-height:500px;display:flex;align-items:center;color:white;}
 .hero::before {content:"";position:absolute;inset:0;background:rgba(7,31,61,0.7);}
 .hero-content {position:relative;z-index:2;max-width:700px;margin-left:50px;}
@@ -132,6 +164,74 @@ footer .d-flex.gap-3 a i {
 }
 /* Why Choose Us Icons Color */
 
+/* ============ DARK MODE ============ */
+body.dark-mode {
+  background: #0f1720;
+  color: #e5e7eb;
+}
+
+body.dark-mode .navbar {
+  background: #060f1f;
+}
+
+body.dark-mode .section,
+body.dark-mode .feature-card,
+body.dark-mode .leader-card,
+body.dark-mode .metric-card {
+  background: #16233a;
+  color: #e5e7eb;
+}
+
+body.dark-mode .metric-card h3 {
+  color: #f3f4f6;
+}
+
+body.dark-mode .metric-card p {
+  color: #9ca3af;
+}
+
+body.dark-mode .section-heading {
+  color: #f3f4f6;
+}
+
+body.dark-mode .choose-section .feature-card h6,
+body.dark-mode .choose-section .feature-card p {
+  color: #e5e7eb !important;
+}
+
+body.dark-mode footer,
+body.dark-mode .footer {
+  background-color: #060f1f !important;
+}
+
+body.dark-mode .about-hero-content p {
+  color: #d1d5db;
+}
+
+/* Dark mode Leadership Team heading */
+
+body.dark-mode .leadership-heading h2 {
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+}
+/* Leadership Team Yellow Line */
+
+.leadership-heading h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ffc107;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+body.dark-mode .leadership-heading p {
+  color: #9ca3af !important;
+}
+body.dark-mode .section.bg-light {
+    background: #16233a !important;
+}
 </style>
 </head>
 <body>
@@ -142,7 +242,7 @@ footer .d-flex.gap-3 a i {
 <a class="navbar-brand" href="index.html">🎓 Forces Academy</a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"><span class="navbar-toggler-icon"></span></button>
 <div class="collapse navbar-collapse" id="navbarMenu">
-<ul class="navbar-nav ms-auto">
+<ul class="navbar-nav ms-auto align-items-lg-center">
 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 <a href="about.html" class="nav-link underline-link">
 About
@@ -158,6 +258,9 @@ About
 </li>
 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 <li class="nav-item"><a class="portal-btn" href="#">Student Portal</a></li>
+<li class="nav-item">
+  <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+</li>
 </ul>
 </div>
 </div>
@@ -482,16 +585,89 @@ align-items:center;
 }
 
 }
+/* Stats Card Animation */
+
+.metric-card{
+    opacity:0;
+    transform:translateY(70px);
+    transition:all .8s ease;
+}
+
+
+.metric-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+.course-card{
+opacity:0;
+transform:translateY(40px);
+animation:courseShow .8s forwards;
+}
+
+
+.course-card:nth-child(1){
+animation-delay:.2s;
+}
+
+.course-card:nth-child(2){
+animation-delay:.4s;
+}
+
+.course-card:nth-child(3){
+animation-delay:.6s;
+}
+
+
+@keyframes courseShow{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+/* ==========================
+   SCROLL REVEAL ANIMATION
+========================== */
+
+.reveal{
+    opacity:0;
+    transform:translateY(60px);
+    transition: all 0.9s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* Cards thora delay se */
+.reveal-card{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all .8s ease;
+}
+
+.reveal-card.active{
+    opacity:1;
+    transform:translateY(0);
+}
 </style>
 
 <!-- Academy Overview -->
-<section class="section" id="academy-overview">
+<section class="section reveal" id="academy-overview">
 <div class="container">
 <h2 class="section-heading">Academy Overview</h2>
 <div class="underline"></div>
 <div class="row align-items-center g-5">
 <div class="col-md-6">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiAG-z-MhWDdMIapAw9tjw6rXT-uFDiTiQWRhvDR-uyA&s=10 "class="overview-img" alt="Forces Academy Overview">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiAG-z-MhWDdMIapAw9tjw6rXT-uFDiTiQWRhvDR-uyA&s=10 "class="overview-img" alt="Forces Academy students and instructor in a classroom setting">
 </div>
 <div class="col-md-6">
 <h4>About Forces Academy Faisalabad</h4>
@@ -508,7 +684,7 @@ align-items:center;
 </section>
 
 <!-- Mission & Vision -->
-<section class="mission-section">
+<section class="mission-section reveal">
 <div class="container">
 <h2 class="section-heading">Mission & Vision</h2>
 <div class="underline"></div>
@@ -522,7 +698,7 @@ align-items:center;
 </div>
 </div>
 <div class="col-md-6">
-<div class="feature-card">
+<div class="feature-card reveal-card">
 <i class="bi bi-eye-fill fs-1"></i>
 <h5>Our Vision</h5>
 <p>Our vision is to become a leading educational academy recognized for excellence in learning, innovation, and student development. We strive to inspire lifelong learning and empower students to become responsible, confident, and successful individuals who make a positive impact on society.</p>
@@ -536,7 +712,7 @@ align-items:center;
 <br>
 
 <!-- Why Choose Us -->
-<section class="choose-section">
+<section class="choose-section reveal">
 <div class="container">
 <h2 class="section-heading">Why Choose Us</h2>
 <div class="underline"></div>
@@ -548,17 +724,17 @@ align-items:center;
 <div class="feature-card"><i class="bi bi-person-badge fs-2"></i><h6>Qualified Faculty</h6><p>Our skilled and experienced faculty provides quality education with personalized guidance and support</p></div>
 </div>
 <div class="col-md-3">
-<div class="feature-card"><i class="bi bi-trophy fs-2"></i><h6>Proven Results</h6><p>Our students consistently achieve excellent academic results through dedicated teaching, regular assessments, and continuous support.</p></div>
+<div class="feature-card"><i class="bi bi-trophy fs-2"></i><h6>Proven Results</h6><p>Our students consistently achieve excellent academic results through dedicated teaching , assessments.</p></div>
 </div>
 <div class="col-md-3">
-<div class="feature-card"><i class="bi bi-building fs-2"></i><h6>Modern Facilities</h6><p>We provide modern classrooms, learning resources, and a comfortable environment to enhance the educational experience.</p></div>
+<div class="feature-card"><i class="bi bi-building fs-2"></i><h6>Modern Facilities</h6><p>We provide modern classrooms, learning resources, and a comfortable environment.</p></div>
 </div>
 </div>
 </div>
 
 </section>
 <!-- Stats / Metrics Section -->
-<section class="section bg-light">
+<section class="section bg-light reveal">
   <div class="container">
     <div class="row text-center g-4">
       <div class="col-md-3 col-6">
@@ -703,7 +879,7 @@ leadership and professional training.
 
 <div class="col-lg-3 col-md-6">
 
-<div class="flip-card">
+<div class="flip-card reveal-card">
 
 <div class="flip-inner">
 
@@ -1204,6 +1380,9 @@ color:#000;
 line-height:1.7;
 
 }
+
+
+
 </style>
 <!-- Back to Top Button -->
 <button id="backToTopBtn" title="Back to Top">↑</button>
@@ -1266,6 +1445,28 @@ menuItems.forEach(item => {
     item.classList.add("active");
   }
 });
+</script>
+
+<!-- Dark Mode Toggle -->
+<script>
+(function(){
+  const toggleBtn = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Apply saved theme on page load
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    toggleBtn.textContent = '☀️';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    toggleBtn.textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+})();
+
 </script>
 
 
@@ -1331,5 +1532,58 @@ menuItems.forEach(item => {
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const reveals = document.querySelectorAll(".reveal, .reveal-card");
+
+function revealOnScroll(){
+
+    reveals.forEach((element)=>{
+
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const revealPoint = 120;
+
+        if(elementTop < windowHeight - revealPoint){
+            element.classList.add("active");
+        }
+
+    });
+
+}
+
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
+</script>
+<script>
+const statsCards = document.querySelectorAll(".metric-card");
+
+
+function showStats(){
+
+statsCards.forEach(card=>{
+
+let position = card.getBoundingClientRect().top;
+
+let screen = window.innerHeight;
+
+
+if(position < screen - 100){
+
+card.classList.add("show");
+
+}
+
+});
+
+}
+
+
+window.addEventListener("scroll",showStats);
+
+showStats();
+</script>
 </body>
 </html>

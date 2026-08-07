@@ -7,6 +7,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Contact | Forces Academy</title>
+<meta name="description" content="Contact Forces Academy for admissions, courses, guidance and student support. Reach our team for more information.">
+<meta name="keywords" content="Forces Academy, Contact, Admissions, Courses, Faisalabad Academy">
+<meta property="og:title" content="Forces Academy Contact">
+<meta property="og:description" content="Get in touch with Forces Academy for admissions and guidance.">
+<link rel="icon" type="image/png" href="images/favicon.png">
 
 
 <!-- Bootstrap -->
@@ -42,32 +47,35 @@ background:#f7f5ed;
 }
 
 
+/* ================= BODY ================= */
+body{
 
-/* ================= NAVBAR ================= */
-.navbar {
-  border-bottom: 3px solid #ffc107; /* ye yellow line hai */
+font-family:'Poppins',sans-serif;
+
+background:#f7f5ed;
+
+scroll-behavior:smooth;
+
+transition:background-color 0.3s ease, color 0.3s ease;
+
 }
 
+/* ================= NAVBAR ================= */
 .navbar{
 
 background:#071f3d;
 
-padding:15px 0;
-
 }
-
-
 
 .navbar-brand{
 
 color:white!important;
 
-font-size:26px;
+font-size:28px;
 
 font-weight:900;
 
 }
-
 
 
 .nav-link{
@@ -76,11 +84,9 @@ color:white!important;
 
 font-weight:600;
 
-margin:0 10px;
+margin:0 8px;
 
 }
-
-
 
 .nav-link:hover{
 
@@ -100,7 +106,11 @@ color:#ffc107!important;
     height: 3px;
     background: #ffc107; /* yellow line */
     border-radius: 2px;
+    
 }
+
+
+
 
 .portal-btn {
     background:#ffc107;
@@ -112,11 +122,15 @@ color:#ffc107!important;
     white-space:nowrap; /* ye ensure kare ke text single line me rahe */
     display:inline-block;
 }
-
 .portal-btn:hover{
     background:#ffb300;
     transform:translateY(-2px);
+
 }
+.navbar{
+    border-bottom: 3px solid #ffc107;
+}
+
 
 
 /* ================= HERO ================= */
@@ -542,6 +556,85 @@ font-size:28px;
 }
 
 
+
+/* DARK MODE CONTACT PAGE FIX */
+body.dark-mode{
+background:#111827;
+color:white;
+}
+/* Follow Us heading dark mode */
+
+body.dark-mode .follow-us h3 {
+    color: white !important;
+}
+body.dark-mode .contact-cards,
+body.dark-mode .contact-section,
+body.dark-mode .faq-section{
+background:#111827 !important;
+}
+body.dark-mode .info-card,
+body.dark-mode .contact-info,
+body.dark-mode .contact-form,
+body.dark-mode .accordion-body{
+background:#1f2937 !important;
+color:white !important;
+}
+body.dark-mode .info-card h5,
+body.dark-mode .contact-section h2,
+body.dark-mode .faq-title,
+body.dark-mode .contact-info b,
+body.dark-mode label{
+color:white !important;
+}
+body.dark-mode .info-card p,
+body.dark-mode .contact-info p{
+color:#ddd !important;
+}
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea{
+background:#374151;
+color:white;
+border-color:#555;
+}
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder{
+color:#ccc;
+}
+
+ /* Dark mode toggle button */
+#theme-toggle {
+  background: transparent;
+  border: 2px solid #ffc107;
+  color: #ffc107;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#theme-toggle:hover {
+  background: #ffc107;
+  color: #071f3d;
+  transform: translateY(-3px);
+}
+/* Contact page headings yellow line */
+
+
+.faq-title::after,
+.follow-us h3::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #ffc107;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
 </style>
 
 </head>
@@ -640,7 +733,7 @@ Student Portal
 
 
 
-</ul>
+<li class="nav-item ms-2"><button id="theme-toggle" class="theme-btn">🌙</button></li></ul>
 
 
 </div>
@@ -1528,6 +1621,21 @@ text-align:center;
   background-color: #ffb300;
   transform: translateY(-3px);
 }
+.info-card:nth-child(1){
+animation-delay:.2s;
+}
+
+.info-card:nth-child(2){
+animation-delay:.4s;
+}
+
+.info-card:nth-child(3){
+animation-delay:.6s;
+}
+
+.info-card:nth-child(4){
+animation-delay:.8s;
+}
 </style>
 
 <script>
@@ -1581,7 +1689,7 @@ menuItems.forEach(item => {
         <div class="d-flex gap-3">
           <a href="https://www.facebook.com/ForcesAcademyFaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
           <a href="https://www.instagram.com/forcesacademyfaisalabad?igsh=MWI4YThxazhwM3o3Zg==" target="_blank" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
-          <a href="http://www.youtube.com/@forcesacademyfaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.youtube.com/@forcesacademyfaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
       </div>
@@ -1668,6 +1776,63 @@ footer .d-flex.gap-3 a i {
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+</script>
+
+
+<script>
+const themeToggle=document.getElementById("theme-toggle");
+if(themeToggle){
+if(localStorage.getItem("theme")==="dark"){
+document.body.classList.add("dark-mode");
+themeToggle.innerHTML="☀️";
+}
+themeToggle.onclick=()=>{
+document.body.classList.toggle("dark-mode");
+if(document.body.classList.contains("dark-mode")){
+localStorage.setItem("theme","dark");
+themeToggle.innerHTML="☀️";
+}else{
+localStorage.setItem("theme","light");
+themeToggle.innerHTML="🌙";
+}
+};
+}
+</script>
+
+
+<style>
+/* SCROLL REVEAL ANIMATION */
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all .8s ease;
+}
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+    const sections = document.querySelectorAll(
+        ".contact-cards, .contact-section, .faq-section, .follow-us, footer, .info-card, .contact-info, .contact-form"
+    );
+
+    sections.forEach(el=>el.classList.add("reveal"));
+
+    const observer = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                entry.target.classList.add("show");
+            }
+        });
+    },{
+        threshold:.15
+    });
+
+    sections.forEach(el=>observer.observe(el));
+});
 </script>
 
 </body>

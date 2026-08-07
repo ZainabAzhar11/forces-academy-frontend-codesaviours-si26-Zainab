@@ -4,9 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Forces Academy</title>
+ <title>Forces Academy | ISSB & Armed Forces Preparation</title>
+
+  <meta name="description" content="Forces Academy in Faisalabad offers ISSB, PMA and entry test prep, academic coaching, and leadership training for future army, navy and air force cadets.">
+  <meta name="keywords" content="Forces Academy, ISSB preparation, PMA long course, army entry test, Pakistan armed forces academy, Faisalabad academy">
+  <meta property="og:title" content="Forces Academy - Build Your Future, Serve Your Nation">
+  <meta property="og:description" content="Quality education, discipline and forces test preparation for students aiming to join Pakistan Armed Forces in Faisalabad, Pakistan.">
+  <meta property="og:type" content="website">
   
-  
+ <link rel="icon" type="image/png" href="images/favicon.png">
+
   <link 
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
     rel="stylesheet"
@@ -37,88 +44,220 @@
       background: #ffffff;
       color: #111827;
       overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* NAVBAR */
-   /* NAVBAR */
-    .navbar {
-      background: #071f3d;
-      padding: 14px 0;
+    /* ============ DARK MODE ============ */
+    body.dark-mode {
+      background: #0f1720;
+      color: #e5e7eb;
     }
 
-    .navbar-brand {
-      color: white !important;
-      font-size: 28px;
-      font-weight: 900;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      white-space: nowrap;
+    body.dark-mode .navbar {
+      background: #060f1f;
     }
 
-    .nav-link {
-      color: white !important;
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0 5px;
-      position: relative;
-      white-space: nowrap;
+    body.dark-mode .section,
+    body.dark-mode .courses,
+    body.dark-mode .admission-box,
+    body.dark-mode .course-card,
+    body.dark-mode .stat-card,
+    body.dark-mode .gallery-card,
+    body.dark-mode .testimonial-card,
+    body.dark-mode .spot-card,
+    body.dark-mode .mini-box,
+    body.dark-mode .selection-box {
+      background: #111c2b;
+      color: #e5e7eb;
     }
 
-    .nav-link:hover {
+    body.dark-mode .stats-section,
+    body.dark-mode .mission-section,
+    body.dark-mode .gallery-section,
+    body.dark-mode .testimonials-section,
+    body.dark-mode .latest-news,
+    body.dark-mode .spotlight-section {
+      background: #0b1420 !important;
+    }
+
+    body.dark-mode .section-heading,
+    body.dark-mode .stat-box h2,
+    body.dark-mode .course-body h3,
+    body.dark-mode .mission-section h2,
+    body.dark-mode .spot-head h2,
+    body.dark-mode .spot-card h4,
+    body.dark-mode .news-text h3,
+    body.dark-mode .testimonial-card h5 {
+      color: #f3f4f6;
+    }
+
+    body.dark-mode .section-text,
+    body.dark-mode .course-body p,
+    body.dark-mode .stat-box p,
+    body.dark-mode .mission-section p,
+    body.dark-mode .spot-card p,
+    body.dark-mode .news-text p,
+    body.dark-mode .gallery-text {
+      color: #9ca3af;
+    }
+
+    body.dark-mode footer {
+      background-color: #060f1f !important;
+    }
+
+    /* Fix hardcoded navy/blue text becoming invisible on dark backgrounds */
+    body.dark-mode .small-title,
+    body.dark-mode .section-heading span,
+    body.dark-mode .login-text a,
+    body.dark-mode .mini-box h5,
+    body.dark-mode .mission-section h2,
+    body.dark-mode .spot-head h2,
+    body.dark-mode .spot-card h4,
+    body.dark-mode .news-text h3,
+    body.dark-mode .testimonial-card h5,
+    body.dark-mode .gallery-title,
+    body.dark-mode .gallery-tag,
+    body.dark-mode .testimonials-section h2,
+    body.dark-mode .stat-number,
+    body.dark-mode .admission-box h3,
+    body.dark-mode .stat-box h2 {
       color: #ffc107 !important;
     }
 
-    /* Active Navbar Line */
+    body.dark-mode .mini-box,
+    body.dark-mode .spot-card,
+    body.dark-mode .testimonial-card,
+    body.dark-mode .stat-card {
+      background: #16233a !important;
+    }
 
-.nav-link::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-6px;
-width:0;
-height:3px;
-background:#ffc107;
-border-radius:5px;
-transition:.3s;
+    body.dark-mode .mini-box p,
+    body.dark-mode .spot-card p,
+    body.dark-mode .testimonial-card p,
+    body.dark-mode .testimonial-card span,
+    body.dark-mode .news-text p,
+    body.dark-mode .stat-card p,
+    body.dark-mode .gallery-text,
+    body.dark-mode .check-list li span {
+      color: #9ca3af !important;
+    }
+
+    #theme-toggle {
+      background: transparent;
+      border: 2px solid #ffc107;
+      color: #ffc107;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #theme-toggle:hover {
+      background: #ffc107;
+      color: #071f3d;
+      transform: translateY(-3px);
+    }
+    /* ===== Dark Mode Headings Fix ===== */
+
+body.dark-mode .gallery-title,
+body.dark-mode .testimonials-section h2 {
+    color: #ffffff !important;
+}
+body.dark-mode .gallery-section .gallery-title {
+    color:white !important;
+    -webkit-text-fill-color:white !important;
+}
+/* Dark mode - What Happening heading */
+/* Dark mode - Academy Spotlight heading */
+
+body.dark-mode .spot-head h2 {
+    color: white !important;
+    -webkit-text-fill-color: white !important;
 }
 
 
-.nav-link:hover::after,
-.nav-link.active::after{
-width:100%;
+
+
+
+/* ================= NAVBAR ================= */
+.navbar{
+
+background:#071f3d;
+
+}
+
+.navbar-brand{
+
+color:white!important;
+
+font-size:28px;
+
+font-weight:900;
+
 }
 
 
-.nav-link.active{
-color:#ffc107 !important;
+.nav-link{
+
+color:white!important;
+
+font-weight:600;
+
+margin:0 8px;
+
 }
+
+.nav-link:hover{
+
+color:#ffc107!important;
+
+}
+.nav-link.active {
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #ffc107; /* yellow line */
+    border-radius: 2px;
+    
+}
+
+
+
+
+.portal-btn {
+    background:#ffc107;
+    color:#000 !important;
+    padding:10px 25px; /* width ko thoda increase kiya */
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:700;
+    white-space:nowrap; /* ye ensure kare ke text single line me rahe */
+    display:inline-block;
+}
+.portal-btn:hover{
+    background:#ffb300;
+    transform:translateY(-2px);
+
+}
+
 .navbar{
     border-bottom: 3px solid #ffc107;
 }
-    
-    
-  
-    
-
-    .portal-btn {
-      background: #ffc107;
-      color: #000 !important;
-      padding: 11px 20px;
-      border-radius: 8px;
-      font-weight: 700;
-      text-decoration: none;
-      margin-left: 10px;
-      display: inline-block;
-      transition: 0.3s;
-      white-space: nowrap;
-    }
-
-    .portal-btn:hover {
-      background: #ffb300;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(255, 193, 7, 0.35);
-    }
+   
+   
 
     
 
@@ -451,6 +590,16 @@ to{
       transition: 0.4s;
       height: 100%;
       background: white;
+      opacity: 0;
+    }
+
+    .course-card.visible {
+      animation: cardRise 0.6s ease-out forwards;
+    }
+
+    @keyframes cardRise {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .course-card:hover {
@@ -640,7 +789,175 @@ to{
 </head>
 
 <body>
-  
+
+  <!-- INTRO / SPLASH VIDEO SCREEN -->
+  <div id="intro-screen">
+    <video autoplay muted playsinline id="intro-video">
+      <source src="https://assets.mixkit.co/videos/23053/23053-360.mp4" type="video/mp4">
+    </video>
+
+    <div class="intro-logo-badge">🎓</div>
+
+    <div class="intro-overlay">
+      <h1 class="intro-title">FORCES ACADEMY</h1>
+      <p class="intro-subtitle">Faisalabad's Premier Cadet Training Academy</p>
+    </div>
+
+    <div class="intro-scroll" id="intro-scroll-btn">
+      <span>SCROLL</span>
+      <div class="intro-scroll-arrow">↓</div>
+    </div>
+  </div>
+
+  <style>
+    #intro-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+
+    #intro-screen.fade-out {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    #intro-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      filter: brightness(0.55);
+    }
+
+    .intro-logo-badge {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      z-index: 3;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .intro-overlay {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #fff;
+    }
+    .intro-title {
+      font-size: 64px;
+      font-weight: 900;
+      letter-spacing: 6px;
+      color: #ffc107;
+      margin-bottom: 10px;
+    }
+
+    .intro-subtitle {
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    
+    }
+
+    
+
+    .intro-scroll {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      text-align: center;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .intro-scroll span {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+      opacity: 0.85;
+    }
+
+    .intro-scroll-arrow {
+      font-size: 20px;
+      animation: introBounce 1.6s infinite;
+    }
+
+    @keyframes introBounce {
+      0%, 100% { transform: translateY(0); opacity: 0.6; }
+      50% { transform: translateY(8px); opacity: 1; }
+    }
+
+    body.intro-active {
+      overflow: hidden;
+    }
+
+    @media (max-width: 576px) {
+      .intro-title {
+        font-size: 52px;
+        letter-spacing: 5px;
+      }
+      .intro-subtitle {
+        font-size: 11px;
+      }
+      .intro-logo-badge {
+        width: 46px;
+        height: 46px;
+        font-size: 20px;
+        top: 15px;
+        right: 15px;
+      }
+    }
+  </style>
+
+  <script>
+    // Lock scroll while intro is showing
+    document.body.classList.add("intro-active");
+
+    const introScreen = document.getElementById("intro-screen");
+    let introDismissed = false;
+
+    function dismissIntro() {
+      if (introDismissed) return;
+      introDismissed = true;
+      introScreen.classList.add("fade-out");
+      document.body.classList.remove("intro-active");
+      const homeSection = document.getElementById("home");
+      if (homeSection) {
+        homeSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+
+    window.addEventListener("load", () => {
+      // Auto fade out after 3 seconds
+      setTimeout(dismissIntro, 3000);
+    });
+
+    // Clicking SCROLL dismisses the intro immediately and scrolls to Home
+    document.getElementById("intro-scroll-btn").addEventListener("click", dismissIntro);
+  </script>
+
   <!-- NAVBAR -->
 <nav class="navbar navbar-expand-xl navbar-dark sticky-top">
     <div class="container">
@@ -661,22 +978,17 @@ to{
 
       <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-       <a class="nav-link active" href="index.html">Home</a>
-        <a class="nav-link" href="about.html">About </a>
-        <a class="nav-link" href="courses.html">Courses </a>
-<a class="nav-link" href="admissions.html">Admissions </a>
-<li class="nav-item">
-<a class="nav-link" href="results.html">Results</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="gallery.html">Gallery</a>
-</li>
-<a class="nav-link" href="contact.html">Contact </a>
-      
-        
-          <li class="nav-item"><a class="portal-btn" href="#Student-portal.html
-            ">Student Portal</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="portal-btn" href="student-portal.html">Student Portal</a></li>
+          <li class="nav-item">
+            <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+          </li>
         </ul>
       </div>
 
@@ -707,11 +1019,7 @@ to{
     </div>
   </section>
  
-
-
-     
-  <div id="about" style="display:none; background:white; min-height:100vh; padding:40px;">
-    <style>
+<style>
     /* Hero Text Smooth Reveal */
 
 .hero-text-animation{
@@ -736,11 +1044,6 @@ to{
 
 }
 </style>
-   
-</div>
-<div id="courses" style="display:none; background:white; min-height:100vh; padding:40px;">
-    
-</div>
 <!-- Selection Box -->
 <div class="selection-box">
   <h5>Selection Process</h5>
@@ -1017,7 +1320,30 @@ body{
   padding: 30px 20px;
   border-radius: 15px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.8s ease;
+  opacity: 0;
+  transform: translateY(80px);
+}
+
+.stat-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stat-card:nth-child(1){
+  transition-delay:.1s;
+}
+
+.stat-card:nth-child(2){
+  transition-delay:.2s;
+}
+
+.stat-card:nth-child(3){
+  transition-delay:.3s;
+}
+
+.stat-card:nth-child(4){
+  transition-delay:.4s;
 }
 .stat-card:hover {
   transform: translateY(-10px);
@@ -1129,7 +1455,6 @@ body{
 
 }
 </style>
-</style>
 
 <script>
 
@@ -1159,6 +1484,23 @@ const observer = new IntersectionObserver(entries => {
 }, options);
 
 stats.forEach(stat => observer.observe(stat));
+
+// Stat cards slide up when in view
+const statCards = document.querySelectorAll('.stat-card');
+const statCardObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      statCardObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+statCards.forEach((card,index)=>{
+  card.style.transitionDelay = `${index * 0.15}s`;
+  statCardObserver.observe(card);
+});
+
 </script>
 
 
@@ -1234,7 +1576,7 @@ stats.forEach(stat => observer.observe(stat));
             <div class="course-img">
               <img 
                 src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=80" 
-                alt="Academic Preparation"
+                alt="Students studying together during Forces Academy academic preparation class"
               />
             </div>
             <div class="course-body">
@@ -1249,7 +1591,7 @@ stats.forEach(stat => observer.observe(stat));
             <div class="course-img">
               <img 
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" 
-                alt="Leadership Training"
+                alt="Instructor leading a leadership training session at Forces Academy"
               />
             </div>
             <div class="course-body">
@@ -1264,7 +1606,7 @@ stats.forEach(stat => observer.observe(stat));
             <div class="course-img">
               <img 
                 src="https://images.unsplash.com/photo-1517976487492-5750f3195933?auto=format&fit=crop&w=900&q=80" 
-                alt="Air Force Preparation"
+                alt="Cadet in Air Force preparation training at Forces Academy"
               />
             </div>
             <div class="course-body">
@@ -1277,6 +1619,21 @@ stats.forEach(stat => observer.observe(stat));
       </div>
     </div>
   </section>
+  <script>
+    // Course cards appear one by one with a slight delay
+    const courseCards = document.querySelectorAll('.course-card');
+    const courseObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const index = Array.from(courseCards).indexOf(entry.target);
+          entry.target.style.animationDelay = (index * 0.2) + 's';
+          entry.target.classList.add('visible');
+          courseObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    courseCards.forEach(card => courseObserver.observe(card));
+  </script>
     
          
   
@@ -1298,7 +1655,7 @@ stats.forEach(stat => observer.observe(stat));
             for future success in education and forces preparation.
           </p>
 
-          <a href="#contact" class="main-btn">Contact for Admission →</a>
+          <a href="contact.html" class="main-btn">Contact for Admission →</a>
         </div>
 
         <div class="col-lg-6">
@@ -1397,6 +1754,12 @@ Start Application →
 padding:70px 0;
 background:#f8f6ed;
 
+}
+/* Build Your Future heading dark mode */
+
+body.dark-mode .mission-section h2 {
+    color: white !important;
+    -webkit-text-fill-color: white !important;
 }
 
 
@@ -1520,10 +1883,22 @@ font-size:14px;
 margin:0;
 
 }
+/* Yellow underline for main section headings */
 
+/* Only Training Programs yellow line */
 
-
-
+.courses .section-heading::after,
+.gallery-title::after,
+.testimonials-section h2::after,
+.spot-head h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #ffc107;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
 
 
 
@@ -1566,7 +1941,7 @@ font-size:30px;
 <div class="col-lg-4 col-md-6">
 <div class="gallery-card">
 <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f"
-alt="Campus">
+alt="Forces Academy campus building exterior">
 </div>
 </div>
 
@@ -1575,7 +1950,7 @@ alt="Campus">
 <div class="col-lg-4 col-md-6">
 <div class="gallery-card">
 <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" 
-alt="Learning">
+alt="Students learning in classroom at Forces Academy">
 </div>
 </div>
 
@@ -1584,7 +1959,7 @@ alt="Learning">
 <div class="col-lg-4 col-md-6">
 <div class="gallery-card">
 <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644"
-alt="Students Activity">
+alt="Students participating in Forces Academy group activity">
 </div>
 </div>
 
@@ -1650,6 +2025,7 @@ transform:scale(1.08);
 <h2 class="text-center mb-5"
 style="font-weight:900;color:#071f3d;">
 What Our Cadets Say
+
 </h2>
 
 
@@ -1663,10 +2039,10 @@ What Our Cadets Say
 
 <div class="testimonial-card">
 
-<img src="https://randomuser.me/api/portraits/women/31.jpg">
+<img src="https://randomuser.me/api/portraits/women/31.jpg" alt="Portrait of Mahnoor Iqbal, Forces Academy alumna selected for Navy">
 
 <p>
-“Force Academy helped me build my confidence and skills. The teachers are very supportive.”
+"Force Academy helped me build my confidence and skills. The teachers are very supportive."
 </p>
 
 <h5>Mahnoor Iqbal</h5>
@@ -1688,10 +2064,10 @@ What Our Cadets Say
 
 <div class="testimonial-card">
 
-<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Portrait of Usman Khan, Forces Academy alumnus selected for Pakistan Army">
 
 <p>
-“The coaching here is top-notch and helped me achieve my goals in exams and physical fitness.”
+"The coaching here is top-notch and helped me achieve my goals in exams and physical fitness."
 </p>
 
 <h5>Usman Khan</h5>
@@ -1713,10 +2089,10 @@ What Our Cadets Say
 
 <div class="testimonial-card">
 
-<img src="https://randomuser.me/api/portraits/men/30.jpg">
+<img src="https://randomuser.me/api/portraits/men/30.jpg" alt="Portrait of Abdullah Anjum, Forces Academy alumnus selected for Army">
 
 <p>
-“I gained excellent academic and leadership skills here. Highly recommended!”
+"I gained excellent academic and leadership skills here. Highly recommended!"
 </p>
 
 <h5>Abdullah Anjum</h5>
@@ -1738,10 +2114,10 @@ What Our Cadets Say
 
 <div class="testimonial-card">
 
-<img src="https://randomuser.me/api/portraits/women/50.jpg">
+<img src="https://randomuser.me/api/portraits/women/50.jpg" alt="Portrait of Ayesha Noor, Forces Academy student">
 
 <p>
-“The environment and support system at Forces Academy is incredible for student growth.”
+"The environment and support system at Forces Academy is incredible for student growth."
 </p>
 
 <h5>Ayesha Noor</h5>
@@ -2746,7 +3122,7 @@ html{
         <div class="d-flex gap-3">
           <a href="https://www.facebook.com/ForcesAcademyFaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
           <a href="https://www.instagram.com/forcesacademyfaisalabad?igsh=MWI4YThxazhwM3o3Zg==" target="_blank" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
-          <a href="http://www.youtube.com/@forcesacademyfaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.youtube.com/@forcesacademyfaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
       </div>
@@ -2829,6 +3205,52 @@ footer .d-flex.gap-3 a i {
     line-height: 1; /* ensures icon vertically centered */
 }
 
+</style>
+<!-- Back to Top Button -->
+<button id="backToTopBtn" title="Back to Top">↑</button>
+
+<style>
+#backToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+}
+#backToTopBtn:hover {
+  background-color: #ffb300;
+  transform: translateY(-3px);
+}
+</style>
+
+<script>
+
+
+// Back-to-top button
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+window.onscroll = function() {
+  if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+};
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+});
+
+</script>
 
 
 
@@ -2856,58 +3278,52 @@ section.classList.add("show");
 });
 
 </script>
-</script>
-  <!-- Back to Top Button -->
-<button id="backToTopBtn" title="Back to Top">↑</button>
-
-<style>
-#backToTopBtn {
-  display: none; /* Hidden by default */
-  position: fixed;
-  bottom: 40px;
-  right: 30px;
-  z-index: 99;
-  background-color: #ffc107;
-  color: #000;
-  border: none;
-  padding: 12px 16px;
-  border-radius: 50%;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-  transition: all 0.3s;
-}
-#backToTopBtn:hover {
-  background-color: #ffb300;
-  transform: translateY(-3px);
-}
-</style>
-
 <script>
+
+const themeToggle = document.getElementById("theme-toggle");
+
+themeToggle.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+
+        themeToggle.innerHTML = "☀️";
+        localStorage.setItem("theme","dark");
+
+    } 
+    else {
+
+        themeToggle.innerHTML = "🌙";
+        localStorage.setItem("theme","light");
+
+    }
+
+});
 // Smooth scroll for all anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e){
+    const targetEl = document.querySelector(this.getAttribute('href'));
+    if(!targetEl) return;
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
+    targetEl.scrollIntoView({
       behavior: 'smooth'
     });
   });
 });
+window.addEventListener("DOMContentLoaded", () => {
 
-// Back-to-top button
-const backToTopBtn = document.getElementById("backToTopBtn");
+    const savedTheme = localStorage.getItem("theme");
 
-window.onscroll = function() {
-  if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-};
+    if(savedTheme === "dark"){
 
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({top: 0, behavior: 'smooth'});
+        document.body.classList.add("dark-mode");
+        document.getElementById("theme-toggle").innerHTML = "☀️";
+
+    }
+
 });
+
 // gets the current file name
 
 const current = location.pathname.split("/").pop(); // gets the current file name

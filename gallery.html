@@ -8,6 +8,12 @@
 
 <title>Gallery | Forces Academy</title>
 
+<meta name="description" content="Explore Forces Academy gallery featuring academy events, sports activities, training sessions and student achievements.">
+<meta name="keywords" content="Forces Academy, Gallery, Training, Events, Students">
+<meta property="og:title" content="Forces Academy Gallery">
+<meta property="og:description" content="View memorable moments and activities of Forces Academy.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -375,11 +381,18 @@ color:#000;
   color: #000000;
 }
 /* FINAL HEADING COLOR FIX */
+
 body .gallery-section .gallery-header .gallery-heading {
-  color: #071f3d !important;
-  -webkit-text-fill-color: #071f3d !important;
+   color: #071f3d;
+   -webkit-text-fill-color: #071f3d;
 }
 
+
+/* DARK MODE EXPLORE MOMENTS FIX */
+body.dark-mode .gallery-section .gallery-header .gallery-heading {
+   color: #ffffff !important;
+   -webkit-text-fill-color: #ffffff !important;
+}
 
 
 
@@ -806,10 +819,83 @@ body .gallery-section .gallery-header .gallery-heading {
         height: 62vh;
       }
     }
-  </style>
+  
+
+/* Dark mode toggle button */
+#theme-toggle {
+  background: transparent;
+  border: 2px solid #ffc107;
+  color: #ffc107;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#theme-toggle:hover {
+  background: #ffc107;
+  color: #071f3d;
+  transform: translateY(-3px);}
+  /* WEEK 6 DARK MODE FIX */
+
+body.dark-mode{
+background:#111827;
+color:white;
+}
+
+
+
+body.dark-mode .gallery-section,
+body.dark-mode .campus-tour,
+body.dark-mode .life-section,
+body.dark-mode .facility-section{
+background:#111827 !important;
+}
+
+body.dark-mode .gallery-heading,
+body.dark-mode .title,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4{
+color:white !important;
+}
+
+body.dark-mode p{
+color:#ddd;
+}
+
+body.dark-mode .timeline-card,
+body.dark-mode .life-card,
+body.dark-mode .time-card{
+background:#1f2937 !important;
+color:white !important;
+}
+
+</style>
+
+<style>
+/* Scroll Reveal Animation */
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:all .8s ease;
+}
+.reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+</style>
+
 </head>
 
-<body>
+
 
 <!-- NAVBAR -->
 
@@ -861,7 +947,7 @@ body .gallery-section .gallery-header .gallery-heading {
 Student Portal
 </a>
 </li>
-
+<li class="nav-item ms-2"><button id="theme-toggle" class="theme-btn">🌙</button></li>
 
 </ul>
 
@@ -879,7 +965,7 @@ Student Portal
 
 <!-- HERO -->
 
-<section class="hero">
+<section class="hero reveal">
 
 <div>
 
@@ -897,12 +983,12 @@ A glimpse of academy life, training, events and achievements.
 
 <body>
 
-  <main class="gallery-section">
+  <main class="gallery-section reveal">
 
     <div class="container">
 
       <!-- Heading -->
-      <header class="gallery-header">
+      <header class="gallery-header reveal">
         <h1 class="gallery-heading">Explore Moments</h1>
 
         <div class="heading-line"></div>
@@ -1587,7 +1673,7 @@ A glimpse of academy life, training, events and achievements.
 </script>
 <!-- OUR JOURNEY SECTION -->
 
-<section class="py-5 journey-section">
+<section class="py-5 journey-section reveal">
 
 <div class="container">
 
@@ -1749,6 +1835,19 @@ margin-right:auto;
 margin-left:auto;
 
 }
+/* OUR JOURNEY - DARK MODE FIX */
+
+body.dark-mode .timeline-card h4{
+    color:#ffc107 !important;
+}
+
+body.dark-mode .timeline-card p{
+    color:#ffffff !important;
+}
+
+body.dark-mode .timeline-card{
+    background:#1f2937 !important;
+}
 
 
 
@@ -1806,7 +1905,7 @@ margin-left:50px!important;
 </style>
 <!-- VIRTUAL CAMPUS TOUR -->
 
-<section class="campus-tour">
+<section class="campus-tour reveal">
 
 <div class="container">
 
@@ -1821,7 +1920,7 @@ Virtual Campus Tour
 <div class="tour-box">
 
 
-<img src="https://images.unsplash.com/photo-1562774053-701939374585?w=1600">
+<img src="https://images.unsplash.com/photo-1562774053-701939374585?w=1600" alt="Forces Academy campus grounds and training area">
 
 
 <div class="tour-overlay">
@@ -2044,6 +2143,162 @@ transform:translateY(-5px);
 }
 
 </style>
+
+<!---------------------------------- VIDEO SECTION ------------------------------------------->
+<section class="video-section reveal">
+  <div class="container">
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <span class="hof-label">Academy Life & Activities</span>
+      <h2 class="hof-title video-title">Cadet Training Highlights</h2>
+      <p class="hof-subtitle video-subtitle">See our cadets build confidence, skills and leadership
+
+      </p>
+    </div>
+    <!-- Featured Video -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-8">
+        <a href="https://www.youtube.com/watch?v=HVj7JX_sXuw" class="glightbox video-featured" data-type="video">
+          <img src="https://img.youtube.com/vi/HVj7JX_sXuw/maxresdefault.jpg" alt="Forces Academy Faisalabad">
+          <div class="video-play-overlay">
+            <i class="bi bi-play-circle-fill"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- 3 Thumbnails -->
+    <div class="row g-3 justify-content-center">
+      <!-- Thumb 1: Maha Sarwar -->
+      <div class="col-md-4 col-6">
+        <a href="https://www.youtube.com/watch?v=YsRmqm9E4Ck" class="glightbox video-thumb" data-type="video">
+          <img src="https://img.youtube.com/vi/YsRmqm9E4Ck/mqdefault.jpg" alt="PAF Recommended Female Interview">
+          <div class="video-play-overlay small">
+            <i class="bi bi-play-circle-fill"></i>
+          </div>
+        </a>
+      </div>
+      <!-- Thumb 2: Cadet Moeez -->
+      <div class="col-md-4 col-6">
+        <a href="https://www.youtube.com/watch?v=AMYHBhzcy4E" class="glightbox video-thumb" data-type="video">
+          <img src="https://img.youtube.com/vi/AMYHBhzcy4E/mqdefault.jpg" alt="Gentleman Cadet Moeez">
+          <div class="video-play-overlay small">
+            <i class="bi bi-play-circle-fill"></i>
+          </div>
+        </a>
+      </div>
+      <!-- Thumb 3: Academy Short -->
+      <div class="col-md-4 col-6">
+        <a href="https://www.youtube.com/shorts/RvTNq7_h2yE" class="glightbox video-thumb" data-type="video">
+          <img src="https://img.youtube.com/vi/RvTNq7_h2yE/mqdefault.jpg" alt="Academy Life">
+          <div class="video-play-overlay small">
+            <i class="bi bi-play-circle-fill"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.video-section {
+  padding: 70px 0;
+  background: #fdf6e8;
+}
+
+.hof-label {
+  display: inline-block;
+  background: #ffc107;
+  color: #071f3d;
+  padding: 7px 20px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.video-title {
+  font-size: 36px;
+  font-weight: 900;
+  color: #071f3d;
+  margin-top: 10px;
+}
+
+.video-subtitle {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.video-featured,
+.video-thumb {
+  position: relative;
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+.video-featured img,
+.video-thumb img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.video-featured:hover img,
+.video-thumb:hover img {
+  transform: scale(1.05);
+}
+
+.video-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(7, 31, 61, 0.25);
+  color: #ffc107;
+  font-size: 70px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.video-play-overlay.small {
+  font-size: 45px;
+}
+
+.video-featured:hover .video-play-overlay,
+.video-thumb:hover .video-play-overlay {
+  background: rgba(7, 31, 61, 0.45);
+  transform: scale(1.08);
+}
+
+body.dark-mode .video-section {
+  background: #111827 !important;
+}
+
+body.dark-mode .video-title {
+  color: #ffffff !important;
+}
+
+body.dark-mode .video-subtitle {
+  color: #ddd;
+}
+
+@media (max-width: 768px) {
+  .video-title {
+    font-size: 28px;
+  }
+  .video-play-overlay {
+    font-size: 50px;
+  }
+  .video-play-overlay.small {
+    font-size: 32px;
+  }
+}
+</style>
+<!---------------------------------- END VIDEO SECTION ------------------------------------------->
+
 <!-- TRAINING DAY SCHEDULE -->
 
 
@@ -2430,9 +2685,38 @@ color:#ffc107;
 font-weight:900;
 
 }
+/* LIFE AT FORCES ACADEMY DARK MODE FIX */
 
+body.dark-mode .life-section{
+    background:#111827 !important;
+}
 
+body.dark-mode .life-section .life-card{
+    background:#1f2937 !important;
+}
 
+body.dark-mode .life-section .life-card h4{
+    color:#ffc107 !important;
+}
+
+/* Icons Dark Blue */
+body.dark-mode .life-section .life-card i{
+    color:#010610 !important;
+}
+body.dark-mode .life-section .life-card i{
+    color:#ffc107 !important;
+}
+
+.time-card h3{
+color:#ffc107;
+font-weight:900;
+}
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4{
+color:white !important;
+}
+body.dark-mode .time-card h3{
+color:#ffc107 !important;
+}
 
 
 /* FACILITIES */
@@ -2544,7 +2828,7 @@ menuItems.forEach(item => {
         <div class="d-flex gap-3">
           <a href="https://www.facebook.com/ForcesAcademyFaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
           <a href="https://www.instagram.com/forcesacademyfaisalabad?igsh=MWI4YThxazhwM3o3Zg==" target="_blank" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
-          <a href="http://www.youtube.com/@forcesacademyfaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.youtube.com/@forcesacademyfaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
       </div>
@@ -2641,6 +2925,54 @@ footer .d-flex.gap-3 a i {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+  // Initialize GLightbox for the video gallery
+  const videoLightbox = GLightbox({
+    selector: '.glightbox',
+    autoplayVideos: true
+  });
+</script>
+
+<script>
+const themeToggle=document.getElementById("theme-toggle");
+if(themeToggle){
+if(localStorage.getItem("theme")==="dark"){
+document.body.classList.add("dark-mode");
+themeToggle.innerHTML="☀️";
+}
+themeToggle.onclick=()=>{
+document.body.classList.toggle("dark-mode");
+if(document.body.classList.contains("dark-mode")){
+localStorage.setItem("theme","dark");
+themeToggle.innerHTML="☀️";
+}else{
+localStorage.setItem("theme","light");
+themeToggle.innerHTML="🌙";
+}
+};
+}
+
+
+  </script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+ const revealItems=document.querySelectorAll(".reveal");
+ const observer=new IntersectionObserver((entries)=>{
+   entries.forEach(entry=>{
+     if(entry.isIntersecting){
+       entry.target.classList.add("show");
+     }
+   });
+ },{
+   threshold:0.15
+ });
+ revealItems.forEach(item=>observer.observe(item));
+});
+
+</script>
 
 </body>
 
