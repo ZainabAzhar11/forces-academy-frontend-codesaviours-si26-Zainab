@@ -985,7 +985,7 @@ to{
           <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item"><a class="portal-btn" href="student-portal.html">Student Portal</a></li>
+          <li class="nav-item"><a class="portal-btn" href="https://tehseenproject.ct.ws/login.php">Student Portal</a></li>
           <li class="nav-item">
             <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
           </li>
@@ -2340,6 +2340,265 @@ slidesPerView:3,
 
 
 </script>
+<!-- ============================================= -->
+<!-- LATEST ANNOUNCEMENTS SECTION (flip cards) -->
+<!-- ============================================= -->
+
+<section class="announcements-section" id="announcements">
+
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="ann-heading">Latest Announcements</h2>
+      <div class="ann-star">★★★★</div>
+      <p class="ann-subtext">Stay updated with our latest news and important announcements</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-inner">
+
+            <div class="flip-front">
+              <div class="ann-top">
+                <div class="ann-icon">📢</div>
+                <span class="ann-date"><i class="bi bi-calendar3"></i> 10 August 2026</span>
+              </div>
+              <div class="ann-divider"></div>
+              <h3>Admissions Open 2026</h3>
+              <p>Admissions are now open for Matric, FSc and Defence preparation programs. Apply now and secure your future.</p>
+              <span class="ann-link">Read More <i class="bi bi-arrow-right"></i></span>
+            </div>
+
+            <div class="flip-back">
+              <h3>Admissions Open 2026</h3>
+              <p>Admissions for the 2026 batch are officially open across Matric, FSc Pre-Medical, FSc Pre-Engineering and full Defence/ISSB preparation programs. Seats are limited and filled on a first-come basis, so early registration is strongly encouraged. Visit the Admissions page or contact the academy office to begin your application, submit required documents, and book your entry test slot.</p>
+            
+              <span class="ann-link">Back <i class="bi bi-arrow-left"></i></span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-inner">
+
+            <div class="flip-front">
+              <div class="ann-top">
+                <div class="ann-icon">🏆</div>
+                <span class="ann-date"><i class="bi bi-calendar3"></i> 25 September 2026</span>
+              </div>
+              <div class="ann-divider"></div>
+              <h3>Result Announcement</h3>
+              <p>Congratulations to all our students who achieved excellent results in their board examinations.</p>
+              <span class="ann-link">Read More <i class="bi bi-arrow-right"></i></span>
+            </div>
+
+            <div class="flip-back">
+              <h3>Result Announcement</h3>
+              <p>Board examination results for this session have been announced, and Forces Academy students have once again delivered outstanding performances across Matric and FSc groups. Result cards are available from the academy office, and students are encouraged to meet their subject teachers for detailed feedback and guidance on next steps, including forces entry test preparation.</p>
+              
+              <span class="ann-link">Back <i class="bi bi-arrow-left"></i></span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-inner">
+
+            <div class="flip-front">
+              <div class="ann-top">
+                <div class="ann-icon">👥</div>
+                <span class="ann-date"><i class="bi bi-calendar3"></i> 15 October 2026</span>
+              </div>
+              <div class="ann-divider"></div>
+              <h3>New Batch Starting</h3>
+              <p>A new training batch is starting soon for all programs. Limited seats available. Enroll today!</p>
+              <span class="ann-link">Read More <i class="bi bi-arrow-right"></i></span>
+            </div>
+
+            <div class="flip-back">
+              <h3>New Batch Starting</h3>
+              <p>A new batch for Academic Preparation, Leadership Training and Forces (ISSB / PMA Long Course) preparation begins on 15 September 2026. Classes will cover structured coursework, physical fitness training and interview/psych-test practice. Seats are limited, so students are advised to complete registration early to reserve a spot in this batch.</p>
+             
+              <span class="ann-link">Back <i class="bi bi-arrow-left"></i></span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+.announcements-section{
+  padding:80px 0;
+  background:#f8fbff;
+}
+
+.ann-heading{
+  font-size:34px;
+  font-weight:900;
+  color:#071f3d;
+  margin:0;
+  letter-spacing:1px;
+}
+
+.ann-star{
+  color:#ffc107;
+  font-size:14px;
+  margin-top:14px;
+}
+
+.ann-subtext{
+  color:#666;
+  margin-top:10px;
+  font-size:15px;
+}
+
+/* Flip card mechanics */
+.flip-card{
+  background:transparent;
+  height:340px;
+  perspective:1200px;
+  cursor:pointer;
+  overflow:visible;
+}
+
+.flip-inner{
+  position:relative;
+  width:100%;
+  height:100%;
+  text-align:left;
+  transition:transform 0.7s ease;
+  transform-style:preserve-3d;
+  will-change:transform;
+}
+
+.flip-card.flipped .flip-inner{
+  transform:rotateY(180deg);
+}
+
+.flip-front,
+.flip-back{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  -webkit-backface-visibility:hidden;
+  backface-visibility:hidden;
+  border-radius:16px;
+  border:1px solid rgba(255,193,7,0.25);
+  background:#0d2648;
+  box-shadow:0 12px 30px rgba(15,23,42,.15);
+  padding:28px 26px;
+  display:flex;
+  flex-direction:column;
+  transform:translateZ(0);
+}
+
+.flip-back{
+  transform:rotateY(180deg) translateZ(0);
+  justify-content:center;
+}
+
+.ann-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.ann-icon{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:#071f3d;
+  border:2px solid #ffc107;
+  color:#ffc107;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+}
+
+.ann-date{
+  font-size:13px;
+  color:#dbe4f0;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.ann-divider{
+  height:1px;
+  background:rgba(255,255,255,0.12);
+  margin:18px 0 16px;
+}
+
+.flip-front h3,
+.flip-back h3{
+  color:#ffc107;
+  font-size:20px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+.flip-front p,
+.flip-back p{
+  color:#c3ccdb;
+  font-size:14.5px;
+  line-height:1.7;
+  margin-bottom:16px;
+  flex:1;
+}
+
+.ann-link{
+  font-weight:700;
+  color:#ffc107;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:14px;
+}
+
+/* Dark mode overrides */
+body.dark-mode .announcements-section{
+  background:#0b1420 !important;
+}
+
+body.dark-mode .ann-heading{
+  color:#ffffff !important;
+}
+
+body.dark-mode .ann-subtext{
+  color:#c3ccdb !important;
+}
+
+@media(max-width:768px){
+  .ann-heading{
+    font-size:26px;
+  }
+  .flip-card{
+    height:380px;
+  }
+}
+</style>
 <!-- Latest Announcement -->
 
 <section class="latest-news">
@@ -2371,7 +2630,7 @@ Check admission dates, entry test schedule and important academy updates.
 </div>
 
 
-<a href="admissions.html" class="news-btn">
+       <a href="admissions.html#important-dates" class="news-btn">
 Read More →
 </a>
 
@@ -2539,7 +2798,6 @@ margin:auto;
 
 }
 </style>
-
 
 
 

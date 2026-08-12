@@ -361,7 +361,7 @@ body.dark-mode footer {
 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 
 
-<li class="nav-item"><a class="portal-btn" href="#">Student Portal</a></li>
+<li class="nav-item"><a class="portal-btn" href="https://tehseenproject.ct.ws/login.php">Student Portal</a></li>
 <li class="nav-item">
   <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
 </li>
@@ -1102,38 +1102,38 @@ View Eligibility ↓
 </div>
 
 
-<form>
+<form id="registration-form">
 
 
 <div class="form-grid">
 
 <div>
 <label>First Name</label>
-<input type="text" placeholder="Enter your first name">
+<input type="text" name="first_name" placeholder="Enter your first name">
 </div>
 
 
 <div>
 <label>Last Name</label>
-<input type="text" placeholder="Enter your last name">
+<input type="text" name="last_name" placeholder="Enter your last name">
 </div>
 
 
 <div>
 <label>Father's Name</label>
-<input type="text" placeholder="Enter father's name">
+<input type="text" name="father_name" placeholder="Enter father's name">
 </div>
 
 
 <div>
 <label>Date of Birth</label>
-<input type="date">
+<input type="date" name="dob">
 </div>
 
 
 <div>
 <label>Gender</label>
-<select>
+<select name="gender">
 <option>Select gender</option>
 <option>Male</option>
 <option>Female</option>
@@ -1143,19 +1143,19 @@ View Eligibility ↓
 
 <div>
 <label>CNIC / B-Form</label>
-<input placeholder="XXXXX-XXXXXXX-X">
+<input name="cnic" placeholder="XXXXX-XXXXXXX-X">
 </div>
 
 
 <div>
 <label>Email Address</label>
-<input placeholder="Enter your email">
+<input name="email" placeholder="Enter your email">
 </div>
 
 
 <div>
 <label>Contact Number</label>
-<input placeholder="03XX-XXXXXXX">
+<input name="phone" placeholder="03XX-XXXXXXX">
 </div>
 
 </div>
@@ -1163,7 +1163,7 @@ View Eligibility ↓
 
 <label>Select Program</label>
 
-<select>
+<select name="gender">
 <option>Choose a program</option>
 <option>FSc Pre-Medical</option>
 <option>FSc Pre-Engineering</option>
@@ -1176,7 +1176,7 @@ View Eligibility ↓
 
 <label>Address</label>
 
-<textarea placeholder="Enter your address"></textarea>
+<textarea name="address" placeholder="Enter your address"></textarea>
 
 
 <div class="form-buttons">
@@ -2544,7 +2544,7 @@ grid-template-columns:1fr;
 
 <span>IMPORTANT</span>
 
-<h2>Important Dates</h2>
+<h2 id="important-dates">Important Dates</h2>
 
 <div class="yellow-line"></div>
 
@@ -2810,6 +2810,244 @@ display:none;
 }
 
 }
+
+</style>
+<!-- Admission Enquiry Form -->
+
+<section class="enquiry-section">
+
+<div class="container">
+
+<div class="enquiry-box">
+
+<h2>Admission Enquiry</h2>
+
+<p>
+Have questions about admission? Send us your enquiry.
+</p>
+
+
+<form id="contact-form">
+
+
+<div class="row">
+
+<div class="col-md-6">
+<input 
+type="text" 
+name="name"
+placeholder="Enter Your Name"
+required>
+</div>
+
+
+<div class="col-md-6">
+<input 
+type="email" 
+name="email"
+placeholder="Enter Your Email"
+required>
+</div>
+
+
+<div class="col-md-6">
+<input 
+type="text"
+name="phone"
+placeholder="Enter Phone Number"
+required>
+</div>
+
+
+<div class="col-md-6">
+
+<select name="course" required>
+
+<option value="">
+Select Course
+</option>
+
+<option>
+FSc Pre-Medical
+</option>
+
+<option>
+FSc Pre-Engineering
+</option>
+
+<option>
+Matric Science
+</option>
+
+<option>
+Matric Arts
+</option>
+
+<option>
+PMA Long Course Preparation
+</option>
+
+<option>
+ISSB Preparation
+</option>
+
+</select>
+
+</div>
+
+
+<div class="col-12">
+
+<textarea 
+name="message"
+placeholder="Write your message"
+required></textarea>
+
+</div>
+
+
+<div class="col-12 text-center">
+
+<button type="submit">
+Send Enquiry
+</button>
+
+</div>
+
+
+</div>
+
+
+</form>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+.enquiry-section{
+
+background:#f8f9fa;
+padding:80px 0;
+
+}
+
+
+.enquiry-box{
+
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+
+.enquiry-box h2{
+
+text-align:center;
+font-weight:900;
+color:#071f3d;
+
+}
+
+
+.enquiry-box p{
+
+text-align:center;
+color:#666;
+margin-bottom:30px;
+
+}
+
+
+.enquiry-box input,
+.enquiry-box select,
+.enquiry-box textarea{
+
+width:100%;
+padding:15px;
+margin-bottom:20px;
+border:1px solid #ddd;
+border-radius:8px;
+
+}
+
+
+.enquiry-box textarea{
+
+height:130px;
+
+}
+
+
+.enquiry-box button{
+
+background:#ffc107;
+color:#071f3d;
+border:none;
+padding:14px 40px;
+font-weight:800;
+border-radius:8px;
+cursor:pointer;
+
+}
+
+
+.enquiry-box button:hover{
+
+background:#ffb300;
+
+}
+/* Admission Enquiry Dark Mode */
+
+body.dark-mode .enquiry-section{
+    background:#0f1720;
+}
+
+
+body.dark-mode .enquiry-box{
+    background:#071f3d;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+
+body.dark-mode .enquiry-box h2{
+    color:#ffc107;
+}
+
+
+body.dark-mode .enquiry-box p{
+    color:#d1d5db;
+}
+
+
+body.dark-mode .enquiry-box input,
+body.dark-mode .enquiry-box select,
+body.dark-mode .enquiry-box textarea{
+    background:#0f1720;
+    color:white;
+    border:1px solid #374151;
+}
+
+
+body.dark-mode .enquiry-box input::placeholder,
+body.dark-mode .enquiry-box textarea::placeholder{
+    color:#9ca3af;
+}
+
+
+body.dark-mode .enquiry-box select option{
+    background:#071f3d;
+    color:white;
+}
 </style>
 
 <!-- FAQ Section -->
@@ -2985,6 +3223,7 @@ based on academic performance and academy criteria.
 </div>
 
 </div>
+
 
 
 
@@ -3317,7 +3556,7 @@ menuItems.forEach(item => {
         <div class="d-flex gap-3">
           <a href="https://www.facebook.com/ForcesAcademyFaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
           <a href="https://www.instagram.com/forcesacademyfaisalabad?igsh=MWI4YThxazhwM3o3Zg==" target="_blank" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
-          <a href="http://www.youtube.com/@forcesacademyfaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.youtube.com/@forcesacademyfaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
       </div>
@@ -3400,6 +3639,53 @@ reveal.forEach(section=>{
     observer.observe(section);
 });
 
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init({
+    publicKey: "UuYaAlNiLE099J87s"
+});
+
+
+document.getElementById("contact-form")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_intxzo9",
+        "template_8kypfwd",
+        this
+    )
+
+    .then(function(){
+
+        alert("Enquiry Sent Successfully!");
+
+    })
+
+    .catch(function(error){
+
+alert(JSON.stringify(error));
+console.log(error);
+
+});
+
+});
+
+
+// Registration form EmailJS
+const regForm = document.getElementById("registration-form");
+if(regForm){
+regForm.addEventListener("submit", function(e){
+ e.preventDefault();
+ emailjs.sendForm("service_intxzo9","template_8kypfwd",this)
+ .then(()=>{alert("Application Submitted Successfully!"); this.reset();})
+ .catch((error)=>{alert(JSON.stringify(error)); console.log(error);});
+});
+}
 </script>
 </body>
 </html>

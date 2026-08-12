@@ -637,6 +637,7 @@ color:#ccc;
 }
 </style>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 
@@ -726,7 +727,7 @@ Contact
 
 
 <li>
-<a class="portal-btn" href="#student-portal.html">
+<a class="portal-btn" href="https://tehseenproject.ct.ws/login.php">
 Student Portal
 </a>
 </li>
@@ -1103,7 +1104,7 @@ Full Name
 </label>
 
 
-<input type="text" id="name" placeholder="Enter your name">
+<input type="text" id="name" name="name" placeholder="Enter your name">
 
 
 </div>
@@ -1122,7 +1123,7 @@ Phone Number
 </label>
 
 
-<input type="text" id="phone" placeholder="Enter phone number">
+<input type="text" id="phone" name="phone" placeholder="Enter phone number">
 
 
 </div>
@@ -1144,7 +1145,7 @@ Email Address
 </label>
 
 
-<input type="email" id="email" placeholder="Enter email">
+<input type="email" id="email" name="email" placeholder="Enter email">
 
 
 
@@ -1158,7 +1159,15 @@ Subject
 </label>
 
 
-<input type="text" id="subject" placeholder="Enter subject">
+<select id="subject" name="subject" required>
+<option value="">Select Enquiry Type</option>
+<option value="Admission Enquiry">Admission Enquiry</option>
+<option value="Course Information">Course Information</option>
+<option value="ISSB Preparation">ISSB Preparation</option>
+<option value="PMA Long Course">PMA Long Course</option>
+<option value="Fee Details">Fee Details</option>
+<option value="General Information">General Information</option>
+</select>
 
 
 
@@ -1172,7 +1181,7 @@ Message
 </label>
 
 
-<textarea id="message" rows="6" placeholder="Write your message"></textarea>
+<textarea id="message" name="message" rows="6" placeholder="Write your message"></textarea>
 
 
 
@@ -1283,11 +1292,19 @@ return;
 
 
 
-alert("Your enquiry has been submitted successfully!");
-
-
-
+emailjs.sendForm(
+"service_intxz09",
+"template_8kypfwd",
+this
+)
+.then(function(){
+alert("Message Sent Successfully!");
 document.getElementById("contactForm").reset();
+})
+.catch(function(error){
+alert(JSON.stringify(error));
+console.log(error);
+});
 
 
 
@@ -1564,9 +1581,9 @@ text-align:center;
     <a href="https://www.youtube.com/forcesacademy" target="_blank" class="youtube">
       <i class="bi bi-youtube"></i>
     </a>
-    <a href="https://www.linkedin.com/school/forcesacademy" target="_blank" class="linkedin">
-      <i class="bi bi-linkedin"></i>
-    </a>
+    <a href="https://wa.me/923478592099" target="_blank" class="whatsapp">
+  <i class="bi bi-whatsapp"></i>
+</a>
   </div>
 </div>
 
@@ -1833,6 +1850,53 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     sections.forEach(el=>observer.observe(el));
 });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init({
+    publicKey: "UuYaAlNiLE099J87s"
+});
+
+
+document.getElementById("contactForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+  emailjs.sendForm(
+    "service_intxzo9",
+    "template_8kypfwd",
+    this
+)
+
+    .then(function(){
+
+        alert("Enquiry Sent Successfully!");
+
+    })
+
+    .catch(function(error){
+
+alert(JSON.stringify(error));
+console.log(error);
+
+});
+
+});
+
+
+// Registration form EmailJS
+const regForm = document.getElementById("registration-form");
+if(regForm){
+regForm.addEventListener("submit", function(e){
+ e.preventDefault();
+ emailjs.sendForm("service_intxzo9","template_8kypfwd",this)
+ .then(()=>{alert("Application Submitted Successfully!"); this.reset();})
+ .catch((error)=>{alert(JSON.stringify(error)); console.log(error);});
+});
+}
 </script>
 
 </body>
