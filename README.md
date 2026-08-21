@@ -1,11 +1,8 @@
 # 🛡️ Forces Academy Faisalabad Website
-A modern and responsive educational ISSB preparation website designed to provide students with information about **ISSB preparation programs, academy courses, admissions, student achievements, gallery, and contact services** through a professional and user-friendly platform.
-
-The website represents the vision of Forces Academy Faisalabad in guiding aspiring candidates towards their defence career goals by providing structured learning resources, admission guidance, course information, and an interactive digital experience.
+A modern and responsive educational ISSB preparation website designed to provide students with information about **ISSB preparation programs, academy courses, admissions, student achievements, gallery, and contact services** through a professional and user-friendly platform.The website represents the vision of Forces Academy Faisalabad in guiding aspiring candidates towards their defence career goals by providing structured learning resources, admission guidance, course information, and an interactive digital experience.
 ---
 ## 📌 About The Project
-The website provides students with an easy-to-use platform to explore courses, check results through **roll numbers, view academy selections, and get information about admission procedures and services**.
-The project focuses on responsive design, smooth animations, interactive features, and a clean user experience across **desktop, tablet, and mobile devices**.
+The website provides students with an easy-to-use platform to explore courses, check results through **roll numbers, view academy selections, and get information about admission procedures and services**.The project focuses on responsive design, smooth animations, interactive features, and a clean user experience across **desktop, tablet, and mobile devices**.
 ---
 ## 🌐 Live Website
 
@@ -285,9 +282,7 @@ The changes are uploaded to the GitHub `main` branch.
 ---
 ## **🎯 Project Purpose**
 
-The purpose of this project is to develop a modern, responsive, and user-friendly website for **Forces Academy Faisalabad**. The website provides students with an easy platform to explore academy programs, courses, admission details, student results, gallery, and contact information.
-
-This project demonstrates practical frontend development skills including responsive web design, Bootstrap components, JavaScript interactivity, animations, form integration, SEO basics, Git version control, and GitHub Pages deployment.
+The purpose of this project is to develop a modern, responsive, and user-friendly website for **Forces Academy Faisalabad**. The website provides students with an easy platform to explore academy programs, courses, admission details, student results, gallery, and contact information.This project demonstrates practical frontend development skills including responsive web design, Bootstrap components, JavaScript interactivity, animations, form integration, SEO basics, Git version control, and GitHub Pages deployment.
 ---
 ## 📂 GitHub Repository
 
@@ -304,8 +299,6 @@ This project was developed as part of the:
 The project represents the practical implementation of frontend development skills learned during the internship, including responsive web design, UI development, JavaScript functionality, animations, and website deployment using GitHub Pages.
 
 ## 👩‍💻 Built By
-
-
 **Zainab Azhar | Code Saviours — SI-26 | Frontend Track | 2026**
 
-⭐ **Thank you for exploring the Forces Academy Faisalabad Website. Feel free to check the repository, visit the live demo, and share your valuable feedback.**
+⭐ **Thank you for exploring the Forces Academy Faisalabad Website. Feel free to check the repository, visit the live demo, and share your valuwable feedback.**
