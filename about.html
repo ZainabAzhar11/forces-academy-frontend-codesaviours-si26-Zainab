@@ -232,7 +232,256 @@ body.dark-mode .leadership-heading p {
 body.dark-mode .section.bg-light {
     background: #16233a !important;
 }
+
+/* ===== ABOUT PAGE FINAL POLISH ===== */
+
+/* Desktop hero balance */
+.about-hero{
+    min-height:620px;
+}
+
+.about-hero-content{
+    padding:20px;
+}
+
+/* Better section spacing */
+.section{
+    padding:75px 0;
+}
+
+/* Mobile polish */
+@media(max-width:576px){
+
+    .about-hero{
+        min-height:650px;
+        height:auto;
+        padding:90px 15px 60px;
+        background-position:center;
+    }
+
+    .about-hero-content{
+        padding:0;
+    }
+
+    .about-badge{
+        font-size:11px;
+        padding:8px 14px;
+        letter-spacing:.5px;
+        margin-bottom:18px;
+    }
+
+    .about-hero h1{
+        font-size:34px;
+        line-height:1.25;
+        margin-bottom:15px;
+    }
+
+    .about-hero p{
+        font-size:15px;
+        line-height:1.7;
+        margin:15px auto 25px;
+    }
+
+    .hero-btn{
+        padding:12px 32px;
+    }
+
+    .hero-stats{
+        flex-direction:column;
+        width:100%;
+        margin-top:25px;
+        gap:12px;
+    }
+
+    .hero-stat{
+        width:100%;
+        max-width:260px;
+        padding:12px 15px;
+        font-size:14px;
+    }
+
+    .overview-img{
+        margin-bottom:25px;
+    }
+
+    .section-heading{
+        font-size:30px;
+    }
+
+    .feature-card,
+    .leader-card{
+        padding:20px;
+    }
+
+    .flip-card{
+        height:320px;
+    }
+}
+
+/* iPad/tablet spacing */
+@media(min-width:577px) and (max-width:1199px){
+
+    .about-hero h1{
+        font-size:48px;
+    }
+
+    .hero-stats{
+        flex-wrap:wrap;
+    }
+
+    .hero-stat{
+        min-width:180px;
+    }
+}
+
+
+/* ===== About Heading + Dark Mode Section Fix ===== */
+
+#academy-overview h4{
+    font-size:32px;
+    font-weight:900;
+    color:#071f3d;
+    margin-bottom:20px;
+    position:relative;
+}
+
+#academy-overview h4::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:4px;
+    background:#ffc107;
+    margin-top:12px;
+    border-radius:10px;
+}
+
+body.dark-mode #academy-overview h4{
+    color:#ffffff !important;
+}
+
+
+/* Why Choose Us / Next Section Dark Mode Separation */
+
+body.dark-mode .section.bg-light{
+    background:#0f172a !important;
+}
+
+body.dark-mode .metric-card{
+    background:#16233a !important;
+    border:1px solid rgba(255,193,7,0.2);
+}
+
+body.dark-mode .metric-card h3{
+    color:#ffffff !important;
+}
+
+body.dark-mode .metric-card p{
+    color:#cbd5e1 !important;
+}
+
 </style>
+
+<style>
+.hero{
+min-height:620px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(90deg,rgba(4,20,45,.92),rgba(7,31,61,.75)),
+url("https://images.unsplash.com/photo-1522735856-4f1dc00fb0f0?w=1600")
+center/cover;
+}
+
+.hero:after{
+content:"";
+position:absolute;
+inset:0;
+background-image:radial-gradient(#6aa7ff 1px,transparent 1px);
+background-size:28px 28px;
+opacity:.15;
+}
+
+.content{
+position:relative;
+z-index:2;
+width:900px;
+padding:40px 20px;
+}
+
+.badge{
+display:inline-block;
+border:1px solid #4f91ff;
+color:#8fc0ff;
+padding:8px 22px;
+border-radius:30px;
+font-weight:700;
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:62px;
+line-height:1.1;
+margin:0 0 20px;
+font-weight:900;
+}
+
+.hero h1 span{
+color:#72adff;
+}
+
+.hero p{
+color:#d4dfef;
+font-size:17px;
+line-height:1.8;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:35px;
+flex-wrap:wrap;
+}
+
+.card{
+width:230px;
+padding:18px;
+border:1px solid rgba(120,180,255,.45);
+border-radius:14px;
+background:rgba(10,45,90,.55);
+backdrop-filter:blur(8px);
+display:flex;
+gap:12px;
+align-items:center;
+text-align:left;
+color:white;
+}
+
+.card i{
+font-size:28px;
+color:#78b2ff;
+}
+
+.card strong{
+display:block;
+font-size:14px;
+}
+
+.card small{
+color:#b9cce5;
+}
+
+@media(max-width:700px){
+.hero h1{font-size:40px}
+.card{width:90%}
+}
+</style>
+
 </head>
 <body>
 
@@ -257,6 +506,7 @@ About
 <a class="nav-link" href="gallery.html">Gallery</a>
 </li>
 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+<br>
 <li class="nav-item"><a class="portal-btn" href="https://tehseenproject.ct.ws/login.php">Student Portal</a></li>
 <li class="nav-item">
   <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
@@ -266,68 +516,54 @@ About
 </div>
 </nav>
 
+
 <!-- Hero -->
-<section class="about-hero">
+<section class="hero">
+<div class="content">
 
-<div class="about-overlay"></div>
-
-<div class="container">
-
-<div class="about-hero-content">
-
-
-<span class="about-badge">
-🎓 ABOUT FORCES ACADEMY
-</span>
-
+<div class="badge">ABOUT FORCES ACADEMY</div>
 
 <h1>
-Forging Character 
-<span>Building Leaders</span>
-Inspiring Success.
+Discipline. Knowledge.<br>
+<span>Leadership Excellence.</span>
 </h1>
 
-
 <p>
-Empowering young minds with discipline, knowledge and leadership skills 
-to achieve excellence and build a successful future.
+Empowering students with strong values, quality education and professional
+training to achieve their goals and build a successful future.
 </p>
 
+<div class="cards">
 
-
-<a href="gallery.html" class="hero-btn">
-Learn More
-</a>
-
-
-
-<div class="hero-stats">
-
-
-<div class="hero-stat blue">
-✔ 15+ Years
+<div class="card">
+<i class="bi bi-award-fill"></i>
+<div>
+<strong>Proven Excellence</strong>
+<small>15+ Years of Excellence</small>
+</div>
 </div>
 
-
-<div class="hero-stat green">
-👥 5000+ Students
+<div class="card">
+<i class="bi bi-mortarboard-fill"></i>
+<div>
+<strong>Expert Guidance</strong>
+<small>Dedicated Faculty Support</small>
+</div>
 </div>
 
-
-<div class="hero-stat yellow">
-🏆 98% Results
+<div class="card">
+<i class="bi bi-compass-fill"></i>
+<div>
+<strong>Career Direction</strong>
+<small>Complete Student Guidance</small>
 </div>
-
-
-</div>
-
-
-
 </div>
 
 </div>
 
+</div>
 </section>
+
 <style>
   .about-hero{
 
@@ -1469,67 +1705,318 @@ menuItems.forEach(item => {
 
 </script>
 
-
-
-
-
-
-
-<!-- Footer -->
-<footer style="background-color:#0b1e46; color:#fff;" class="py-5 mt-5">
+<!-- FOOTER -->
+  <footer style="background-color:#0b1e46; color:#fff;" class="py-5 ">
   <div class="container">
     <div class="row">
 
       <!-- About -->
       <div class="col-md-3 mb-4">
-       
-        <h5><span>🎓</span>Forces Academy</h5>
-        <p>Forces Academy is committed to preparing students for a successful career through quality education, discipline, and character building.</p>
-         <div class="col-md-3 mb-4">
-        <h5>Follow Us</h5>
-        <div class="d-flex gap-3">
-          <a href="https://www.facebook.com/ForcesAcademyFaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/forcesacademyfaisalabad?igsh=MWI4YThxazhwM3o3Zg==" target="_blank" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
-          <a href="http://www.youtube.com/@forcesacademyfaisalabad" target="_blank" class="text-light fs-5"><i class="bi bi-youtube"></i></a>
+        <div class="footer-brand">
+          <div class="footer-logo-badge">🎓</div>
+          <div>
+            <h5 class="footer-brand-title">FORCES ACADEMY</h5>
+            <span class="footer-brand-sub">FAISALABAD</span>
+          </div>
         </div>
-      </div>
+        <p class="footer-desc">Forces Academy is committed to preparing students for a successful career through quality education, discipline, and character building.</p>
       </div>
 
-      <!-- Location & Working Hours -->
+      <!-- Quick Links -->
       <div class="col-md-3 mb-4">
-        <h5>Location</h5>
-        <p>📍 Forces Academy, Faisalabad, Pakistan</p>
-        <h5>Working Hours</h5>
-        <p>🕘 9:00 AM – 5:00 PM<br>Monday – Saturday</p>
+        <h5 class="footer-heading">Quick Links</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html"><i class="bi bi-caret-right-fill"></i> Home</a></li>
+          <li><a href="about.html"><i class="bi bi-caret-right-fill"></i> About</a></li>
+          <li><a href="courses.html"><i class="bi bi-caret-right-fill"></i> Courses</a></li>
+          <li><a href="admissions.html"><i class="bi bi-caret-right-fill"></i> Admissions</a></li>
+          <li><a href="results.html"><i class="bi bi-caret-right-fill"></i> Results</a></li>
+          <li><a href="gallery.html"><i class="bi bi-caret-right-fill"></i> Gallery</a></li>
+          <li><a href="contact.html"><i class="bi bi-caret-right-fill"></i> Contact</a></li>
+        </ul>
       </div>
 
       <!-- Contact Info -->
       <div class="col-md-3 mb-4">
-        <h5>Contact Us</h5>
-        
-          📞 <a href="tel:+923478592099" style="color:#fff; text-decoration:underline;">+923478592099</a><br>
-            <p>✉️<a href="mailto:forcesacademyofficial@gmail.com" style="color:#fff; text-decoration:underline;">forcesacademyofficial@gmail.com</a></p>
-      </div>
-
-      <!-- Web Links -->
-            <div class="col-md-3 mb-4">
-        <h5>Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
-          <li><a href="about.html" class="text-light text-decoration-none">About</a></li>
-          <li><a href="courses.html" class="text-light text-decoration-none">Courses</a></li>
-          <li><a href="admissions.html" class="text-light text-decoration-none">Admissions</a></li>
-          <li><a href="gallery.html" class="text-light text-decoration-none">Gallery</a></li>
-          <li><a href="results.html" class="text-light text-decoration-none">Results</a></li>
-          <li><a href="contact.html" class="text-light text-decoration-none">Contact </a></li>
+        <h5 class="footer-heading">Contact Us</h5>
+        <ul class="list-unstyled footer-contact">
+          <li><span class="footer-icon-circle"><i class="bi bi-geo-alt-fill"></i></span> Forces Academy, Faisalabad, Pakistan</li>
+          <li><span class="footer-icon-circle"><i class="bi bi-telephone-fill"></i></span> <a href="tel:+923478592099">+92 347 8592099</a></li>
+          <li><span class="footer-icon-circle"><i class="bi bi-envelope-fill"></i></span> <a href="mailto:forcesacademyofficial@gmail.com">forcesacademyofficial@gmail.com</a></li>
+          <li><span class="footer-icon-circle"><i class="bi bi-clock-fill"></i></span> Mon – Sat: 9:00 AM – 5:00 PM</li>
         </ul>
       </div>
+
+      <!-- Get In Touch -->
+      <div class="col-md-3 mb-4">
+        <h5 class="footer-heading">Get In Touch</h5>
+        <p class="footer-desc">Stay connected with Forces Academy for the latest updates.</p>
+        <div class="d-flex gap-3">
+          <a href="https://www.facebook.com/ForcesAcademyFaisalabad" target="_blank" class="footer-social"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/forcesacademyfaisalabad?igsh=MWI4YThxazhwM3o3Zg==" target="_blank" class="footer-social"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/923478592099" target="_blank" class="footer-social"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.youtube.com/@forcesacademyfaisalabad" target="_blank" class="footer-social"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
     </div>
-    <div class="text-center mt-3 border-top border-secondary pt-3">
-      © 2026 Forces Academy. All Rights Reserved.
+    <div class="footer-bottom-bar d-flex flex-wrap justify-content-between align-items-center mt-3 pt-3">
+      <span>© 2026 <strong>Forces Academy Faisalabad</strong>. All rights reserved.</span>
+      <span class="footer-bottom-links">
+        <a href="#">Privacy Policy</a> <span class="footer-dot">•</span> <a href="#">Terms of Use</a>
+      </span>
     </div>
   </div>
 </footer>
+<style>
+footer h5 {
+    color: #4e86ff; /* Bright Blue like your screenshot */
+    font-weight: 700;
+}
+
+/* Footer Quick Links & Web Links Hover Fix */
+footer .list-unstyled li a {
+    color: #fff !important; /* default white */
+    text-decoration: none !important;
+    transition: color 0.3s;
+}
+
+footer .list-unstyled li a:hover {
+    color: #ffc107 !important; /* yellow on hover */
+}
+/* Footer Social Icons - proper circles */
+footer .d-flex.gap-3 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* perfect circle */
+    background-color: #ffc107; /* default yellow */
+    color: #000; /* icon black */
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+footer .d-flex.gap-3 a:hover {
+    background-color: #ffb300; /* darker yellow on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    color: #000;
+}
+
+footer .d-flex.gap-3 a i {
+    line-height: 1; /* ensures icon vertically centered */
+}
+
+/* Fix: long text (email/links) overflowing into next column on tablets like iPad */
+footer .row {
+    row-gap: 20px;
+}
+
+footer .col-md-3 {
+    min-width: 0; /* allows flex/grid children to shrink instead of overflowing */
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+footer .col-md-3 a,
+footer .col-md-3 p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    footer .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+/* ===== New Footer Design ===== */
+footer{
+    background-color:#0b1e46 !important;
+}
+
+.footer-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:16px;
+}
+
+.footer-logo-badge{
+    width:48px;
+    height:48px;
+    min-width:48px;
+    border-radius:50%;
+    background:#ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+}
+
+.footer-brand-title{
+    color:#ffc107;
+    font-weight:900;
+    font-size:16px;
+    letter-spacing:1px;
+    margin:0;
+}
+
+.footer-brand-sub{
+    color:#9ca3af;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+.footer-desc{
+    color:#c3ccdb;
+    font-size:14px;
+    line-height:1.8;
+}
+
+.footer-heading{
+    color:#ffc107;
+    font-weight:800;
+    font-size:14px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:14px;
+    position:relative;
+    padding-bottom:12px;
+}
+
+.footer-heading::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    max-width:160px;
+    height:1px;
+    background-image:linear-gradient(to right, #ffc107 60%, transparent 40%);
+    background-size:8px 1px;
+}
+
+.footer-links li{
+    margin-bottom:10px;
+}
+
+.footer-links a{
+    color:#e5e7eb;
+    text-decoration:none;
+    font-size:14px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:.3s;
+}
+
+.footer-links a i{
+    color:#ffc107;
+    font-size:10px;
+}
+
+.footer-links a:hover{
+    color:#ffc107;
+    transform:translateX(4px);
+}
+
+.footer-contact li{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:16px;
+    color:#e5e7eb;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.footer-contact a{
+    color:#e5e7eb;
+    text-decoration:none;
+    word-break:break-word;
+}
+
+.footer-contact a:hover{
+    color:#ffc107;
+}
+
+.footer-icon-circle{
+    width:30px;
+    height:30px;
+    min-width:30px;
+    border-radius:50%;
+    background:#ffc107;
+    color:#071f3d;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+}
+
+.footer-social{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#ffc107;
+    color:#071f3d;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:16px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-social:hover{
+    background:#ffb300;
+    transform:translateY(-3px);
+    box-shadow:0 8px 15px rgba(0,0,0,0.3);
+}
+
+.footer-bottom-bar{
+    border-top:1px dashed rgba(255,193,7,0.35);
+    color:#c3ccdb;
+    font-size:13px;
+}
+
+.footer-bottom-bar strong{
+    color:#e5e7eb;
+}
+
+.footer-bottom-links a{
+    color:#c3ccdb;
+    text-decoration:none;
+}
+
+.footer-bottom-links a:hover{
+    color:#ffc107;
+}
+
+.footer-dot{
+    color:#ffc107;
+    margin:0 6px;
+}
+
+@media(max-width:768px){
+    .footer-bottom-bar{
+        flex-direction:column;
+        text-align:center;
+        gap:10px;
+    }
+}
+</style>
+
+
+
+
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -1585,5 +2072,177 @@ window.addEventListener("scroll",showStats);
 
 showStats();
 </script>
+
+<style>
+.card{
+    transition:all .35s ease !important;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:translateY(-10px) !important;
+    border-color:#72adff !important;
+    background:rgba(30,95,170,.65) !important;
+    box-shadow:
+    0 15px 35px rgba(60,150,255,.35),
+    inset 0 0 20px rgba(120,180,255,.15) !important;
+}
+
+.card:hover i{
+    transform:scale(1.15) rotate(5deg);
+    color:#ffffff !important;
+}
+
+.card i{
+    transition:.35s ease;
+}
+</style>
+
+
+<style>
+.card{
+    width:200px !important;
+    padding:14px !important;
+    border-radius:12px !important;
+}
+
+.card i{
+    font-size:24px !important;
+}
+
+.card strong{
+    font-size:13px !important;
+}
+
+.card small{
+    font-size:11px !important;
+}
+
+.cards{
+    gap:12px !important;
+}
+</style>
+
+
+<style>
+.card{
+    width:175px !important;
+    min-height:58px !important;
+    padding:9px 12px !important;
+    border-radius:10px !important;
+    gap:10px !important;
+}
+
+.card i{
+    font-size:21px !important;
+}
+
+.card strong{
+    font-size:12px !important;
+    line-height:1.2 !important;
+}
+
+.card small{
+    font-size:9.5px !important;
+}
+
+.cards{
+    gap:14px !important;
+}
+</style>
+
+
+<style>
+@media(max-width:576px){
+
+.hero,
+.about-hero{
+    min-height:100vh !important;
+    height:auto !important;
+    padding:75px 15px 55px !important;
+}
+
+.content,
+.about-hero-content{
+    width:100% !important;
+    max-width:100% !important;
+    padding:20px 5px !important;
+}
+
+.hero h1,
+.about-hero h1{
+    font-size:38px !important;
+    line-height:1.08 !important;
+    letter-spacing:-1px !important;
+    margin-bottom:18px !important;
+}
+
+.hero p,
+.about-hero p{
+    font-size:14px !important;
+    line-height:1.7 !important;
+    max-width:340px !important;
+    margin:15px auto !important;
+}
+
+.badge,
+.about-badge{
+    font-size:10px !important;
+    padding:7px 15px !important;
+    margin-bottom:20px !important;
+}
+
+.cards,
+.hero-stats{
+    flex-direction:column !important;
+    align-items:center !important;
+    gap:12px !important;
+    margin-top:25px !important;
+}
+
+.card{
+    width:175px !important;
+    min-height:58px !important;
+    padding:10px 12px !important;
+}
+
+.card i{
+    font-size:20px !important;
+}
+
+.card strong{
+    font-size:12px !important;
+}
+
+.card small{
+    font-size:9px !important;
+}
+
+}
+</style>
+
+
+<style>
+@media(max-width:576px){
+
+.hero h1,
+.about-hero h1{
+    font-size:32px !important;
+    line-height:1.12 !important;
+    letter-spacing:-0.5px !important;
+}
+
+}
+</style>
+
+
+<style>
+/* Only Why Choose Us heading fix */
+.choose-section h6{
+    color:#071f3d !important;
+    font-weight:800;
+}
+</style>
+
 </body>
 </html>
