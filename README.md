@@ -1,9 +1,16 @@
 # 🛡️ Forces Academy Faisalabad Website
-A modern and responsive educational ISSB preparation website designed to provide students with information about **ISSB preparation programs, academy courses, admissions, student achievements, gallery, and contact services** through a professional and user-friendly platform.The website represents the vision of Forces Academy Faisalabad in guiding aspiring candidates towards their defence career goals by providing structured learning resources, admission guidance, course information, and an interactive digital experience.
+
+A modern and responsive educational ISSB preparation website designed to provide students with information about **ISSB preparation programs, academy courses, admissions, student achievements, gallery, and contact services** through a professional and user-friendly platform.
+
+The website represents the vision of Forces Academy Faisalabad in guiding aspiring candidates towards their defence career goals by providing structured learning resources, admission guidance, course information, and an interactive digital experience.
+
 ---
+
 ## 📌 About The Project
-The website provides students with an easy-to-use platform to explore courses, check results through **roll numbers, view academy selections, and get information about admission procedures and services**.The project focuses on responsive design, smooth animations, interactive features, and a clean user experience across **desktop, tablet, and mobile devices**.
----
+
+The website provides students with an easy-to-use platform to explore courses, check results through **roll numbers, view academy selections, and get information about admission procedures and services**.
+
+The project focuses on responsive design, smooth animations, interactive features, and a clean user experience across **desktop, tablet, and mobile devices**.
 ## 🌐 Live Website
 
 🔗 **GitHub Pages live link:**  
